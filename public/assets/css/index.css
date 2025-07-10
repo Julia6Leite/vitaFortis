@@ -1,0 +1,140 @@
+/*CSS DA PÁGINA INICIAL*/
+
+/*CABEÇALHO*/
+/* rgba(253, 209, 1, 0.8);
+rgba(170, 142, 0, 0.8);
+rgba(253, 209, 1, 1); */
+
+/*CABEÇALHO PARTE DE CIMA*/
+
+#cabecalhoParteDeCima {
+    /*parte de cima do cabeçalho*/
+    background: black;
+}
+
+#logoCabecalho img {
+    /*logo do cabeçalho*/
+    max-height: 5rem;
+    transition: transform 0.3s ease;
+}
+
+#logoCabecalho img:hover {
+    /*logo do cabeçalho quando passa o mouse*/
+    transform: scale(1.08);
+}
+
+#barraDePesquisa {
+    /*tamanho da barra de pesquisa*/
+    min-width: 25rem;
+}
+
+#botaoLupa{ /*parte da lupa na barra de pesquisa*/
+    background-color: rgba(253, 209, 1, 0.8);
+}
+
+#botaoLupa:hover{ /*parte da lupa na barra de pesquisa quando passa o mouse*/
+    background-color: rgba(170, 142, 0, 0.8);
+}
+
+.input-group .btn:hover {
+    /*lupa da caixa de pesquisa quando passa o mouse em cima*/
+    color: white;
+}
+
+.input-group .form-control:focus {
+    /*tira a borda azul da caixa de pesquisa quando clica */
+    border-color: transparent;
+    box-shadow: none;
+}
+
+#iconeLogin{ /*ícone de boneco no login*/
+    color: rgba(253, 209, 1, 1);
+    font-size: 1.3rem;
+    transition: transform 0.3s ease;
+}
+
+#iconeLogin:hover{ /*ícone de boneco no login quando passa o mouse*/
+    color: rgba(253, 209, 1, 1);
+    font-size: 1.3rem;
+    transform: scale(1.08);
+    cursor: pointer;
+}
+
+#loginArea span { /*texto "seja bem-vindo"*/
+    color: rgba(253, 209, 1, 1);
+    font-size: .9rem;
+}
+
+#loginArea a { /*texto faça login/cadastre-se*/
+    color: white;
+    font-size: .95rem;
+    text-decoration: none;
+}
+
+#loginArea a:hover { /*texto faça login/cadastre-se quando passa o mouse*/
+    text-decoration: underline;
+}
+
+#loginArea .d-flex.flex-column { /*centraliza as duas frases do login*/
+    text-align: center;  
+}
+
+#carrinhoArea{ /*carrinho de compras*/
+    color: rgba(253, 209, 1, 1);
+}
+
+#carrinhoArea:hover{ /*carrinho de compras*/
+    cursor: pointer;
+}
+
+#areaLoginECarrinho{ /*distância da área do login e do carrinho da margem direita */
+    margin-right: 3.5rem;
+}
+
+/*CABEÇALHO PARTE DE BAIXO*/
+
+#cabecalhoParteDeBaixo {
+    /*parte de baixo do cabeçalho (transparente)*/
+    background-color: #000000;
+    opacity: 90%;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    font-weight: 600;
+}
+
+.nav-link.text-uppercase.mx-3 {
+    /*opções do menu*/
+    color: rgba(253, 209, 1, 1);
+    font-size: .9rem;
+    transition: transform 0.3s ease;
+}
+
+.nav-link.text-uppercase.mx-3:hover {
+    /*opções do menu quando passa o mouse*/
+    transform: scale(1.1);
+}
+
+#opcaoCategorias{ /*opção "categorias"*/
+    color: white;
+}
+
+#fundoCategorias{ /*background da opção "categorias"*/
+    background-color: rgba(253, 209, 1, 0.8);
+    border-radius: .2rem;
+}
+
+/*INÍCIO DO CORPO DO SITE*/
+
+/*CLUBE FIDELIDADE*/
+
+#clubeFidelidadeBanner { /*section do clube fidelidade*/
+    background-color: #dddac9; 
+    color: #000;               
+    font-weight: 600;
+    min-height: 20rem;
+}
+
+h1{ /*título clube fidelidade*/
+    padding-top: 10rem;
+}
