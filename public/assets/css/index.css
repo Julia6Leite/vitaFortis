@@ -1,15 +1,38 @@
 /*CSS DA PÁGINA INICIAL*/
 
+/*cores do documento:
+
+rgba(253, 209, 1, 0.8) amarelo mais claro;
+rgba(253, 209, 1, 1) amarelo mais escuro;
+rgba(170, 142, 0, 0.8) dourado;
+linear-gradient(180deg, #810202, #000000) cabeçalho vinho e preto;
+linear-gradient(180deg, #dd2424, #131313) botão quando passa o mouse - vermelho e quase preto
+#eeece7 off white
+
+*/
+
+/*CORPO*/
+
+body {
+    /*cor de fundo*/
+    background-color: #eeece7;
+    overflow-x: hidden; /*remove a barra de rolar embaixo*/
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
 /*CABEÇALHO*/
-/* rgba(253, 209, 1, 0.8);
-rgba(170, 142, 0, 0.8);
-rgba(253, 209, 1, 1); */
 
 /*CABEÇALHO PARTE DE CIMA*/
 
+header { /*fixa o cabeçalho mesmo ao rolar a tela*/
+    position: sticky; 
+    top: 0;
+    z-index: 1000;
+}
+
 #cabecalhoParteDeCima {
     /*parte de cima do cabeçalho*/
-    background: black;
+    background: linear-gradient(180deg, #810202, #000000);
 }
 
 #logoCabecalho img {
@@ -25,14 +48,23 @@ rgba(253, 209, 1, 1); */
 
 #barraDePesquisa {
     /*tamanho da barra de pesquisa*/
-    min-width: 25rem;
+    width: 50%;
+    max-width: 25rem;
 }
 
-#botaoLupa{ /*parte da lupa na barra de pesquisa*/
+#barraDePesquisaToda {
+    /*posição da barra de pesquisa com o botão/lupa*/
+    margin-left: 15%;
+    margin-right: 5%;
+}
+
+#botaoLupa {
+    /*parte da lupa na barra de pesquisa*/
     background-color: rgba(253, 209, 1, 0.8);
 }
 
-#botaoLupa:hover{ /*parte da lupa na barra de pesquisa quando passa o mouse*/
+#botaoLupa:hover {
+    /*parte da lupa na barra de pesquisa quando passa o mouse*/
     background-color: rgba(170, 142, 0, 0.8);
 }
 
@@ -47,47 +79,56 @@ rgba(253, 209, 1, 1); */
     box-shadow: none;
 }
 
-#iconeLogin{ /*ícone de boneco no login*/
+#iconeLogin {
+    /*ícone de boneco no login*/
     color: rgba(253, 209, 1, 1);
     font-size: 1.3rem;
     transition: transform 0.3s ease;
 }
 
-#iconeLogin:hover{ /*ícone de boneco no login quando passa o mouse*/
+#iconeLogin:hover {
+    /*ícone de boneco no login quando passa o mouse*/
     color: rgba(253, 209, 1, 1);
     font-size: 1.3rem;
     transform: scale(1.08);
     cursor: pointer;
 }
 
-#loginArea span { /*texto "seja bem-vindo"*/
+#loginArea span {
+    /*texto "seja bem-vindo"*/
     color: rgba(253, 209, 1, 1);
     font-size: .9rem;
 }
 
-#loginArea a { /*texto faça login/cadastre-se*/
+#loginArea a {
+    /*texto faça login/cadastre-se*/
     color: white;
     font-size: .95rem;
     text-decoration: none;
 }
 
-#loginArea a:hover { /*texto faça login/cadastre-se quando passa o mouse*/
+#loginArea a:hover {
+    /*texto faça login/cadastre-se quando passa o mouse*/
     text-decoration: underline;
 }
 
-#loginArea .d-flex.flex-column { /*centraliza as duas frases do login*/
-    text-align: center;  
+#loginArea .d-flex.flex-column {
+    /*centraliza as duas frases do login*/
+    text-align: center;
 }
 
-#carrinhoArea{ /*carrinho de compras*/
+#carrinhoArea {
+    /*carrinho de compras*/
     color: rgba(253, 209, 1, 1);
 }
 
-#carrinhoArea:hover{ /*carrinho de compras*/
+#carrinhoArea:hover {
+    /*carrinho de compras*/
     cursor: pointer;
 }
 
-#areaLoginECarrinho{ /*distância da área do login e do carrinho da margem direita */
+#areaLoginECarrinho {
+    /*distância da área do login e do carrinho da margem direita */
     margin-right: 3.5rem;
 }
 
@@ -115,26 +156,245 @@ rgba(253, 209, 1, 1); */
     transform: scale(1.1);
 }
 
-#opcaoCategorias{ /*opção "categorias"*/
+#opcaoCategorias {
+    /*opção "categorias"*/
     color: white;
 }
 
-#fundoCategorias{ /*background da opção "categorias"*/
+#fundoCategorias {
+    /*background da opção "categorias"*/
     background-color: rgba(253, 209, 1, 0.8);
     border-radius: .2rem;
 }
 
-/*INÍCIO DO CORPO DO SITE*/
-
-/*CLUBE FIDELIDADE*/
-
-#clubeFidelidadeBanner { /*section do clube fidelidade*/
-    background-color: #dddac9; 
-    color: #000;               
-    font-weight: 600;
-    min-height: 20rem;
+#menuIcon {
+    /*esconde o ícone hambúrger em telas grandes*/
+    display: none;
 }
 
-h1{ /*título clube fidelidade*/
-    padding-top: 10rem;
+/*INÍCIO DO CORPO DO SITE*/
+
+/*CARROSSEL/CLUBE FIDELIDADE*/
+
+#carrossel img {
+    /*altura da imagem do carrossel*/
+    height: 80vh;
+}
+
+/*AS CATEGORIAS EM BOTÕES QUE APARECEM NO MAIN*/
+
+h1 {
+    /*título o que você procura?*/
+    padding: 1rem 0rem 0rem 1rem;
+    color: black;
+    font-size: 1.8rem;
+    font-weight: 650;
+}
+
+#botoesCategoriasCorpo {
+    /*os botões categorias como um todo*/
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    padding: 1rem;
+    flex-wrap: nowrap;
+}
+
+#botoesCategoriasCorpo>.col {
+    /*largura auto de cada botão*/
+    width: auto;
+}
+
+.btn.categorias {
+    /*os botões categorias individuais, mas pegando todos*/
+    background-color: rgba(145, 121, 2, 0.8);
+    color: rgb(255, 255, 255);
+    border: none;
+    font-weight: 700;
+    transition: transform 0.3s ease;
+    box-shadow: .3rem .4rem .6rem rgb(0, 0, 0);
+    white-space: nowrap;
+}
+
+.btn.categorias:hover {
+    /*os botões categorias individuais, mas pegando todos, quando passa o mouse*/
+    background-color: rgb(145, 121, 2);
+    transform: scale(1.02);
+}
+
+.btn.categorias:focus {
+    /*mantém a palavra branca ao clicar no botão*/
+    color: white;
+}
+
+/*BARRA DE ROLAR DOS BOTÕES CATEGORIAS NO MAIN*/
+
+#botoesCategoriasCorpo::-webkit-scrollbar {
+    /*necessário para conseguir editar a estética da barra de rolar*/
+    height: .4rem;
+}
+
+#botoesCategoriasCorpo::-webkit-scrollbar-track {
+    /*cor do trilho*/
+    background: transparent;
+}
+
+#botoesCategoriasCorpo::-webkit-scrollbar-thumb {
+    /*estética do pegador*/
+    background-color: rgba(192, 191, 191, 0.8);
+    border-radius: .3rem;
+    max-width: .5rem;
+    cursor: pointer;
+}
+
+#botoesCategoriasCorpo::-webkit-scrollbar-thumb:hover {
+    /*ao passar o mouse*/
+    background-color: rgb(119, 119, 119);
+}
+
+/*PRODUTOS EM OFERTAS*/
+
+h2 {
+    /*título "ofertas"*/
+    text-align: center;
+    background: linear-gradient(180deg, #810202, #000000);
+    color: white;
+    border-radius: .3rem;
+    font-weight: 700;
+    box-shadow: .3rem .4rem .6rem rgb(0, 0, 0);
+    margin-top: 1.5rem;
+    margin-bottom: 5rem;
+}
+
+#fundoOfertas {
+    /*centralizando o background do título "ofertas"*/
+    display: flex;
+    justify-content: center;
+}
+
+#fundoOfertas h2 {
+    /*definindo o tamanho do background do título "ofertas"*/
+    width: 93%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*RESPONSIVIDADE*/
+@media (max-width: 768px) { /*de 768px de largura para baixo = tablet*/
+
+    /*CABEÇALHO PARTE DE CIMA*/
+
+    #cabecalhoParteDeCima {
+        /*parte de cima do cabeçalho*/
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    #logoCabecalho {
+        /*logo*/
+        margin-top: .2rem;
+    }
+
+    #areaLoginECarrinho {
+        /*área de login e carrinho*/
+        margin-right: .8rem;
+    }
+
+    #loginArea span {
+        /*texto "seja bem-vindo"*/
+        font-size: .8rem;
+    }
+
+    #loginArea a {
+        /*texto faça login/cadastre-se*/
+        font-size: .85rem;
+    }
+
+    #cabecalhoParteDeCima>.flex-grow-1 {
+        /*joga a barra de pesquisa para baixo + margens*/
+        order: 2;
+        flex: 0 0 100%;
+        margin: 1.5rem 0 3rem 0;
+    }
+
+    #barraDePesquisaToda {
+        /* remove as margens internas da barra de pesquisa*/
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .input-group {
+        /* ajusta a largura da barra de pesquisa*/
+        width: 90%;
+        max-width: 25rem;
+    }
+
+    /*CABEÇALHO PARTE DEBAIXO*/
+
+    #cabecalhoParteDeBaixo {
+        /*esconde o menu*/
+        display: none;
+    }
+
+    #menuIcon {
+        /*exibe o hambúrguer*/
+        display: inline-block;
+        position: absolute;
+        z-index: 30;
+        top: 80%;
+        padding: 0.5rem;
+    }
+
+    #menuToggle:checked+#cabecalhoParteDeBaixo {
+        /*menu ao clicar no hambúrguer*/
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        z-index: 20;
+        background-color: #000;
+        opacity: .9;
+    }
+
+    #menuToggle:checked+#cabecalhoParteDeBaixo .container {
+        /*layout interno vertical/estilização interna do nav quando aberto*/
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /*BOTÕES CATEGORIAS NO MAIN*/
+
+    #botoesCategoriasCorpo { /*alinhando à esquerda para ver o primeiro botão na barra de rolagem*/
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (min-width: 820px) and (max-width: 829px) { /*margem esquerda no ipad air*/
+
+    /*BOTÕES CATEGORIAS NO MAIN*/
+
+    #botoesCategoriasCorpo {
+        margin-left: .3rem;
+    }
+}
+
+@media (min-width: 829px) { /*de 829px de largura para cima*/
+
+    /*BOTÕES CATEGORIAS NO MAIN*/
+
+    #botoesCategoriasCorpo>.col { /*aumentando a largura dos botões a medida que a tela cresce*/
+        flex: 1 1 auto;
+    }
 }
