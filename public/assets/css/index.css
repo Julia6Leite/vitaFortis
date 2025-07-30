@@ -8,13 +8,13 @@ rgba(170, 142, 0, 0.8) dourado;
 linear-gradient(180deg, #810202, #000000) cabeçalho vinho e preto;
 linear-gradient(180deg, #dd2424, #131313) botão quando passa o mouse - vermelho e quase preto
 #eeece7 off white
+rgba(158, 136, 25, 0.8) cor do botão "comprar" nos produtos em oferta
 
 */
 
 /*CORPO*/
 
-body {
-    /*cor de fundo*/
+body { /*cor de fundo*/
     background-color: #eeece7;
     overflow-x: hidden; /*remove a barra de rolar embaixo*/
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -25,117 +25,98 @@ body {
 /*CABEÇALHO PARTE DE CIMA*/
 
 header { /*fixa o cabeçalho mesmo ao rolar a tela*/
-    position: sticky; 
+    position: sticky;
     top: 0;
     z-index: 1000;
 }
 
-#cabecalhoParteDeCima {
-    /*parte de cima do cabeçalho*/
+#cabecalhoParteDeCima { /*parte de cima do cabeçalho*/
     background: linear-gradient(180deg, #810202, #000000);
 }
 
-#logoCabecalho img {
-    /*logo do cabeçalho*/
+#logoCabecalho img {  /*logo do cabeçalho*/
     max-height: 5rem;
     transition: transform 0.3s ease;
 }
 
-#logoCabecalho img:hover {
-    /*logo do cabeçalho quando passa o mouse*/
+#logoCabecalho img:hover { /*logo do cabeçalho quando passa o mouse*/
     transform: scale(1.08);
 }
 
-#barraDePesquisa {
-    /*tamanho da barra de pesquisa*/
+#barraDePesquisa { /*tamanho da barra de pesquisa*/
     width: 50%;
     max-width: 25rem;
 }
 
-#barraDePesquisaToda {
-    /*posição da barra de pesquisa com o botão/lupa*/
+#barraDePesquisaToda { /*posição da barra de pesquisa com o botão/lupa*/
     margin-left: 15%;
     margin-right: 5%;
 }
 
-#botaoLupa {
-    /*parte da lupa na barra de pesquisa*/
+#botaoLupa { /*parte da lupa na barra de pesquisa*/
     background-color: rgba(253, 209, 1, 0.8);
 }
 
-#botaoLupa:hover {
-    /*parte da lupa na barra de pesquisa quando passa o mouse*/
+#botaoLupa:hover { /*parte da lupa na barra de pesquisa quando passa o mouse*/
     background-color: rgba(170, 142, 0, 0.8);
 }
 
-.input-group .btn:hover {
-    /*lupa da caixa de pesquisa quando passa o mouse em cima*/
+.input-group .btn:hover { /*lupa da caixa de pesquisa quando passa o mouse em cima*/
     color: white;
 }
 
-.input-group .form-control:focus {
-    /*tira a borda azul da caixa de pesquisa quando clica */
+.input-group .form-control:focus { /*lupa da caixa de pesquisa quando passa o mouse em cima*/
     border-color: transparent;
     box-shadow: none;
 }
 
-#iconeLogin {
-    /*ícone de boneco no login*/
+#iconeLogin { /*ícone de boneco no login*/
     color: rgba(253, 209, 1, 1);
     font-size: 1.3rem;
     transition: transform 0.3s ease;
 }
 
-#iconeLogin:hover {
-    /*ícone de boneco no login quando passa o mouse*/
+#iconeLogin:hover { /*ícone de boneco no login quando passa o mouse*/
     color: rgba(253, 209, 1, 1);
     font-size: 1.3rem;
     transform: scale(1.08);
     cursor: pointer;
 }
 
-#loginArea span {
-    /*texto "seja bem-vindo"*/
+#loginArea span { /*texto "seja bem-vindo"*/
     color: rgba(253, 209, 1, 1);
     font-size: .9rem;
 }
 
-#loginArea a {
-    /*texto faça login/cadastre-se*/
+#loginArea a { /*texto faça login/cadastre-se*/
     color: white;
     font-size: .95rem;
     text-decoration: none;
 }
 
-#loginArea a:hover {
-    /*texto faça login/cadastre-se quando passa o mouse*/
+#loginArea a:hover { /*texto faça login/cadastre-se quando passa o mouse*/
     text-decoration: underline;
 }
 
-#loginArea .d-flex.flex-column {
-    /*centraliza as duas frases do login*/
+#loginArea .d-flex.flex-column { /*centraliza as duas frases do login*/
     text-align: center;
 }
 
-#carrinhoArea {
-    /*carrinho de compras*/
+#carrinhoArea { /*carrinho de compras*/
     color: rgba(253, 209, 1, 1);
 }
 
-#carrinhoArea:hover {
-    /*carrinho de compras*/
+#carrinhoArea:hover { /*carrinho de compras*/
     cursor: pointer;
 }
 
-#areaLoginECarrinho {
-    /*distância da área do login e do carrinho da margem direita */
+#areaLoginECarrinho { /*distância da área do login e do carrinho da margem direita */
     margin-right: 3.5rem;
 }
 
 /*CABEÇALHO PARTE DE BAIXO*/
 
-#cabecalhoParteDeBaixo {
-    /*parte de baixo do cabeçalho (transparente)*/
+#cabecalhoParteDeBaixo { /*parte de baixo do cabeçalho (transparente)*/
     background-color: #000000;
     opacity: 90%;
     position: absolute;
@@ -144,31 +125,26 @@ header { /*fixa o cabeçalho mesmo ao rolar a tela*/
     font-weight: 600;
 }
 
-.nav-link.text-uppercase.mx-3 {
-    /*opções do menu*/
+.nav-link.text-uppercase.mx-3 { /*opções do menu*/
     color: rgba(253, 209, 1, 1);
     font-size: .9rem;
     transition: transform 0.3s ease;
 }
 
-.nav-link.text-uppercase.mx-3:hover {
-    /*opções do menu quando passa o mouse*/
+.nav-link.text-uppercase.mx-3:hover { /*opções do menu quando passa o mouse*/
     transform: scale(1.1);
 }
 
-#opcaoCategorias {
-    /*opção "categorias"*/
+#opcaoCategorias { /*opção "categorias"*/
     color: white;
 }
 
-#fundoCategorias {
-    /*background da opção "categorias"*/
+#fundoCategorias { /*background da opção "categorias"*/
     background-color: rgba(253, 209, 1, 0.8);
     border-radius: .2rem;
 }
 
-#menuIcon {
-    /*esconde o ícone hambúrger em telas grandes*/
+#menuIcon { /*esconde o ícone hambúrger em telas grandes*/
     display: none;
 }
 
@@ -176,23 +152,20 @@ header { /*fixa o cabeçalho mesmo ao rolar a tela*/
 
 /*CARROSSEL/CLUBE FIDELIDADE*/
 
-#carrossel img {
-    /*altura da imagem do carrossel*/
+#carrossel img { /*altura da imagem do carrossel*/
     height: 80vh;
 }
 
 /*AS CATEGORIAS EM BOTÕES QUE APARECEM NO MAIN*/
 
-h1 {
-    /*título o que você procura?*/
+h1 { /*título o que você procura? / todos os títulos do corpo pretos sem nenhuma outra formatação*/
     padding: 1rem 0rem 0rem 1rem;
     color: black;
     font-size: 1.8rem;
     font-weight: 650;
 }
 
-#botoesCategoriasCorpo {
-    /*os botões categorias como um todo*/
+#botoesCategoriasCorpo { /*os botões categorias como um todo*/
     overflow-x: auto;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
@@ -200,82 +173,227 @@ h1 {
     flex-wrap: nowrap;
 }
 
-#botoesCategoriasCorpo>.col {
-    /*largura auto de cada botão*/
+#botoesCategoriasCorpo>.col { /*largura auto de cada botão*/
     width: auto;
 }
 
-.btn.categorias {
-    /*os botões categorias individuais, mas pegando todos*/
+.btn.categoriasCorpo { /*os botões categorias individuais, mas pegando todos*/
     background-color: rgba(145, 121, 2, 0.8);
     color: rgb(255, 255, 255);
     border: none;
     font-weight: 700;
     transition: transform 0.3s ease;
-    box-shadow: .3rem .4rem .6rem rgb(0, 0, 0);
+    box-shadow: .3rem .4rem .6rem rgb(53, 53, 53);
     white-space: nowrap;
 }
 
-.btn.categorias:hover {
-    /*os botões categorias individuais, mas pegando todos, quando passa o mouse*/
+.btn.categoriasCorpo:hover { /*os botões categorias individuais, mas pegando todos, quando passa o mouse*/
     background-color: rgb(145, 121, 2);
     transform: scale(1.02);
 }
 
-.btn.categorias:focus {
-    /*mantém a palavra branca ao clicar no botão*/
+.btn.categoriasCorpo:focus { /*mantém a palavra branca ao clicar no botão*/
     color: white;
 }
 
 /*BARRA DE ROLAR DOS BOTÕES CATEGORIAS NO MAIN*/
 
-#botoesCategoriasCorpo::-webkit-scrollbar {
-    /*necessário para conseguir editar a estética da barra de rolar*/
+#botoesCategoriasCorpo::-webkit-scrollbar { /*necessário para conseguir editar a estética da barra de rolar*/
     height: .4rem;
 }
 
-#botoesCategoriasCorpo::-webkit-scrollbar-track {
-    /*cor do trilho*/
+#botoesCategoriasCorpo::-webkit-scrollbar-track { /*cor do trilho*/
     background: transparent;
 }
 
-#botoesCategoriasCorpo::-webkit-scrollbar-thumb {
-    /*estética do pegador*/
+#botoesCategoriasCorpo::-webkit-scrollbar-thumb { /*estética do pegador*/
     background-color: rgba(192, 191, 191, 0.8);
     border-radius: .3rem;
     max-width: .5rem;
     cursor: pointer;
 }
 
-#botoesCategoriasCorpo::-webkit-scrollbar-thumb:hover {
-    /*ao passar o mouse*/
+#botoesCategoriasCorpo::-webkit-scrollbar-thumb:hover { /*ao passar o mouse*/
     background-color: rgb(119, 119, 119);
 }
 
 /*PRODUTOS EM OFERTAS*/
 
-h2 {
-    /*título "ofertas"*/
+/*TÍTULO*/
+
+h2 { /*título "ofertas" / todos os títulos no corpo com o fundo em degradê vinho e preto*/
     text-align: center;
     background: linear-gradient(180deg, #810202, #000000);
     color: white;
     border-radius: .3rem;
     font-weight: 700;
     box-shadow: .3rem .4rem .6rem rgb(0, 0, 0);
-    margin-top: 1.5rem;
-    margin-bottom: 5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
 }
 
-#fundoOfertas {
-    /*centralizando o background do título "ofertas"*/
+#fundoOfertas { /*centralizando o background do título "ofertas"*/
     display: flex;
     justify-content: center;
 }
 
-#fundoOfertas h2 {
-    /*definindo o tamanho do background do título "ofertas"*/
-    width: 93%;
+#fundoOfertas h2 { /*definindo o tamanho do background do título "ofertas"*/
+    width: 95%;
 }
+
+/*PRODUTOS*/
+
+.card.h-100.ofertas { /*o card em si do produto*/
+    box-shadow: .1rem .1rem .6rem rgb(100, 100, 100);
+    cursor: pointer;
+}
+
+.card-img-top.ofertas { /*imagem do produto em promoção*/
+    max-width: 10rem;
+    margin: 1rem auto 0rem auto;
+    transition: transform 0.5s ease;
+}
+
+.card-img-top.ofertas:hover { /*imagem do produto em promoção quando passa o mouse*/
+    transform: scale(1.08);
+}
+
+.card-text.flex-grow-1.ofertas { /*descrição/preço do produto em ofertas*/
+    text-align: center;
+}
+
+.btn.comprarOfertas { /*botão "comprar" nos produtos em oferta*/
+    background-color: rgba(158, 136, 25, 0.8);
+    color: rgb(255, 255, 255);
+    border: none;
+    font-weight: 650;
+    transition: transform 0.3s ease;
+    white-space: nowrap;
+}
+
+.btn.comprarOfertas:hover { /*os botões categorias individuais, mas pegando todos, quando passa o mouse*/
+    background-color: rgb(145, 121, 2);
+    transform: scale(1.02);
+}
+
+.btn.comprarOfertas:focus { /*mantém a palavra branca ao clicar no botão*/
+    color: white;
+}
+
+/*POR CATEGORIAS COM IMAGENS*/
+
+.categoriesImagens-section { /*parte preta dos cards das categorias com imagens*/
+    margin: 1rem 1rem 0.5rem 1rem;
+    padding: 1rem;
+    background-color: #19191b;
+    border-radius: 0.5rem;
+}
+
+.categoriesImagens-grid { /*deixa tudo em uma linha só com barra de rolar/disposição dos cards*/
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 0.5rem;
+}
+
+.categoryImagens-card { /*parte vinho degradê dos cards das categorias com imagens*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    background: radial-gradient(circle farthest-corner at center,#ad3939 20%, #831b1b 60%, #19191b 100%);
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.categoryImagens-card:hover { /*parte vinho degradê dos cards das categorias com imagens quando passa o mouse*/
+    transform: scale(1.03);
+    background: rgba(173, 57, 57, 0.39);
+}
+
+.categoryImagens-img { /*imagem dos cards/foto dos produtos*/
+    max-height: 10rem;
+    width: auto;
+    object-fit: contain;
+}
+
+.categoryImagens-btn { /*botão/nome dos produtos*/
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.7rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.categoriesImagens-grid::-webkit-scrollbar { /*necessário para conseguir editar a estética da barra de rolar dos cards com imagens*/
+    height: 0.3rem;
+}
+
+.categoriesImagens-grid::-webkit-scrollbar-thumb { /*estética do pegador dos cards com imagens*/
+    background-color: rgba(192, 191, 191, 0.8);
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+
+
+/*OS PRODUTOS MAIS VENDIDOS*/
+
+.card.h-100.maisVendidos { /*o card em si do produto*/
+    box-shadow: .1rem .1rem .6rem rgb(100, 100, 100);
+    cursor: pointer;
+    background-color: rgba(158, 136, 25, 0.61);
+}
+
+.maisVendidos { /*largura dos cards, excluir caso necessário*/
+    width: auto;
+    max-width: 20rem;
+}
+
+.card-img-top.maisVendidos { /*imagem do produto mais vendidos*/
+    max-width: 10rem;
+    margin: 1rem auto 0rem auto;
+    transition: transform 0.5s ease;
+}
+
+.card-img-top.maisVendidos:hover { /*imagem do produto mais vendidos quando passa o mouse*/
+    transform: scale(1.08);
+}
+
+.card-title.maisVendidos { /*nome do produto*/
+    color: #ffffff;
+    font-weight: 650;
+}
+
+.descricaoMaisVendidos { /*descrição do produto*/
+    text-align: justify;
+    font-size: .8rem;
+    color: white;
+    font-weight: 550;
+}
+
+.btn.euQueroMaisVendidos { /*botão "eu quero" nos produtos mais vendidos*/
+    background-color: rgb(145, 121, 2);
+    color: rgb(255, 255, 255);
+    border: none;
+    font-weight: 650;
+    transition: transform 0.3s ease;
+    white-space: nowrap;
+}
+
+.btn.euQueroMaisVendidos:hover { /*os botões eu quero individuais, mas pegando todos, quando passa o mouse*/
+    background-color: rgb(100, 85, 11);
+    transform: scale(1.02);
+}
+
+.btn.euQueroMaisVendidos:focus { /*mantém a palavra branca ao clicar no botão*/
+    color: white;
+}
+
+
+
+
 
 
 
@@ -291,64 +409,70 @@ h2 {
 
 
 /*RESPONSIVIDADE*/
-@media (max-width: 768px) { /*de 768px de largura para baixo = tablet*/
+@media (min-width: 914px) { /*em telas maiores que 914px de largura*/
+
+    /*CATEGORIAS COM IMAGENS*/
+    .categoriesImagens-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /*transforma em 2 colunas*/
+        gap: 1rem;
+        overflow: visible;
+    }
+}
+
+@media (min-width: 1311px) { /*em telas maiores que 1311px de largura*/
+
+    /*CATEGORIAS COM IMAGENS*/
+    .categoriesImagens-grid {
+        grid-template-columns: repeat(3, 1fr); /*transforma em 3 colunas*/
+    }
+}
+
+@media (max-width: 768px) { /*em telas menores que 768px de largura*/
 
     /*CABEÇALHO PARTE DE CIMA*/
-
-    #cabecalhoParteDeCima {
-        /*parte de cima do cabeçalho*/
+    #cabecalhoParteDeCima { /*parte de cima do cabeçalho*/
         flex-wrap: wrap;
         justify-content: space-between;
     }
 
-    #logoCabecalho {
-        /*logo*/
-        margin-top: .2rem;
+    #logoCabecalho { /*logo*/
+        margin-top: 0.2rem;
     }
 
-    #areaLoginECarrinho {
-        /*área de login e carrinho*/
-        margin-right: .8rem;
+    #areaLoginECarrinho { /*área de login e carrinho*/
+        margin-right: 0.8rem;
     }
 
-    #loginArea span {
-        /*texto "seja bem-vindo"*/
-        font-size: .8rem;
+    #loginArea span { /*texto "seja bem-vindo"*/
+        font-size: 0.8rem;
     }
 
-    #loginArea a {
-        /*texto faça login/cadastre-se*/
-        font-size: .85rem;
+    #loginArea a { /*texto faça login/cadastre-se*/
+        font-size: 0.85rem;
     }
 
-    #cabecalhoParteDeCima>.flex-grow-1 {
-        /*joga a barra de pesquisa para baixo + margens*/
+    #cabecalhoParteDeCima>.flex-grow-1 { /*joga a barra de pesquisa para baixo + margens*/
         order: 2;
         flex: 0 0 100%;
         margin: 1.5rem 0 3rem 0;
     }
 
-    #barraDePesquisaToda {
-        /* remove as margens internas da barra de pesquisa*/
-        margin-left: 0;
-        margin-right: 0;
+    #barraDePesquisaToda { /*remove as margens internas da barra de pesquisa*/
+        margin: 0;
     }
 
-    .input-group {
-        /* ajusta a largura da barra de pesquisa*/
+    .input-group { /*ajusta a largura da barra de pesquisa*/
         width: 90%;
         max-width: 25rem;
     }
 
-    /*CABEÇALHO PARTE DEBAIXO*/
-
-    #cabecalhoParteDeBaixo {
-        /*esconde o menu*/
+    /*CABEÇALHO PARTE DE BAIXO*/
+    #cabecalhoParteDeBaixo { /*esconde o menu*/
         display: none;
     }
 
-    #menuIcon {
-        /*exibe o hambúrguer*/
+    #menuIcon { /*exibe o hambúrguer*/
         display: inline-block;
         position: absolute;
         z-index: 30;
@@ -356,8 +480,7 @@ h2 {
         padding: 0.5rem;
     }
 
-    #menuToggle:checked+#cabecalhoParteDeBaixo {
-        /*menu ao clicar no hambúrguer*/
+    #menuToggle:checked+#cabecalhoParteDeBaixo { /*menu ao clicar no hambúrguer*/
         display: block;
         position: absolute;
         top: 100%;
@@ -365,35 +488,31 @@ h2 {
         width: 100%;
         z-index: 20;
         background-color: #000;
-        opacity: .9;
+        opacity: 0.9;
     }
 
-    #menuToggle:checked+#cabecalhoParteDeBaixo .container {
-        /*layout interno vertical/estilização interna do nav quando aberto*/
+    #menuToggle:checked+#cabecalhoParteDeBaixo .container { /*layout interno vertical/estilização interna do nav quando aberto*/
         flex-direction: column;
         align-items: center;
     }
 
-    /*BOTÕES CATEGORIAS NO MAIN*/
-
+    /*BOTÕES AMARELOS DE CATEGORIAS NO CORPO DO SITE*/
     #botoesCategoriasCorpo { /*alinhando à esquerda para ver o primeiro botão na barra de rolagem*/
         justify-content: flex-start;
     }
 }
 
-@media screen and (min-width: 820px) and (max-width: 829px) { /*margem esquerda no ipad air*/
+@media (min-width: 820px) and (max-width: 829px) { /*dimensões do ipad air*/
 
-    /*BOTÕES CATEGORIAS NO MAIN*/
-
-    #botoesCategoriasCorpo {
-        margin-left: .3rem;
+    /*BOTÕES AMARELOS DE CATEGORIAS NO CORPO DO SITE*/
+    #botoesCategoriasCorpo { /*margem esquerda no ipad air*/
+        margin-left: 0.3rem;
     }
 }
 
-@media (min-width: 829px) { /*de 829px de largura para cima*/
+@media (min-width: 829px) { /*em telas maiores que 829px de largura*/
 
-    /*BOTÕES CATEGORIAS NO MAIN*/
-
+    /*BOTÕES AMARELOS DE CATEGORIAS NO CORPO DO SITE*/
     #botoesCategoriasCorpo>.col { /*aumentando a largura dos botões a medida que a tela cresce*/
         flex: 1 1 auto;
     }
