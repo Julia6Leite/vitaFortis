@@ -11,6 +11,8 @@
     <!--bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
     <!--js do bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <!--biblioteca de ícones do bootstrap-->
     <link href="assets/css/index.css" rel="stylesheet"> <!--css-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     <!--biblioteca de ícones-->
@@ -151,7 +153,11 @@
 
                 <!--primeiro produto-->
                 <div class="col">
-                    <div class="card h-100 ofertas">
+                    <div class="card h-100 ofertas position-relative">
+                        <!--botão de favorito-->
+                        <button class="btn btn-light btn-sm position-absolute top-0 end-0 m-2 favorito-btn">
+                            <i class="bi bi-heart"></i>
+                        </button>
                         <!--imagem-->
                         <img src="assets/imagens/imagemExemploProdutosPromocao" class="card-img-top ofertas"
                             alt="Imagem 1 - produto em oferta">
@@ -339,6 +345,10 @@
                     <div class="card h-100 maisVendidos position-relative">
                         <!--posição/número-->
                         <span class="badge-num">1</span>
+                        <!--botão de favorito-->
+                        <button class="btn btn-light btn-sm position-absolute top-0 end-0 m-2 favorito-btn">
+                            <i class="bi bi-heart"></i>
+                        </button>
                         <!--imagem-->
                         <img src="assets/imagens/imagemExemploProdutosPromocao" class="card-img-top maisVendidos"
                             alt="Imagem 1 - produto mais vendido">
@@ -473,10 +483,13 @@
         <div id="cardsOutletFundo">
             <div class="container-fluid py-4 px-5"> <!--primeira linha de produtos-->
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
-
                     <!--primeiro produto-->
                     <div class="col">
-                        <div class="card h-100 produtosOutlet">
+                        <div class="card h-100 produtosOutlet position-relative">
+                            <!--botão de favorito-->
+                            <button class="btn btn-light btn-sm position-absolute top-0 end-0 m-2 favorito-btn">
+                                <i class="bi bi-heart"></i>
+                            </button>
                             <!--imagem-->
                             <img src="assets/imagens/imagemExemploProdutosPromocao" class="card-img-top produtosOutlet"
                                 alt="Imagem 1 - produto em outlet">
@@ -614,6 +627,253 @@
                 </div>
             </div>
         </div>
+
+        <section id="fundoSeuEsporte">
+            <div class="titulo-seu-esporte">
+                <h3>QUAL É A SUA</h3>
+                <h3 id="seuEsporteTituloDois">ATIVIDADE FÍSICA?</h3>
+            </div>
+
+            <div class="categoriesImagens-grid">
+                <div class="categoryImagens-card">
+                    <img src="assets/imagens/corrida" alt="Corrida" class="categoryImagens-img esportes">
+                    <button class="categoryImagens-btn">CORRIDA</button>
+                </div>
+                <div class="categoryImagens-card">
+                    <img src="assets/imagens/futebol" alt="Futebol" class="categoryImagens-img esportes">
+                    <button class="categoryImagens-btn">FUTEBOL</button>
+                </div>
+                <div class="categoryImagens-card">
+                    <img src="assets/imagens/musculacao" alt="Musculação" class="categoryImagens-img esportes">
+                    <button class="categoryImagens-btn">MUSCULAÇÃO</button>
+                </div>
+                <div class="categoryImagens-card">
+                    <img src="assets/imagens/pilates.jpg" alt="Pilates" class="categoryImagens-img esportes">
+                    <button class="categoryImagens-btn">PILATES</button>
+                </div>
+            </div>
+        </section>
+
+        <!--banner whey protein-->
+        <section class="banner-wheyProtein position-relative">
+            <img src="assets/imagens/wheyBanner" class="img-fluid w-100" alt="Banner Whey Protein">
+            <div class="overlay"></div>
+            <div class="container text-center position-absolute top-50 start-50 translate-middle">
+                <h1 class="tituloWhey">WHEY PROTEIN</h1>
+                <p class="subTituloWhey">A força que você precisa na construção e na recuperação dos músculos</p>
+                <div class="d-flex justify-content-center gap-4 itens-whey">
+                    <div class="d-flex align-items-center gap-2">
+                        <i class="bi bi-check-circle-fill text-success"></i>
+                        <span>APROVADO EM TODOS OS LAUDOS DE PROTEÍNA</span>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <i class="bi bi-check-circle-fill text-success"></i>
+                        <span>COMPRE COM CONFIANÇA</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--cards de whey protein-->
+        <div class="container-fluid py-4 px-5"> <!--primeira linha de produtos-->
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
+
+                <!--primeiro produto-->
+                <div class="col">
+                    <div class="card h-100 produtosWheyProtein position-relative">
+                        <!--botão de favorito-->
+                        <button class="btn btn-light btn-sm position-absolute top-0 end-0 m-2 favorito-btn">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                        <!--imagem-->
+                        <img src="assets/imagens/wheyProtein" class="card-img-top produtosWheyProtein"
+                            alt="Imagem 1 - primeiro Whey Protein">
+                        <div class="card-body d-flex flex-column">
+                            <!--nome-->
+                            <h5 class="card-title produtosWheyProtein">Whey Protein Chocolate (250g)</h5>
+                            <div class="produtosWheyProtein mb-3">
+                                <!--preço-->
+                                <div class="text-muted small mb-1">
+                                    De: <del>R$ 99,52</del>
+                                </div>
+                                <div class="d-flex flex-wrap align-items-baseline">
+                                    <span>Por:</span>
+                                    <span class="fs-4 fw-bold ms-2">
+                                        R$ 89,57
+                                    </span>
+                                    <small class="fw-normal text-secondary ms-2">
+                                        no PIX
+                                    </small>
+                                </div>
+                                <div class="small text-secondary">
+                                    ou R$ 95,52 em até 1× de R$ 95,52
+                                </div>
+                            </div>
+                            <!--botão "comprar"-->
+                            <a href="#" class="btn comprarProdutosWheyProtein">COMPRAR</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--segundo produto-->
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Card title 2</h5>
+                            <p class="card-text flex-grow-1">
+                                Some quick example text to build on the card title…
+                            </p>
+                            <a href="#" class="btn btn-primary mt-auto">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--terceiro produto-->
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Card title 3</h5>
+                            <p class="card-text flex-grow-1">
+                                Some quick example text to build on the card title…
+                            </p>
+                            <a href="#" class="btn btn-primary mt-auto">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--quarto produto-->
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Card title 4</h5>
+                            <p class="card-text flex-grow-1">
+                                Some quick example text to build on the card title…
+                            </p>
+                            <a href="#" class="btn btn-primary mt-auto">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container-fluid py-4 px-5"> <!--segunda linha-->
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
+
+                <!--primeiro produto-->
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Card title 1</h5>
+                            <p class="card-text flex-grow-1">
+                                Some quick example text to build on the card title…
+                            </p>
+                            <a href="#" class="btn btn-primary mt-auto">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--segundo produto-->
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Card title 2</h5>
+                            <p class="card-text flex-grow-1">
+                                Some quick example text to build on the card title…
+                            </p>
+                            <a href="#" class="btn btn-primary mt-auto">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--terceiro produto-->
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Card title 3</h5>
+                            <p class="card-text flex-grow-1">
+                                Some quick example text to build on the card title…
+                            </p>
+                            <a href="#" class="btn btn-primary mt-auto">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--quarto produto-->
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Card title 4</h5>
+                            <p class="card-text flex-grow-1">
+                                Some quick example text to build on the card title…
+                            </p>
+                            <a href="#" class="btn btn-primary mt-auto">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!--tela com quadrados/opções filtráveis-->
+        <section id="fundoTelaComFiltros">
+            <div class="filtros-grid">
+                <div id="itemFiltravelProteina" class="filtro-card"><span>PROTEÍNAS</span></div>
+                <div id="itemFiltravelVegano" class="filtro-card"><span>VEGANOS</span></div>
+                <div id="itemFiltravelVegetariano" class="filtro-card"><span>VEGETARIANOS</span></div>
+                <div id="itemFiltravelTermogenico" class="filtro-card"><span>TERMOGÊNICOS</span></div>
+                <div id="itemFiltravelVitamina" class="filtro-card"><span>VITAMINAS</span></div>
+                <div id="itemFiltravelLinhaClinical" class="filtro-card"><span>LINHA CLINICAL</span></div>
+                <div id="itemFiltravelAminoacido" class="filtro-card"><span>AMINOÁCIDOS</span></div>
+                <div id="itemFiltravelCarboidrato" class="filtro-card"><span>CARBOIDRATOS</span></div>
+            </div>
+        </section>
+
+        <!--cards verticais de produtos-->
+        <div class="container my-4">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm cardsVerticais">
+                        <img src="assets/imagens/proteina_telafiltraveis.jpg" class="card-img-top cardsVerticais"
+                            alt="...">
+                        <div class="card-body cardsVerticais">
+                            <h5 class="card-title cardsVerticais">Título 1</h5>
+                            <p class="card-text cardsVerticais">Descrição breve do card 1.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm cardsVerticais">
+                        <img src="assets/imagens/proteina_telafiltraveis.jpg" class="card-img-top cardsVerticais"
+                            alt="...">
+                        <div class="card-body cardsVerticais">
+                            <h5 class="card-title cardsVerticais">Título 1</h5>
+                            <p class="card-text cardsVerticais">Descrição breve do card 1.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm cardsVerticais">
+                        <img src="assets/imagens/proteina_telafiltraveis.jpg" class="card-img-top cardsVerticais"
+                            alt="...">
+                        <div class="card-body cardsVerticais">
+                            <h5 class="card-title cardsVerticais">Título 1</h5>
+                            <p class="card-text cardsVerticais">Descrição breve do card 1.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </main>
 
     <script src="assets/scripts/index.js"></script> <!--js-->

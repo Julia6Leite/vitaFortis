@@ -487,7 +487,7 @@ h2 { /*título "ofertas" / todos os títulos no corpo com o fundo em degradê vi
 }
 
 #cardsOutletFundo.filtrado { /*fundo colorido quando eu clico em um sub-botão*/
-    background-color: #810202;
+    background-color: rgb(145, 121, 2);
     margin-top: .5rem;
 }
 
@@ -507,6 +507,242 @@ h2 { /*título "ofertas" / todos os títulos no corpo com o fundo em degradê vi
     border-style: solid;
     border-color: rgb(145, 121, 2) transparent;
 }
+
+/*PARTE QUAL É O SEU ESPORTE*/
+
+#fundoSeuEsporte { /*fundo escuro da parte qual é o seu esporte*/
+    background-color: black;
+    margin-top: 1rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    /*gap: 2rem;*/
+}
+
+.titulo-seu-esporte { /*distância entre o título e os cards*/
+    flex: 1;
+}
+
+.titulo-seu-esporte h3 { /*título qual é o seu esporte?*/
+    color: rgb(255, 255, 255);
+    font-size: 3.5rem;
+    font-weight: 650;
+    padding-left: 2rem;
+}
+
+#seuEsporteTituloDois { /*padding esquerdo do título de baixo*/
+    padding-left: 2rem;
+}
+
+.categoriesImagens-grid { /*posição dos cards*/
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) !important; 
+    gap: 1rem;
+    padding-right: 2rem;
+}
+
+.categoryImagens-card { /*posição das imagens dos cards*/
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.esportes { /*imagens dos esportes*/
+    border-radius: .6rem;
+    opacity: 50%;
+    transition: opacity 0.3s ease;
+}
+
+.esportes:hover { /*hover nas imagens*/
+    opacity: 100%;
+}
+
+/*BANNER WHEY PROTEIN*/
+
+.banner-wheyProtein { /*banner em si*/
+    max-height: 18rem;
+    overflow: hidden;
+    margin-top: 1rem;
+}
+
+.tituloWhey{ /*título whey protein*/
+    color: rgb(255, 255, 255);
+    font-size: 3.5rem;
+    font-weight: 650;
+}
+
+.subTituloWhey{ /*frase embaixo do título*/
+    color: white;
+}
+
+.itens-whey{ /*frases de qualidade com os checks em verde*/
+   color: #ffffff;
+   margin-top: 4rem;
+}
+  
+.banner-wheyProtein img { /*imagem do banner*/
+    height: 100%;
+}
+  
+.banner-wheyProtein .overlay { /*camada escura sob a imagem*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5); 
+}
+
+/*CARDS DE WHEY PROTEIN*/
+
+.card.h-100.produtosWheyProtein { /*o card em si do produto whey protein*/
+    box-shadow: .1rem .1rem .6rem rgb(100, 100, 100);
+    cursor: pointer;
+}
+
+.favorito-btn { /*tirando o fundo cinza do botão de coração/favorito*/
+    background-color: transparent;
+    border: none;
+}
+
+.favorito-btn:hover { /*tirando o fundo cinza do botão de coração/favorito quando passa o mouse*/
+    background-color: transparent;
+    border: none;
+}
+
+.favorito-btn i { /*coração em si*/
+    font-size: 1.1rem;
+    color: #810202;
+}
+
+.favorito-btn:hover i::before { /*coração preenchido ao passar o mouse*/
+    content: "\f415"; 
+}
+
+.card-img-top.produtosWheyProtein { /*imagem do produto whey protein*/
+    max-width: 10rem;
+    margin: 1rem auto 0rem auto;
+    transition: transform 0.5s ease;
+}
+
+.card-img-top.produtosWheyProtein:hover { /*imagem quando passa o mouse*/
+    transform: scale(1.08);
+}
+
+.card-text.flex-grow-1.produtosWheyProtein { /*descrição/preço do whey protein*/
+    text-align: center;
+}
+
+.btn.comprarProdutosWheyProtein { /*botão "comprar" nos produtos whey protein*/
+    background-color: rgba(158, 136, 25, 0.8);
+    color: rgb(255, 255, 255);
+    border: none;
+    font-weight: 650;
+    transition: transform 0.3s ease;
+    white-space: nowrap;
+}
+
+.btn.comprarProdutosWheyProtein:hover { /*os botões de comprar, mas pegando todos, quando passa o mouse*/
+    background-color: rgb(145, 121, 2);
+    transform: scale(1.02);
+}
+
+.btn.comprarProdutosWheyProtein:focus { /*mantém a palavra branca ao clicar no botão*/
+    color: white;
+}
+
+/*TELA COM OPÇÕES/QUADRADOS FILTRÁVEIS*/
+
+#fundoTelaComFiltros{ /*fundo preto*/
+    background:#000; 
+    padding:1rem;
+}
+
+.filtros-grid{ /*estrutura/tamanho/posição dos blocos amarelos*/
+    display:grid;
+    grid-template-columns:repeat(4,1fr); 
+    gap: 1.5rem; 
+}
+
+.filtro-card{ /*estética dos blocos amarelos*/
+  background:#f2c100;
+  border-radius:.3rem;
+  min-height:12rem;
+  display:flex; 
+  align-items:center; 
+  justify-content:center;
+  cursor:pointer;
+  transition: transform .20s ease, filter .20s ease;
+}
+
+.filtro-card span{ /*estética da palavra dentro de cada bloco amarelo*/
+  z-index:2;
+  font-weight:700; 
+  font-size:1.2rem; 
+  color:#000;                      
+}
+
+.filtro-card::after{ /*estética da imagem de fundo*/
+  content:"";
+  position:absolute; 
+  inset:0;
+  background-image: var(--bg);    
+  background-size:cover; 
+  background-position:center; 
+  background-repeat:no-repeat;                   
+}
+
+.filtro-card::before{ /*camada para escurecer a imagem*/
+  content:"";
+  position:absolute; 
+  inset:0;
+  background:rgba(0,0,0,.6);                
+  z-index:1;                      
+}
+
+.filtro-card:hover{ /*mudanças para cima ao passar o mouse*/
+    transform:translateY(-2px); 
+    filter:brightness(1.05); 
+}
+
+.filtro-card:hover span{ /*mudança de cor da palavra*/
+    color:#fff; 
+}        
+
+/*imagens de fundo*/
+#itemFiltravelProteina      { --bg: url(../imagens/proteina_telafiltraveis.jpg); }
+#itemFiltravelVegano        { --bg: url(../imagens/vegano_telafiltraveis); }
+#itemFiltravelVegetariano   { --bg: url(../imagens/vegetariano_telafiltraveis); }
+#itemFiltravelTermogenico   { --bg: url(../imagens/termogenico_telafiltraveis); }
+#itemFiltravelVitamina      { --bg: url(../imagens/vitamina_telafiltraveis); }
+#itemFiltravelLinhaClinical { --bg: url(../imagens/clinical_telafiltraveis); }
+#itemFiltravelAminoacido    { --bg: url(../imagens/aminoacidos_telafiltraveis); }
+#itemFiltravelCarboidrato   { --bg: url(../imagens/carboidrato_telafiltraveis); }
+
+.cardsVerticais{
+    max-width: 20rem;
+    min-height: 10rem;
+}
+  
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+  
+  
+
+
+
+
 
 
 
@@ -532,7 +768,7 @@ h2 { /*título "ofertas" / todos os títulos no corpo com o fundo em degradê vi
     }
 }
 
-@media (max-width: 767px) { /*em telas menores que 767px de largura*/
+@media (max-width: 768px) { /*em telas menores que 767px de largura (referência: ipad mini)*/
 
     /*CABEÇALHO PARTE DE CIMA*/
     #cabecalhoParteDeCima { /*parte de cima do cabeçalho*/
@@ -606,7 +842,31 @@ h2 { /*título "ofertas" / todos os títulos no corpo com o fundo em degradê vi
     }
 
     /*SUB-BOTÕES DE MODA E ACESSÓRIOS*/
+
+    /*ESPORTES*/
+
+    .titulo-seu-esporte{ /*título qual é sua atividade física*/
+        display: flex;
+        gap: .5rem;
+        margin-bottom: 1rem;       
+    }
+
+    .titulo-seu-esporte h3{ /*título qual é sua atividade física*/
+        white-space: nowrap;
+        padding-left: 0 !important;
+        font-size: 2rem;                          
+    }
+
+    #fundoSeuEsporte { /*fundo preto*/
+        flex-direction: column; 
+        align-items: center;    
+        text-align: center;     
+    }
     
+    .categoriesImagens-grid { /*os cards*/
+        width: 100%; 
+    }
+
 }
 
 @media (min-width: 820px) and (max-width: 829px) { /*dimensões do ipad air*/
@@ -624,3 +884,19 @@ h2 { /*título "ofertas" / todos os títulos no corpo com o fundo em degradê vi
         flex: 1 1 auto;
     }
 }
+
+
+
+/* responsividade da TELA COM OPÇÕES/QUADRADOS FILTRÁVEIS */
+/* @media (max-width: 992px){
+    .filtros-grid{ grid-template-columns: repeat(3, 1fr); }
+} 
+
+@media (max-width: 768px){
+    .filtros-grid{ grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px){
+    .filtro-card{ height: 96px; }
+    .filtro-card span{ font-size:.9rem; }
+} */
