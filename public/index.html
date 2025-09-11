@@ -88,6 +88,10 @@
     <main>
         <!--início do corpo do site-->
 
+        <button class="btn-zap"> <!--botão whatsapp-->
+            <i class="fab fa-whatsapp fa-2x"></i>
+        </button>
+
         <!--carrossel clube fidelidade-->
         <div id="carrossel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -883,62 +887,89 @@
             </div>
         </section>
 
+
         <!--rodapé-->
-        <footer class="text-white pt-1">
-            <div class="container-fluid">
-                <div class="row align-items-center">
+        <footer class="text-white pt-3 pb-1">
+            <div class="container-fluid px-4">
+                <div class="row">
 
                     <!-- logo -->
-                    <div class="col-md-2 d-flex justify-content-start">
-                        <img src="assets/imagens/logo_vitafortisBarraPesquisaSemFundo.png" alt="Logo"
-                            class="logo-footer">
+                    <div class="col-md-2 mb-1">
+                        <img src="assets/imagens/logo_vitafortisBarraPesquisaSemFundo.png" alt="Logo rodapé"
+                            class="img-fluid mb-3 logo-footer">
                     </div>
 
-                    <!-- coluna 1 -->
-                    <div class="col-md-9 d-flex justify-content-center">
-                        <div class="d-flex justify-content-evenly w-100">
+                    <!-- fale conosco -->
+                    <div class="col-md-2 mb-4">
+                        <h6 class="fw-bold mb-3">Fale Conosco</h6>
+                        <p class="mb-1"><strong>SAC:</strong> (XX) 9XXXX-XXXX</p>
+                        <p class="mb-1 text-nowrap">Segunda à Quinta<br>8h às 18h</p>
+                        <p class="mb-1"><strong>E-mail:</strong> xxxxx@gmail.com</p>
+                    </div>
 
-                            <div class="text-center">
-                                <p class="mb-1">COMO COMPRAR</p>
-                                <p class="mb-1">ENTREGAS</p>
-                                <p class="mb-1">PAGAMENTOS</p>
-                                <p class="mb-1">TROCAS E DEVOLUÇÕES</p>
-                                <p class="mb-0">SEJA NOSSO PARCEIRO</p>
+                    <!-- seja parceiro -->
+                    <div class="col-md-2 mb-4">
+                        <h6 class="fw-bold mb-3">Seja nosso parceiro</h6>
+                        <p class="mb-1"><a href="#" class="text-white text-decoration-none">Quero ser
+                                <strong>afiliado</strong></a></p>
+                        <p class="mb-1"><a href="#" class="text-white text-decoration-none">Quero fazer parte da
+                                <strong>equipe</strong></a></p>
+                    </div>
+
+                    <!-- institucional -->
+                    <div class="col-md-2 mb-4">
+                        <h6 class="fw-bold mb-3">Institucional</h6>
+                        <p class="mb-1"><a href="#" class="text-white text-decoration-none">Programa Fidelidade</a></p>
+                        <p class="mb-1"><a href="#" class="text-white text-decoration-none">Sobre a Vita Fortis</a></p>
+                        <p class="mb-1"><a href="#" class="text-white text-decoration-none">Políticas da empresa</a></p>
+                        <p class="mb-1"><a href="#" class="text-white text-decoration-none">Endereços</a></p>
+                    </div>
+
+                    <!-- redes sociais -->
+                    <div class="col-md-2 mb-4">
+                        <h6 class="fw-bold mb-3 text-nowrap">Nos acompanhe nas redes sociais</h6>
+                        <a href="#" class="text-white me-3 redesSociaisRodape"><i class="fab fa-whatsapp fa-lg"></i></a>
+                        <a href="#" class="text-white me-3 redesSociaisRodape"><i
+                                class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#" class="text-white me-3 "><i class="fab fa-facebook fa-lg"></i></a>
+                    </div>
+
+                    <!-- linha clara -->
+                    <hr class="bg-light">
+
+                    <!-- pagamento -->
+                    <div class="row">
+                        <div class="col-12">
+                            <h6 class="fw-bold text-center mb-4">Formas de pagamento</h6>
+                            <div
+                                class="payments d-flex flex-wrap justify-content-center align-items-center gap-3 gap-md-4">
+                                <span class="bolaFundoPagamento"><img src="assets/imagens/exemplo_pagamento"></span>
+                                <span class="bolaFundoPagamento"><img
+                                        src="assets/imagens/payments/mastercard.svg"></span>
+                                <span class="bolaFundoPagamento"><img
+                                        src="assets/imagens/payments/hipercard.svg"></span>
+                                <span class="bolaFundoPagamento"><img src="assets/imagens/payments/elo.svg"></span>
+                                <span class="bolaFundoPagamento"><img src="assets/imagens/payments/boleto.svg"></span>
+                                <span class="bolaFundoPagamento"><img src="assets/imagens/payments/bb.svg"></span>
+                                <span class="bolaFundoPagamento"><img src="assets/imagens/payments/caixa.svg"></span>
+                                <span class="bolaFundoPagamento"><img src="assets/imagens/payments/paypal.svg"></span>
+                                <span class="bolaFundoPagamento"><img src="assets/imagens/payments/pix.svg"></span>
                             </div>
-
-                            <!-- coluna 2 -->
-                            <div class="text-center">
-                                <p class="mb-1">SOBRE</p>
-                                <p class="mb-1">PRODUTOS</p>
-                                <p class="mb-1">AFILIADOS</p>
-                                <p class="mb-0">POLÍTICA DE PRIVACIDADE</p>
-                            </div>
-
-                            <!-- coluna 3 - redes sociais -->
-                            <div class="text-center">
-                                <div id="redesSociaisRodape" class="mb-1">NOS ACOMPANHE NAS REDES SOCIAIS</div>
-                                <a href="#" class="text-white me-2"><i class="fab fa-whatsapp"></i></a>
-                                <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
-                                <a href="#" class="text-white"><i class="fab fa-facebook"></i></a>
-                            </div>
-
-                            <!-- coluna 4 - contatos -->
-                            <div class="text-center faleConosco">
-                                <div id="faleConoscoRodape" class="mb-1">FALE CONOSCO</div>
-                                <a href="#" class="mb-1 contatoRodape d-block">XXXXX@gmail.com.br</a>
-                                <a href="#" class="mb-1 contatoRodape d-block">(XX) 9XXXX-XXXX</a>
-                            </div>
-
                         </div>
                     </div>
 
-                    <!-- copyright -->
-                    <hr class="bg-light my-1">
-                    <div id="copy" class="text-center mb-1">
-                        VITA FORTIS 2025. &copy; TODOS OS DIREITOS RESERVADOS.
-                    </div>
                 </div>
 
+                <!-- linha clara -->
+                <hr class="bg-light">
+
+                <!-- copyright -->
+                <div class="copy">
+                    <p class="small text-center">Vita Fortis - CNPJ: 00.000.000/0000-00 - Endereço: xxxxxxxx &copy;
+                        Todos os direitos reservados
+                </div>
+
+            </div>
         </footer>
 
     </main>

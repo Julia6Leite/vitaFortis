@@ -14,9 +14,11 @@ rgba(158, 136, 25, 0.8) cor do botão "comprar" nos produtos em oferta
 
 /*CORPO*/
 
-body { /*cor de fundo*/
+body {
+    /*cor de fundo*/
     background-color: #eeece7;
-    overflow-x: hidden; /*remove a barra de rolar embaixo*/
+    overflow-x: hidden;
+    /*remove a barra de rolar embaixo*/
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -24,99 +26,119 @@ body { /*cor de fundo*/
 
 /*CABEÇALHO PARTE DE CIMA*/
 
-header { /*fixa o cabeçalho mesmo ao rolar a tela*/
+header {
+    /*fixa o cabeçalho mesmo ao rolar a tela*/
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
-#cabecalhoParteDeCima { /*parte de cima do cabeçalho*/
+#cabecalhoParteDeCima {
+    /*parte de cima do cabeçalho*/
     background: linear-gradient(180deg, #000000, #810202);
 }
 
-#logoCabecalho img {  /*logo do cabeçalho*/
+#logoCabecalho img {
+    /*logo do cabeçalho*/
     max-height: 5rem;
     transition: transform 0.3s ease;
 }
 
-#logoCabecalho img:hover { /*logo do cabeçalho quando passa o mouse*/
+#logoCabecalho img:hover {
+    /*logo do cabeçalho quando passa o mouse*/
     transform: scale(1.08);
 }
 
-#barraDePesquisa { /*tamanho da barra de pesquisa*/
+#barraDePesquisa {
+    /*tamanho da barra de pesquisa*/
     width: 50%;
     max-width: 25rem;
 }
 
-#barraDePesquisaToda { /*posição da barra de pesquisa com o botão/lupa*/
+#barraDePesquisaToda {
+    /*posição da barra de pesquisa com o botão/lupa*/
     margin-left: 15%;
     margin-right: 5%;
 }
 
-#botaoLupa { /*parte da lupa na barra de pesquisa*/
+#botaoLupa {
+    /*parte da lupa na barra de pesquisa*/
     background-color: rgba(253, 209, 1, 0.8);
 }
 
-#botaoLupa:hover { /*parte da lupa na barra de pesquisa quando passa o mouse*/
+#botaoLupa:hover {
+    /*parte da lupa na barra de pesquisa quando passa o mouse*/
     background-color: rgba(170, 142, 0, 0.8);
 }
 
-.input-group .btn:hover { /*lupa da caixa de pesquisa quando passa o mouse em cima*/
+.input-group .btn:hover {
+    /*lupa da caixa de pesquisa quando passa o mouse em cima*/
     color: white;
 }
 
-.input-group .form-control:focus { /*lupa da caixa de pesquisa quando passa o mouse em cima*/
+.input-group .form-control:focus {
+    /*lupa da caixa de pesquisa quando passa o mouse em cima*/
     border-color: transparent;
     box-shadow: none;
 }
 
-#iconeLogin { /*ícone de boneco no login*/
+#iconeLogin {
+    /*ícone de boneco no login*/
     color: rgba(253, 209, 1, 1);
     font-size: 1.3rem;
     transition: transform 0.3s ease;
 }
 
-#iconeLogin:hover { /*ícone de boneco no login quando passa o mouse*/
+#iconeLogin:hover {
+    /*ícone de boneco no login quando passa o mouse*/
     color: rgba(253, 209, 1, 1);
     font-size: 1.3rem;
     transform: scale(1.08);
     cursor: pointer;
 }
 
-#loginArea span { /*texto "seja bem-vindo"*/
+#loginArea span {
+    /*texto "seja bem-vindo"*/
     color: rgba(253, 209, 1, 1);
     font-size: .9rem;
 }
 
-#loginArea a { /*texto faça login/cadastre-se*/
+#loginArea a {
+    /*texto faça login/cadastre-se*/
     color: white;
     font-size: .95rem;
     text-decoration: none;
 }
 
-#loginArea a:hover { /*texto faça login/cadastre-se quando passa o mouse*/
+#loginArea a:hover {
+    /*texto faça login/cadastre-se quando passa o mouse*/
     text-decoration: underline;
 }
 
-#loginArea .d-flex.flex-column { /*centraliza as duas frases do login*/
+#loginArea .d-flex.flex-column {
+    /*centraliza as duas frases do login*/
     text-align: center;
 }
 
-#carrinhoArea { /*carrinho de compras*/
+#carrinhoArea {
+    /*carrinho de compras*/
     color: rgba(253, 209, 1, 1);
 }
 
-#carrinhoArea:hover { /*carrinho de compras*/
+#carrinhoArea:hover {
+    /*carrinho de compras*/
     cursor: pointer;
 }
 
-#areaLoginECarrinho { /*distância da área do login e do carrinho da margem direita */
+#areaLoginECarrinho {
+    /*distância da área do login e do carrinho da margem direita */
     margin-right: 3.5rem;
 }
 
 /*CABEÇALHO PARTE DE BAIXO*/
 
-#cabecalhoParteDeBaixo { /*parte de baixo do cabeçalho (transparente)*/
+#cabecalhoParteDeBaixo {
+    /*parte de baixo do cabeçalho (transparente)*/
     background-color: #4e0202;
     opacity: 90%;
     position: absolute;
@@ -125,47 +147,81 @@ header { /*fixa o cabeçalho mesmo ao rolar a tela*/
     font-weight: 600;
 }
 
-.nav-link.text-uppercase.mx-3 { /*opções do menu*/
+.nav-link.text-uppercase.mx-3 {
+    /*opções do menu*/
     color: rgba(253, 209, 1, 1);
     font-size: .9rem;
     transition: transform 0.3s ease;
 }
 
-.nav-link.text-uppercase.mx-3:hover { /*opções do menu quando passa o mouse*/
+.nav-link.text-uppercase.mx-3:hover {
+    /*opções do menu quando passa o mouse*/
     transform: scale(1.1);
 }
 
-#opcaoCategorias { /*opção "categorias"*/
+#opcaoCategorias {
+    /*opção "categorias"*/
     color: white;
 }
 
-#fundoCategorias { /*background da opção "categorias"*/
+#fundoCategorias {
+    /*background da opção "categorias"*/
     background-color: rgba(253, 209, 1, 0.8);
     border-radius: .2rem;
 }
 
-#menuIcon { /*esconde o ícone hambúrger em telas grandes*/
+#menuIcon {
+    /*esconde o ícone hambúrger em telas grandes*/
     display: none;
 }
 
 /*INÍCIO DO CORPO DO SITE*/
 
+.btn-zap { /*botão do whatsapp*/
+    position: fixed;
+    bottom: 1.2rem;
+    right: .5rem;
+    background-color: #4fce5d;
+    color: white;
+    border: none;
+    padding: 0.5rem 0.7rem 0.5rem 0.7rem;
+    border-radius: 50%;
+    font-size: .75rem;
+    font-weight: bold;
+    box-shadow: 0 0.25rem 0.37rem rgba(0, 0, 0, 0.3);
+    z-index: 1050;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    gap: .8rem;
+    transition: transform 0.3s ease;
+}
+
+.btn-zap:hover { /*botão do whatsapp quando passa o mouse*/
+    transform: scale(1.05);
+    background-color: #1f5c0f;
+}
+
 /*CARROSSEL/CLUBE FIDELIDADE*/
 
-#carrossel img { /*altura da imagem do carrossel*/
+#carrossel img {
+    /*altura da imagem do carrossel*/
     height: 80vh;
 }
 
 /*AS CATEGORIAS EM BOTÕES QUE APARECEM NO MAIN*/
 
-h1 { /*título o que você procura? / todos os títulos do corpo pretos sem nenhuma outra formatação*/
+h1 {
+    /*título o que você procura? / todos os títulos do corpo pretos sem nenhuma outra formatação*/
     padding: 1rem 0rem 0rem 1rem;
     color: black;
     font-size: 1.8rem;
     font-weight: 650;
 }
 
-#botoesCategoriasCorpo { /*os botões categorias como um todo*/
+#botoesCategoriasCorpo {
+    /*os botões categorias como um todo*/
     overflow-x: auto;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
@@ -173,11 +229,13 @@ h1 { /*título o que você procura? / todos os títulos do corpo pretos sem nenh
     flex-wrap: nowrap;
 }
 
-#botoesCategoriasCorpo>.col { /*largura auto de cada botão*/
+#botoesCategoriasCorpo>.col {
+    /*largura auto de cada botão*/
     width: auto;
 }
 
-.btn.categoriasCorpo { /*os botões categorias individuais, mas pegando todos*/
+.btn.categoriasCorpo {
+    /*os botões categorias individuais, mas pegando todos*/
     background-color: rgba(145, 121, 2, 0.8);
     color: rgb(255, 255, 255);
     border: none;
@@ -187,33 +245,39 @@ h1 { /*título o que você procura? / todos os títulos do corpo pretos sem nenh
     white-space: nowrap;
 }
 
-.btn.categoriasCorpo:hover { /*os botões categorias individuais, mas pegando todos, quando passa o mouse*/
+.btn.categoriasCorpo:hover {
+    /*os botões categorias individuais, mas pegando todos, quando passa o mouse*/
     background-color: rgb(145, 121, 2);
     transform: scale(1.02);
 }
 
-.btn.categoriasCorpo:focus { /*mantém a palavra branca ao clicar no botão*/
+.btn.categoriasCorpo:focus {
+    /*mantém a palavra branca ao clicar no botão*/
     color: white;
 }
 
 /*BARRA DE ROLAR DOS BOTÕES CATEGORIAS NO MAIN*/
 
-#botoesCategoriasCorpo::-webkit-scrollbar { /*necessário para conseguir editar a estética da barra de rolar*/
+#botoesCategoriasCorpo::-webkit-scrollbar {
+    /*necessário para conseguir editar a estética da barra de rolar*/
     height: .4rem;
 }
 
-#botoesCategoriasCorpo::-webkit-scrollbar-track { /*cor do trilho*/
+#botoesCategoriasCorpo::-webkit-scrollbar-track {
+    /*cor do trilho*/
     background: transparent;
 }
 
-#botoesCategoriasCorpo::-webkit-scrollbar-thumb { /*estética do pegador*/
+#botoesCategoriasCorpo::-webkit-scrollbar-thumb {
+    /*estética do pegador*/
     background-color: rgba(192, 191, 191, 0.8);
     border-radius: .3rem;
     max-width: .5rem;
     cursor: pointer;
 }
 
-#botoesCategoriasCorpo::-webkit-scrollbar-thumb:hover { /*ao passar o mouse*/
+#botoesCategoriasCorpo::-webkit-scrollbar-thumb:hover {
+    /*ao passar o mouse*/
     background-color: rgb(119, 119, 119);
 }
 
@@ -221,7 +285,8 @@ h1 { /*título o que você procura? / todos os títulos do corpo pretos sem nenh
 
 /*TÍTULO*/
 
-h2 { /*título "ofertas" / todos os títulos no corpo com o fundo em degradê vinho e preto*/
+h2 {
+    /*título "ofertas" / todos os títulos no corpo com o fundo em degradê vinho e preto*/
     text-align: center;
     background: linear-gradient(180deg, #000000, #810202);
     color: white;
@@ -232,37 +297,44 @@ h2 { /*título "ofertas" / todos os títulos no corpo com o fundo em degradê vi
     margin-bottom: 1rem;
 }
 
-#fundoOfertas { /*centralizando o background do título "ofertas"*/
+#fundoOfertas {
+    /*centralizando o background do título "ofertas"*/
     display: flex;
     justify-content: center;
 }
 
-#fundoOfertas h2 { /*definindo o tamanho do background do título "ofertas"*/
+#fundoOfertas h2 {
+    /*definindo o tamanho do background do título "ofertas"*/
     width: 95%;
 }
 
 /*PRODUTOS*/
 
-.card.h-100.ofertas { /*o card em si do produto*/
+.card.h-100.ofertas {
+    /*o card em si do produto*/
     box-shadow: .1rem .1rem .6rem rgb(100, 100, 100);
     cursor: pointer;
 }
 
-.card-img-top.ofertas { /*imagem do produto em promoção*/
+.card-img-top.ofertas {
+    /*imagem do produto em promoção*/
     max-width: 10rem;
     margin: 1rem auto 0rem auto;
     transition: transform 0.5s ease;
 }
 
-.card-img-top.ofertas:hover { /*imagem do produto em promoção quando passa o mouse*/
+.card-img-top.ofertas:hover {
+    /*imagem do produto em promoção quando passa o mouse*/
     transform: scale(1.08);
 }
 
-.card-text.flex-grow-1.ofertas { /*descrição/preço do produto em ofertas*/
+.card-text.flex-grow-1.ofertas {
+    /*descrição/preço do produto em ofertas*/
     text-align: center;
 }
 
-.btn.comprarOfertas { /*botão "comprar" nos produtos em oferta*/
+.btn.comprarOfertas {
+    /*botão "comprar" nos produtos em oferta*/
     background-color: rgba(158, 136, 25, 0.8);
     color: rgb(255, 255, 255);
     border: none;
@@ -271,54 +343,62 @@ h2 { /*título "ofertas" / todos os títulos no corpo com o fundo em degradê vi
     white-space: nowrap;
 }
 
-.btn.comprarOfertas:hover { /*botões de comprar individuais, mas pegando todos, quando passa o mouse*/
+.btn.comprarOfertas:hover {
+    /*botões de comprar individuais, mas pegando todos, quando passa o mouse*/
     background-color: rgb(145, 121, 2);
     transform: scale(1.02);
 }
 
-.btn.comprarOfertas:focus { /*mantém a palavra branca ao clicar no botão*/
+.btn.comprarOfertas:focus {
+    /*mantém a palavra branca ao clicar no botão*/
     color: white;
 }
 
 /*POR CATEGORIAS COM IMAGENS*/
 
-.categoriesImagens-section { /*parte preta dos cards das categorias com imagens*/
+.categoriesImagens-section {
+    /*parte preta dos cards das categorias com imagens*/
     margin: 1rem 1rem 0.5rem 1rem;
     padding: 1rem;
     background-color: #19191b;
     border-radius: 0.5rem;
 }
 
-.categoriesImagens-grid { /*deixa tudo em uma linha só com barra de rolar/disposição dos cards*/
+.categoriesImagens-grid {
+    /*deixa tudo em uma linha só com barra de rolar/disposição dos cards*/
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
     gap: 0.5rem;
 }
 
-.categoryImagens-card { /*parte vinho degradê dos cards das categorias com imagens*/
+.categoryImagens-card {
+    /*parte vinho degradê dos cards das categorias com imagens*/
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
     padding: 0.5rem;
-    background: radial-gradient(circle farthest-corner at center,#ad3939 20%, #831b1b 60%, #19191b 100%);
+    background: radial-gradient(circle farthest-corner at center, #ad3939 20%, #831b1b 60%, #19191b 100%);
     border-radius: 0.5rem;
     transition: transform 0.3s ease;
 }
 
-.categoryImagens-card:hover { /*parte vinho degradê dos cards das categorias com imagens quando passa o mouse*/
+.categoryImagens-card:hover {
+    /*parte vinho degradê dos cards das categorias com imagens quando passa o mouse*/
     transform: scale(1.03);
     background: rgba(173, 57, 57, 0.39);
 }
 
-.categoryImagens-img { /*imagem dos cards/foto dos produtos*/
+.categoryImagens-img {
+    /*imagem dos cards/foto dos produtos*/
     max-height: 10rem;
     width: auto;
     object-fit: contain;
 }
 
-.categoryImagens-btn { /*botão/nome dos produtos*/
+.categoryImagens-btn {
+    /*botão/nome dos produtos*/
     background: none;
     border: none;
     color: #fff;
@@ -327,11 +407,13 @@ h2 { /*título "ofertas" / todos os títulos no corpo com o fundo em degradê vi
     white-space: nowrap;
 }
 
-.categoriesImagens-grid::-webkit-scrollbar { /*necessário para conseguir editar a estética da barra de rolar dos cards com imagens*/
+.categoriesImagens-grid::-webkit-scrollbar {
+    /*necessário para conseguir editar a estética da barra de rolar dos cards com imagens*/
     height: 0.3rem;
 }
 
-.categoriesImagens-grid::-webkit-scrollbar-thumb { /*estética do pegador dos cards com imagens*/
+.categoriesImagens-grid::-webkit-scrollbar-thumb {
+    /*estética do pegador dos cards com imagens*/
     background-color: rgba(192, 191, 191, 0.8);
     border-radius: 0.3rem;
     cursor: pointer;
@@ -339,24 +421,27 @@ h2 { /*título "ofertas" / todos os títulos no corpo com o fundo em degradê vi
 
 /*OS PRODUTOS MAIS VENDIDOS*/
 
-.card.h-100.maisVendidos { /*o card em si do produto*/
+.card.h-100.maisVendidos {
+    /*o card em si do produto*/
     box-shadow: .1rem .1rem .6rem rgb(100, 100, 100);
     cursor: pointer;
     background-color: rgba(158, 136, 25, 0.61);
 }
 
-.maisVendidos { /*largura dos cards, excluir caso necessário*/
+.maisVendidos {
+    /*largura dos cards, excluir caso necessário*/
     width: auto;
     max-width: 20rem;
 }
 
-.badge-num { /*número/posição do produto*/
+.badge-num {
+    /*número/posição do produto*/
     position: absolute;
     top: 0.5rem;
     left: 0.5rem;
     width: 2rem;
     height: 2rem;
-    background-color: rgb(100, 85, 11); 
+    background-color: rgb(100, 85, 11);
     color: #fff;
     font-weight: 700;
     font-size: 1rem;
@@ -366,29 +451,34 @@ h2 { /*título "ofertas" / todos os títulos no corpo com o fundo em degradê vi
     justify-content: center;
 }
 
-.card-img-top.maisVendidos { /*imagem do produto mais vendidos*/
+.card-img-top.maisVendidos {
+    /*imagem do produto mais vendidos*/
     max-width: 10rem;
     margin: 1rem auto 0rem auto;
     transition: transform 0.5s ease;
 }
 
-.card-img-top.maisVendidos:hover { /*imagem do produto mais vendidos quando passa o mouse*/
+.card-img-top.maisVendidos:hover {
+    /*imagem do produto mais vendidos quando passa o mouse*/
     transform: scale(1.08);
 }
 
-.card-title.maisVendidos { /*nome do produto*/
+.card-title.maisVendidos {
+    /*nome do produto*/
     color: #ffffff;
     font-weight: 650;
 }
 
-.descricaoMaisVendidos { /*descrição do produto*/
+.descricaoMaisVendidos {
+    /*descrição do produto*/
     text-align: justify;
     font-size: .8rem;
     color: white;
     font-weight: 550;
 }
 
-.btn.euQueroMaisVendidos { /*botão "eu quero" nos produtos mais vendidos*/
+.btn.euQueroMaisVendidos {
+    /*botão "eu quero" nos produtos mais vendidos*/
     background-color: rgb(145, 121, 2);
     color: rgb(255, 255, 255);
     border: none;
@@ -397,18 +487,21 @@ h2 { /*título "ofertas" / todos os títulos no corpo com o fundo em degradê vi
     white-space: nowrap;
 }
 
-.btn.euQueroMaisVendidos:hover { /*os botões eu quero individuais, mas pegando todos, quando passa o mouse*/
+.btn.euQueroMaisVendidos:hover {
+    /*os botões eu quero individuais, mas pegando todos, quando passa o mouse*/
     background-color: rgb(100, 85, 11);
     transform: scale(1.02);
 }
 
-.btn.euQueroMaisVendidos:focus { /*mantém a palavra branca ao clicar no botão*/
+.btn.euQueroMaisVendidos:focus {
+    /*mantém a palavra branca ao clicar no botão*/
     color: white;
 }
 
 /*OUTLET*/
 
-.btn.modaEAcessorio{ /*botões moda e acessórios*/
+.btn.modaEAcessorio {
+    /*botões moda e acessórios*/
     background-color: transparent;
     border: 1px solid rgba(145, 121, 2, 0.8);
     color: rgba(145, 121, 2, 0.8);
@@ -418,14 +511,16 @@ h2 { /*título "ofertas" / todos os títulos no corpo com o fundo em degradê vi
     transition: transform 0.3s ease;
 }
 
-.btn.modaEAcessorio:hover{ /*botões moda e acessórios ao passar o mouse*/
+.btn.modaEAcessorio:hover {
+    /*botões moda e acessórios ao passar o mouse*/
     background-color: rgba(145, 121, 2, 0.8);
     border: none;
     color: rgb(255, 255, 255);
     transform: scale(1.02);
 }
 
-.subBtn { /*sub botões de moda e acessórios - botões individuais, mas pegando todos*/
+.subBtn {
+    /*sub botões de moda e acessórios - botões individuais, mas pegando todos*/
     text-align: center;
     border: none;
     background-color: rgba(145, 121, 2, 0.8);
@@ -435,40 +530,48 @@ h2 { /*título "ofertas" / todos os títulos no corpo com o fundo em degradê vi
     white-space: nowrap;
 }
 
-.subBtn:hover{ /*sub botões de moda e acessórios individuais, quando passa o mouse*/
+.subBtn:hover {
+    /*sub botões de moda e acessórios individuais, quando passa o mouse*/
     background-color: rgb(145, 121, 2) !important;
     color: rgb(255, 255, 255) !important;
 }
 
-.subBotoes .row { /*centraliza horizontalmente os sub-botoes*/
-  justify-content: center;
+.subBotoes .row {
+    /*centraliza horizontalmente os sub-botoes*/
+    justify-content: center;
 }
 
-.subBotoes .col-4 { /*largura dos sub-botões*/
-  max-width: 30%; 
+.subBotoes .col-4 {
+    /*largura dos sub-botões*/
+    max-width: 30%;
 }
 
 /*PRODUTOS EM OUTLET*/
-.card.h-100.produtosOutlet { /*o card em si do produto*/
+.card.h-100.produtosOutlet {
+    /*o card em si do produto*/
     box-shadow: .1rem .1rem .6rem rgb(100, 100, 100);
     cursor: pointer;
 }
 
-.card-img-top.produtosOutlet { /*imagem do produto em outlet*/
+.card-img-top.produtosOutlet {
+    /*imagem do produto em outlet*/
     max-width: 10rem;
     margin: 1rem auto 0rem auto;
     transition: transform 0.5s ease;
 }
 
-.card-img-top.produtosOutlet:hover { /*imagem do produto em outlet quando passa o mouse*/
+.card-img-top.produtosOutlet:hover {
+    /*imagem do produto em outlet quando passa o mouse*/
     transform: scale(1.08);
 }
 
-.card-text.flex-grow-1.produtosOutlet { /*descrição/preço do produto em outlet*/
+.card-text.flex-grow-1.produtosOutlet {
+    /*descrição/preço do produto em outlet*/
     text-align: center;
 }
 
-.btn.comprarProdutosOutlet { /*botão "comprar" nos produtos em outlet*/
+.btn.comprarProdutosOutlet {
+    /*botão "comprar" nos produtos em outlet*/
     background-color: rgba(158, 136, 25, 0.8);
     color: rgb(255, 255, 255);
     border: none;
@@ -477,27 +580,32 @@ h2 { /*título "ofertas" / todos os títulos no corpo com o fundo em degradê vi
     white-space: nowrap;
 }
 
-.btn.comprarProdutosOutlet:hover { /*os botões de comprar, mas pegando todos, quando passa o mouse*/
+.btn.comprarProdutosOutlet:hover {
+    /*os botões de comprar, mas pegando todos, quando passa o mouse*/
     background-color: rgb(145, 121, 2);
     transform: scale(1.02);
 }
 
-.btn.comprarProdutosOutlet:focus { /*mantém a palavra branca ao clicar no botão*/
+.btn.comprarProdutosOutlet:focus {
+    /*mantém a palavra branca ao clicar no botão*/
     color: white;
 }
 
-#cardsOutletFundo.filtrado { /*fundo colorido quando eu clico em um sub-botão*/
+#cardsOutletFundo.filtrado {
+    /*fundo colorido quando eu clico em um sub-botão*/
     background-color: rgb(145, 121, 2);
     margin-top: .5rem;
 }
 
-.subBtn.active { /*o sub-botão depois de clicar*/
+.subBtn.active {
+    /*o sub-botão depois de clicar*/
     position: relative;
-    background-color: rgb(145, 121, 2); 
+    background-color: rgb(145, 121, 2);
     color: #fff !important;
 }
-  
-.subBtn.active::after { /*seta para baixo*/
+
+.subBtn.active::after {
+    /*seta para baixo*/
     content: "";
     position: absolute;
     bottom: -6px;
@@ -510,7 +618,8 @@ h2 { /*título "ofertas" / todos os títulos no corpo com o fundo em degradê vi
 
 /*PARTE QUAL É O SEU ESPORTE*/
 
-#fundoSeuEsporte { /*fundo escuro da parte qual é o seu esporte*/
+#fundoSeuEsporte {
+    /*fundo escuro da parte qual é o seu esporte*/
     background-color: black;
     margin-top: 1rem;
     padding: 1rem;
@@ -519,121 +628,143 @@ h2 { /*título "ofertas" / todos os títulos no corpo com o fundo em degradê vi
     /*gap: 2rem;*/
 }
 
-.titulo-seu-esporte { /*distância entre o título e os cards*/
+.titulo-seu-esporte {
+    /*distância entre o título e os cards*/
     flex: 1;
 }
 
-.titulo-seu-esporte h3 { /*título qual é o seu esporte?*/
+.titulo-seu-esporte h3 {
+    /*título qual é o seu esporte?*/
     color: rgb(255, 255, 255);
     font-size: 3.5rem;
     font-weight: 650;
     padding-left: 2rem;
 }
 
-#seuEsporteTituloDois { /*padding esquerdo do título de baixo*/
+#seuEsporteTituloDois {
+    /*padding esquerdo do título de baixo*/
     padding-left: 2rem;
 }
 
-.categoriesImagens-grid { /*posição dos cards*/
+.categoriesImagens-grid {
+    /*posição dos cards*/
     flex: 1;
     display: grid;
-    grid-template-columns: repeat(2, 1fr) !important; 
+    grid-template-columns: repeat(2, 1fr) !important;
     gap: 1rem;
     padding-right: 2rem;
 }
 
-.categoryImagens-card { /*posição das imagens dos cards*/
+.categoryImagens-card {
+    /*posição das imagens dos cards*/
     flex-direction: column;
     cursor: pointer;
 }
 
-.esportes { /*imagens dos esportes*/
+.esportes {
+    /*imagens dos esportes*/
     border-radius: .6rem;
     opacity: 50%;
     transition: opacity 0.3s ease;
 }
 
-.esportes:hover { /*hover nas imagens*/
+.esportes:hover {
+    /*hover nas imagens*/
     opacity: 100%;
 }
 
 /*BANNER WHEY PROTEIN*/
 
-.banner-wheyProtein { /*banner em si*/
+.banner-wheyProtein {
+    /*banner em si*/
     max-height: 18rem;
     overflow: hidden;
     margin-top: 1rem;
 }
 
-.tituloWhey{ /*título whey protein*/
+.tituloWhey {
+    /*título whey protein*/
     color: rgb(255, 255, 255);
     font-size: 3.5rem;
     font-weight: 650;
 }
 
-.subTituloWhey{ /*frase embaixo do título*/
+.subTituloWhey {
+    /*frase embaixo do título*/
     color: white;
 }
 
-.itens-whey{ /*frases de qualidade com os checks em verde*/
-   color: #ffffff;
-   margin-top: 4rem;
+.itens-whey {
+    /*frases de qualidade com os checks em verde*/
+    color: #ffffff;
+    margin-top: 4rem;
 }
-  
-.banner-wheyProtein img { /*imagem do banner*/
+
+.banner-wheyProtein img {
+    /*imagem do banner*/
     height: 100%;
 }
-  
-.banner-wheyProtein .overlay { /*camada escura sob a imagem*/
+
+.banner-wheyProtein .overlay {
+    /*camada escura sob a imagem*/
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.5); 
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 /*CARDS DE WHEY PROTEIN*/
 
-.card.h-100.produtosWheyProtein { /*o card em si do produto whey protein*/
+.card.h-100.produtosWheyProtein {
+    /*o card em si do produto whey protein*/
     box-shadow: .1rem .1rem .6rem rgb(100, 100, 100);
     cursor: pointer;
 }
 
-.favorito-btn { /*tirando o fundo cinza do botão de coração/favorito*/
+.favorito-btn {
+    /*tirando o fundo cinza do botão de coração/favorito*/
     background-color: transparent;
     border: none;
 }
 
-.favorito-btn:hover { /*tirando o fundo cinza do botão de coração/favorito quando passa o mouse*/
+.favorito-btn:hover {
+    /*tirando o fundo cinza do botão de coração/favorito quando passa o mouse*/
     background-color: transparent;
     border: none;
 }
 
-.favorito-btn i { /*coração em si*/
+.favorito-btn i {
+    /*coração em si*/
     font-size: 1.1rem;
     color: #810202;
 }
 
-.favorito-btn:hover i::before { /*coração preenchido ao passar o mouse*/
-    content: "\f415"; 
+.favorito-btn:hover i::before {
+    /*coração preenchido ao passar o mouse*/
+    content: "\f415";
 }
 
-.card-img-top.produtosWheyProtein { /*imagem do produto whey protein*/
+.card-img-top.produtosWheyProtein {
+    /*imagem do produto whey protein*/
     max-width: 10rem;
     margin: 1rem auto 0rem auto;
     transition: transform 0.5s ease;
 }
 
-.card-img-top.produtosWheyProtein:hover { /*imagem quando passa o mouse*/
+.card-img-top.produtosWheyProtein:hover {
+    /*imagem quando passa o mouse*/
     transform: scale(1.08);
 }
 
-.card-text.flex-grow-1.produtosWheyProtein { /*descrição/preço do whey protein*/
+.card-text.flex-grow-1.produtosWheyProtein {
+    /*descrição/preço do whey protein*/
     text-align: center;
 }
 
-.btn.comprarProdutosWheyProtein { /*botão "comprar" nos produtos whey protein*/
+.btn.comprarProdutosWheyProtein {
+    /*botão "comprar" nos produtos whey protein*/
     background-color: rgba(158, 136, 25, 0.8);
     color: rgb(255, 255, 255);
     border: none;
@@ -642,109 +773,146 @@ h2 { /*título "ofertas" / todos os títulos no corpo com o fundo em degradê vi
     white-space: nowrap;
 }
 
-.btn.comprarProdutosWheyProtein:hover { /*os botões de comprar, mas pegando todos, quando passa o mouse*/
+.btn.comprarProdutosWheyProtein:hover {
+    /*os botões de comprar, mas pegando todos, quando passa o mouse*/
     background-color: rgb(145, 121, 2);
     transform: scale(1.02);
 }
 
-.btn.comprarProdutosWheyProtein:focus { /*mantém a palavra branca ao clicar no botão*/
+.btn.comprarProdutosWheyProtein:focus {
+    /*mantém a palavra branca ao clicar no botão*/
     color: white;
 }
 
 /*TELA COM OPÇÕES/QUADRADOS FILTRÁVEIS*/
 
-#fundoTelaComFiltros{ /*fundo preto*/
-    background:#000; 
-    padding:1rem;
+#fundoTelaComFiltros {
+    /*fundo preto*/
+    background: #000;
+    padding: 1rem;
 }
 
-.filtros-grid{ /*estrutura/tamanho/posição dos blocos amarelos*/
-    display:grid;
-    grid-template-columns:repeat(4,1fr); 
-    gap: 1.5rem; 
+.filtros-grid {
+    /*estrutura/tamanho/posição dos blocos amarelos*/
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
 }
 
-.filtro-card{ /*estética dos blocos amarelos*/
-  background:#f2c100;
-  border-radius:.3rem;
-  min-height:12rem;
-  display:flex; 
-  align-items:center; 
-  justify-content:center;
-  cursor:pointer;
-  position: relative;   
-  transition: transform .3s ease;
+.filtro-card {
+    /*estética dos blocos amarelos*/
+    background: #f2c100;
+    border-radius: .3rem;
+    min-height: 12rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    transition: transform .3s ease;
 }
 
-.filtro-card span{ /*estética da palavra dentro de cada bloco amarelo*/
-  z-index:2;
-  font-weight:700; 
-  font-size:1.2rem; 
-  color:#000;                      
+.filtro-card span {
+    /*estética da palavra dentro de cada bloco amarelo*/
+    z-index: 2;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #000;
 }
 
-.filtro-card::after{ /*estética da imagem de fundo*/
-  content:"";
-  position:absolute; 
-  inset:0;
-  background-image: var(--bg);    
-  background-size:cover; 
-  background-position:center; 
-  background-repeat:no-repeat;     
-  opacity: 0;
+.filtro-card::after {
+    /*estética da imagem de fundo*/
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: var(--bg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
 }
 
-.filtro-card::before{ /*camada para escurecer a imagem*/
-  content:"";
-  position:absolute; 
-  inset:0;
-  background:rgba(0,0,0,.6);                
-  z-index:1;   
-  opacity: 0;
-  transition: opacity .3s ease;
-} 
-
-.filtro-card:hover::before{ /*permite a camada escura acima das imagens*/
-    opacity:1; 
+.filtro-card::before {
+    /*camada para escurecer a imagem*/
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .6);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity .3s ease;
 }
 
-.filtro-card:hover{ /*mudanças para cima ao passar o mouse*/
-    transform:translateY(-6px); 
+.filtro-card:hover::before {
+    /*permite a camada escura acima das imagens*/
+    opacity: 1;
 }
 
-.filtro-card:hover span{ /*mudança de cor da palavra ao passar o mouse*/
-    color:#fff; 
-    background: #000000; 
+.filtro-card:hover {
+    /*mudanças para cima ao passar o mouse*/
+    transform: translateY(-6px);
+}
+
+.filtro-card:hover span {
+    /*mudança de cor da palavra ao passar o mouse*/
+    color: #fff;
+    background: #000000;
     padding: .1rem .5rem .1rem .5rem;
     border-radius: .3rem;
     box-shadow: .3rem .4rem .6rem rgb(0, 0, 0);
-}        
+}
 
-.filtro-card:hover::after{ /*permite que as imagens apareçam ao passar o mouse*/
-    opacity:1; 
+.filtro-card:hover::after {
+    /*permite que as imagens apareçam ao passar o mouse*/
+    opacity: 1;
 }
 
 /*imagens de fundo*/
-#itemFiltravelProteina      { --bg: url(../imagens/proteina_telafiltraveis.jpg); }
-#itemFiltravelVegano        { --bg: url(../imagens/vegano_telafiltraveis); }
-#itemFiltravelVegetariano   { --bg: url(../imagens/vegetariano_telafiltraveis); }
-#itemFiltravelTermogenico   { --bg: url(../imagens/termogenico_telafiltraveis); }
-#itemFiltravelVitamina      { --bg: url(../imagens/vitamina_telafiltraveis); }
-#itemFiltravelLinhaClinical { --bg: url(../imagens/clinical_telafiltraveis); }
-#itemFiltravelAminoacido    { --bg: url(../imagens/aminoacidos_telafiltraveis); }
-#itemFiltravelCarboidrato   { --bg: url(../imagens/carboidrato_telafiltraveis); }
+#itemFiltravelProteina {
+    --bg: url(../imagens/proteina_telafiltraveis.jpg);
+}
+
+#itemFiltravelVegano {
+    --bg: url(../imagens/vegano_telafiltraveis);
+}
+
+#itemFiltravelVegetariano {
+    --bg: url(../imagens/vegetariano_telafiltraveis);
+}
+
+#itemFiltravelTermogenico {
+    --bg: url(../imagens/termogenico_telafiltraveis);
+}
+
+#itemFiltravelVitamina {
+    --bg: url(../imagens/vitamina_telafiltraveis);
+}
+
+#itemFiltravelLinhaClinical {
+    --bg: url(../imagens/clinical_telafiltraveis);
+}
+
+#itemFiltravelAminoacido {
+    --bg: url(../imagens/aminoacidos_telafiltraveis);
+}
+
+#itemFiltravelCarboidrato {
+    --bg: url(../imagens/carboidrato_telafiltraveis);
+}
 
 /*CARDS VERTICAIS*/
 
-.card.cardsVerticais{ /*largura dos cards*/
+.card.cardsVerticais {
+    /*largura dos cards*/
     max-width: clamp(15rem, 32vw, 22rem);
-    margin-inline: auto; 
-    cursor: pointer;             
+    margin-inline: auto;
+    cursor: pointer;
     box-shadow: .1rem .1rem .6rem rgb(100, 100, 100);
 }
-  
-.card.cardsVerticais .card-img-top{ /*imagem dos cards verticais*/
-    aspect-ratio: 2/3;  
+
+.card.cardsVerticais .card-img-top {
+    /*imagem dos cards verticais*/
+    aspect-ratio: 2/3;
     object-fit: cover;
     object-position: center;
     display: block;
@@ -753,7 +921,8 @@ h2 { /*título "ofertas" / todos os títulos no corpo com o fundo em degradê vi
 
 /*SOBRE A VITA FORTIS*/
 
-#fundoSobreVitaFortis{ /*fundo da section sobre a vita fortis*/
+#fundoSobreVitaFortis {
+    /*fundo da section sobre a vita fortis*/
     background-color: #000000;
     min-height: 30rem;
     box-shadow: .1rem .1rem .8rem rgb(129, 2, 2);
@@ -762,120 +931,145 @@ h2 { /*título "ofertas" / todos os títulos no corpo com o fundo em degradê vi
     text-align: center;
 }
 
-.logoTituloSobreVitaFortis{ /*logo + titulo na section sobre vita fortis*/
+.logoTituloSobreVitaFortis {
+    /*logo + titulo na section sobre vita fortis*/
     display: grid;
     grid-template-columns: 1fr auto 1fr;
-    align-items: center;        
+    align-items: center;
 }
-  
-.logoSobreVitaFortis{ /*logo na section sobre vita fortis*/
+
+.logoSobreVitaFortis {
+    /*logo na section sobre vita fortis*/
     grid-column: 1;
-    height: 7rem;     
+    height: 7rem;
     margin: .5rem 0rem 0rem .5rem;
     width: auto;
     transition: transform 0.3s ease;
 }
 
-.logoSobreVitaFortis:hover{ /*logo na section sobre vita fortis quando passa o mouse*/
+.logoSobreVitaFortis:hover {
+    /*logo na section sobre vita fortis quando passa o mouse*/
     transform: scale(1.05);
 }
 
-h4{ /*título você já conhece a vita fortis*/
+h4 {
+    /*título você já conhece a vita fortis*/
     color: #f2c100;
     font-size: 2.5rem;
     font-weight: 700;
 }
 
-.luzSobreVitaFortis{ /*posição da luz*/
+.luzSobreVitaFortis {
+    /*posição da luz*/
     position: relative;
-    display: inline-block;           
+    display: inline-block;
     margin-top: 2rem;
-    overflow: hidden;    
-}
-  
-.luzSobreVitaFortis::before{ /*a luz em si passando no título*/
-    content: "";
-    position: absolute;
-    top: 0; 
-    bottom: 0;
-    width: 45%;                      
-    transform: translateX(-120%) skewX(-20deg);
-    background: linear-gradient(120deg, transparent, rgba(255,255,255,.7), transparent);
+    overflow: hidden;
 }
 
-.luzSobreVitaFortis:hover::before{ /*dispara a luz no hover */
+.luzSobreVitaFortis::before {
+    /*a luz em si passando no título*/
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 45%;
+    transform: translateX(-120%) skewX(-20deg);
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, .7), transparent);
+}
+
+.luzSobreVitaFortis:hover::before {
+    /*dispara a luz no hover */
     animation: luz-passando 1s ease forwards;
 }
 
-@keyframes luz-passando{ /*animação do feixe de luz*/
-    to { transform: translateX(220%) skewX(-20deg); }
+@keyframes luz-passando {
+
+    /*animação do feixe de luz*/
+    to {
+        transform: translateX(220%) skewX(-20deg);
+    }
 }
 
 /*RODAPÉ*/
 
-footer { /*parte de fundo do rodapé*/
+footer {
+    /*parte de fundo do rodapé*/
     background: linear-gradient(180deg, #000000, #810202);
     box-shadow: 0 -0.5rem .5rem rgba(0, 0, 0, 0.3);
-    font-weight: 700;
 }
 
-.logo-footer { /*logo do rodapé*/
-    max-width: 6rem;
+.logo-footer {
+    /*logo do rodapé*/
+    max-width: 7rem;
+    height: auto;
     transition: transform 0.3s ease;
 }
 
-.logo-footer:hover { /*logo do rodapé quando passa o mouse*/
+.logo-footer:hover {
+    /*logo do rodapé quando passa o mouse*/
     transform: scale(1.05);
 }
 
-footer p { /*opções do rodapé*/
-    font-size: 0.7rem;
+footer p {
+    /*opções do rodapé*/
+    font-size: 0.9rem;
     text-align: left;
     transition: transform 0.3s ease;
     cursor: pointer;
-    /*white-space: nowrap;*/
+    
 }
 
-footer p:hover { /*opções do rodapé quando passa o mouse*/
+footer p:hover {
+    /*opções do rodapé quando passa o mouse*/
     transform: scale(1.05);
 }
 
-#redesSociaisRodape { /*alinha os ícones de Redes Socias do rodapé*/
-    text-align: center;
-    font-size: 0.7rem;
+.copy {
+    /*copyright*/
+    font-size: 1rem;
+    font-weight: 600;
 }
 
-#faleConoscoRodape,
-.contatoRodape { /*fale conosco, telefone e e-mail*/
-    color: white;
-    text-decoration: none;
-    font-size: 0.7rem;
-    text-align: left;
+.bolaFundoPagamento { /*círculo branco atrás de cada bandeira */
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background: #fff;
+    display: grid;
+    place-items: center;
 }
 
-#copy { /*copyright*/
-    font-size: 0.8rem;
+.bolaFundoPagamento img { /*tamanho da logo dentro do círculo*/
+    max-width: 90%;
+    max-height: 90%;
+    height: auto;
+    object-fit: contain;
+}
+
+h6{ /*títulos do rodapé*/
+    font-size: 1.1rem;
 }
 
 
 
 
-  
-
-
-
-  
 
 
 
 
-  
 
 
 
 
-  
-  
+
+
+
+
+
+
+
+
 
 
 
@@ -884,12 +1078,14 @@ footer p:hover { /*opções do rodapé quando passa o mouse*/
 
 
 /*RESPONSIVIDADE*/
-@media (min-width: 914px) { /*em telas maiores que 914px de largura*/
+@media (min-width: 914px) {
+    /*em telas maiores que 914px de largura*/
 
     /*CATEGORIAS COM IMAGENS*/
     .categoriesImagens-grid {
         display: grid;
-        grid-template-columns: repeat(2, 1fr); /*transforma em 2 colunas*/
+        grid-template-columns: repeat(2, 1fr);
+        /*transforma em 2 colunas*/
         gap: 1rem;
         overflow: visible;
     }
@@ -897,59 +1093,72 @@ footer p:hover { /*opções do rodapé quando passa o mouse*/
     /*SUB-BOTÕES DE MODA E ACESSÓRIOS*/
 }
 
-@media (min-width: 1311px) { /*em telas maiores que 1311px de largura*/
+@media (min-width: 1311px) {
+    /*em telas maiores que 1311px de largura*/
 
     /*CATEGORIAS COM IMAGENS*/
     .categoriesImagens-grid {
-        grid-template-columns: repeat(3, 1fr); /*transforma em 3 colunas*/
+        grid-template-columns: repeat(3, 1fr);
+        /*transforma em 3 colunas*/
     }
 }
 
-@media (max-width: 768px) { /*em telas menores que 767px de largura (referência: ipad mini)*/
+@media (max-width: 768px) {
+    /*em telas menores que 767px de largura (referência: ipad mini)*/
 
     /*CABEÇALHO PARTE DE CIMA*/
-    #cabecalhoParteDeCima { /*parte de cima do cabeçalho*/
+    #cabecalhoParteDeCima {
+        /*parte de cima do cabeçalho*/
         flex-wrap: wrap;
         justify-content: space-between;
     }
 
-    #logoCabecalho { /*logo*/
+    #logoCabecalho {
+        /*logo*/
         margin-top: 0.2rem;
     }
 
-    #areaLoginECarrinho { /*área de login e carrinho*/
+    #areaLoginECarrinho {
+        /*área de login e carrinho*/
         margin-right: 0.8rem;
     }
 
-    #loginArea span { /*texto "seja bem-vindo"*/
+    #loginArea span {
+        /*texto "seja bem-vindo"*/
         font-size: 0.8rem;
     }
 
-    #loginArea a { /*texto faça login/cadastre-se*/
+    #loginArea a {
+        /*texto faça login/cadastre-se*/
         font-size: 0.85rem;
     }
 
-    #cabecalhoParteDeCima>.flex-grow-1 { /*joga a barra de pesquisa para baixo + margens*/
+    #cabecalhoParteDeCima>.flex-grow-1 {
+        /*joga a barra de pesquisa para baixo + margens*/
         order: 2;
         flex: 0 0 100%;
         margin: 1.5rem 0 3rem 0;
     }
 
-    #barraDePesquisaToda { /*remove as margens internas da barra de pesquisa*/
+    #barraDePesquisaToda {
+        /*remove as margens internas da barra de pesquisa*/
         margin: 0;
     }
 
-    .input-group { /*ajusta a largura da barra de pesquisa*/
+    .input-group {
+        /*ajusta a largura da barra de pesquisa*/
         width: 90%;
         max-width: 25rem;
     }
 
     /*CABEÇALHO PARTE DE BAIXO*/
-    #cabecalhoParteDeBaixo { /*esconde o menu*/
+    #cabecalhoParteDeBaixo {
+        /*esconde o menu*/
         display: none;
     }
 
-    #menuIcon { /*exibe o hambúrguer*/
+    #menuIcon {
+        /*exibe o hambúrguer*/
         display: inline-block;
         position: absolute;
         z-index: 30;
@@ -957,7 +1166,8 @@ footer p:hover { /*opções do rodapé quando passa o mouse*/
         padding: 0.5rem;
     }
 
-    #menuToggle:checked+#cabecalhoParteDeBaixo { /*menu ao clicar no hambúrguer*/
+    #menuToggle:checked+#cabecalhoParteDeBaixo {
+        /*menu ao clicar no hambúrguer*/
         display: block;
         position: absolute;
         top: 100%;
@@ -968,13 +1178,15 @@ footer p:hover { /*opções do rodapé quando passa o mouse*/
         opacity: 0.9;
     }
 
-    #menuToggle:checked+#cabecalhoParteDeBaixo .container { /*layout interno vertical/estilização interna do nav quando aberto*/
+    #menuToggle:checked+#cabecalhoParteDeBaixo .container {
+        /*layout interno vertical/estilização interna do nav quando aberto*/
         flex-direction: column;
         align-items: center;
     }
 
     /*BOTÕES AMARELOS DE CATEGORIAS NO CORPO DO SITE*/
-    #botoesCategoriasCorpo { /*alinhando à esquerda para ver o primeiro botão na barra de rolagem*/
+    #botoesCategoriasCorpo {
+        /*alinhando à esquerda para ver o primeiro botão na barra de rolagem*/
         justify-content: flex-start;
     }
 
@@ -982,42 +1194,50 @@ footer p:hover { /*opções do rodapé quando passa o mouse*/
 
     /*ESPORTES*/
 
-    .titulo-seu-esporte{ /*título qual é sua atividade física*/
+    .titulo-seu-esporte {
+        /*título qual é sua atividade física*/
         display: flex;
         gap: .5rem;
-        margin-bottom: 1rem;       
+        margin-bottom: 1rem;
     }
 
-    .titulo-seu-esporte h3{ /*título qual é sua atividade física*/
+    .titulo-seu-esporte h3 {
+        /*título qual é sua atividade física*/
         white-space: nowrap;
         padding-left: 0 !important;
-        font-size: 2rem;                          
+        font-size: 2rem;
     }
 
-    #fundoSeuEsporte { /*fundo preto*/
-        flex-direction: column; 
-        align-items: center;    
-        text-align: center;     
+    #fundoSeuEsporte {
+        /*fundo preto*/
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
-    
-    .categoriesImagens-grid { /*os cards*/
-        width: 100%; 
+
+    .categoriesImagens-grid {
+        /*os cards*/
+        width: 100%;
     }
 
 }
 
-@media (min-width: 820px) and (max-width: 829px) { /*dimensões do ipad air*/
+@media (min-width: 820px) and (max-width: 829px) {
+    /*dimensões do ipad air*/
 
     /*BOTÕES AMARELOS DE CATEGORIAS NO CORPO DO SITE*/
-    #botoesCategoriasCorpo { /*margem esquerda no ipad air*/
+    #botoesCategoriasCorpo {
+        /*margem esquerda no ipad air*/
         margin-left: 0.3rem;
     }
 }
 
-@media (min-width: 829px) { /*em telas maiores que 829px de largura*/
+@media (min-width: 829px) {
+    /*em telas maiores que 829px de largura*/
 
     /*BOTÕES AMARELOS DE CATEGORIAS NO CORPO DO SITE*/
-    #botoesCategoriasCorpo>.col { /*aumentando a largura dos botões a medida que a tela cresce*/
+    #botoesCategoriasCorpo>.col {
+        /*aumentando a largura dos botões a medida que a tela cresce*/
         flex: 1 1 auto;
     }
 }
