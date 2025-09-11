@@ -31,7 +31,7 @@ header { /*fixa o cabeçalho mesmo ao rolar a tela*/
 }
 
 #cabecalhoParteDeCima { /*parte de cima do cabeçalho*/
-    background: linear-gradient(180deg, #810202, #000000);
+    background: linear-gradient(180deg, #000000, #810202);
 }
 
 #logoCabecalho img {  /*logo do cabeçalho*/
@@ -117,7 +117,7 @@ header { /*fixa o cabeçalho mesmo ao rolar a tela*/
 /*CABEÇALHO PARTE DE BAIXO*/
 
 #cabecalhoParteDeBaixo { /*parte de baixo do cabeçalho (transparente)*/
-    background-color: #000000;
+    background-color: #4e0202;
     opacity: 90%;
     position: absolute;
     width: 100%;
@@ -223,7 +223,7 @@ h1 { /*título o que você procura? / todos os títulos do corpo pretos sem nenh
 
 h2 { /*título "ofertas" / todos os títulos no corpo com o fundo em degradê vinho e preto*/
     text-align: center;
-    background: linear-gradient(180deg, #810202, #000000);
+    background: linear-gradient(180deg, #000000, #810202);
     color: white;
     border-radius: .3rem;
     font-weight: 700;
@@ -710,12 +710,14 @@ h2 { /*título "ofertas" / todos os títulos no corpo com o fundo em degradê vi
 
 .filtro-card:hover{ /*mudanças para cima ao passar o mouse*/
     transform:translateY(-6px); 
-    
 }
 
 .filtro-card:hover span{ /*mudança de cor da palavra ao passar o mouse*/
     color:#fff; 
-    
+    background: #000000; 
+    padding: .1rem .5rem .1rem .5rem;
+    border-radius: .3rem;
+    box-shadow: .3rem .4rem .6rem rgb(0, 0, 0);
 }        
 
 .filtro-card:hover::after{ /*permite que as imagens apareçam ao passar o mouse*/
@@ -812,7 +814,7 @@ h4{ /*título você já conhece a vita fortis*/
 /*RODAPÉ*/
 
 footer { /*parte de fundo do rodapé*/
-    background: linear-gradient(180deg, #810202, #000000);
+    background: linear-gradient(180deg, #000000, #810202);
     box-shadow: 0 -0.5rem .5rem rgba(0, 0, 0, 0.3);
     font-weight: 700;
 }
