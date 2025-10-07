@@ -177,7 +177,8 @@ header {
 
 /*INÍCIO DO CORPO DO SITE*/
 
-.btn-zap { /*botão do whatsapp*/
+.btn-zap {
+    /*botão do whatsapp*/
     position: fixed;
     bottom: 1.2rem;
     right: .5rem;
@@ -198,7 +199,8 @@ header {
     transition: transform 0.3s ease;
 }
 
-.btn-zap:hover { /*botão do whatsapp quando passa o mouse*/
+.btn-zap:hover {
+    /*botão do whatsapp quando passa o mouse*/
     transform: scale(1.05);
     background-color: #1f5c0f;
 }
@@ -386,8 +388,8 @@ h2 {
 
 .categoryImagens-card:hover {
     /*parte vinho degradê dos cards das categorias com imagens quando passa o mouse*/
-    transform: scale(1.03);
     background: rgba(173, 57, 57, 0.39);
+    transform: scale(1.02, 1.0);
 }
 
 .categoryImagens-img {
@@ -498,6 +500,31 @@ h2 {
     color: white;
 }
 
+.todosOsMaisVendidos {
+    /*é o que possibilita editar a scroollbar*/
+    overflow-x: auto;
+    scrollbar-width: auto;
+    scrollbar-color: auto;
+    padding-bottom: 0.8rem;
+    cursor: pointer;
+}
+
+.todosOsMaisVendidos::-webkit-scrollbar {
+    /*altura da barra horizontal*/
+    height: 0.3rem;
+}
+
+.todosOsMaisVendidos::-webkit-scrollbar-track {
+    /*fundo da barra*/
+    background: transparent;
+}
+
+.todosOsMaisVendidos::-webkit-scrollbar-thumb {
+    /*cor da barra*/
+    background-color: #c7c7c7;
+    border-radius: 0.25rem;
+}
+
 /*OUTLET*/
 
 .btn.modaEAcessorio {
@@ -528,6 +555,8 @@ h2 {
     font-weight: 600;
     transition: transform 0.3s ease;
     white-space: nowrap;
+    font-size: 0.9rem;
+    padding: .5rem .2rem;
 }
 
 .subBtn:hover {
@@ -537,9 +566,14 @@ h2 {
 }
 
 .subBotoes .row {
-    /*centraliza horizontalmente os sub-botoes*/
+    /*centraliza horizontalmente os subbotoes*/
     justify-content: center;
 }
+
+/*.subBotoes .col { ??
+    flex: 1 1 0;             
+    max-width: 33%;          
+}*/
 
 .subBotoes .col-4 {
     /*largura dos sub-botões*/
@@ -622,6 +656,7 @@ h2 {
     /*fundo escuro da parte qual é o seu esporte*/
     background-color: black;
     margin-top: 1rem;
+    margin-bottom: 2rem;
     padding: 1rem;
     display: flex;
     align-items: center;
@@ -630,7 +665,7 @@ h2 {
 
 .titulo-seu-esporte {
     /*distância entre o título e os cards*/
-    flex: 1;
+    flex: .5;
 }
 
 .titulo-seu-esporte h3 {
@@ -679,7 +714,7 @@ h2 {
     /*banner em si*/
     max-height: 18rem;
     overflow: hidden;
-    margin-top: 1rem;
+    margin-top: .5rem;
 }
 
 .tituloWhey {
@@ -687,6 +722,7 @@ h2 {
     color: rgb(255, 255, 255);
     font-size: 3.5rem;
     font-weight: 650;
+    text-align: center;
 }
 
 .subTituloWhey {
@@ -698,6 +734,10 @@ h2 {
     /*frases de qualidade com os checks em verde*/
     color: #ffffff;
     margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+    flex-direction: row;
 }
 
 .banner-wheyProtein img {
@@ -712,7 +752,7 @@ h2 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.658);
 }
 
 /*CARDS DE WHEY PROTEIN*/
@@ -856,7 +896,7 @@ h2 {
 .filtro-card:hover span {
     /*mudança de cor da palavra ao passar o mouse*/
     color: #fff;
-    background: #000000;
+    background: #380202;
     padding: .1rem .5rem .1rem .5rem;
     border-radius: .3rem;
     box-shadow: .3rem .4rem .6rem rgb(0, 0, 0);
@@ -922,34 +962,32 @@ h2 {
 /*SOBRE A VITA FORTIS*/
 
 #fundoSobreVitaFortis {
-    /*fundo da section sobre a vita fortis*/
-    background-color: #000000;
+    /*fundo preto*/
+    position: relative;
     min-height: 30rem;
     box-shadow: .1rem .1rem .8rem rgb(129, 2, 2);
-    margin-bottom: 2rem;
-    margin-top: 2rem;
+    margin: 2rem 0;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: #000;
 }
 
-.logoTituloSobreVitaFortis {
-    /*logo + titulo na section sobre vita fortis*/
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    align-items: center;
-}
+.backgroundLogoSobreVitaFortis {
+    /*logo em cima do fundo preto*/
+    position: absolute;
+    inset: 0;
+    background-image: url('../imagens/logo_vitafortisBarraPesquisaSemFundo.png');
+    background-repeat: no-repeat;
+    background-position: center 50%;
+    background-size: 29rem auto;
+    background-color: rgba(0, 0, 0, 0.822);
+    background-blend-mode: darken;
+    z-index: 0;
+    background-size: clamp(21rem, 25vw, 30rem) auto;
+    /* 🔹 torna a logo responsiva */
 
-.logoSobreVitaFortis {
-    /*logo na section sobre vita fortis*/
-    grid-column: 1;
-    height: 7rem;
-    margin: .5rem 0rem 0rem .5rem;
-    width: auto;
-    transition: transform 0.3s ease;
-}
-
-.logoSobreVitaFortis:hover {
-    /*logo na section sobre vita fortis quando passa o mouse*/
-    transform: scale(1.05);
 }
 
 h4 {
@@ -959,12 +997,21 @@ h4 {
     font-weight: 700;
 }
 
+#fundoSobreVitaFortis>*:not(.backgroundLogoSobreVitaFortis) {
+    /*garante que o texto fique acima*/
+    position: relative;
+    z-index: 1;
+}
+
 .luzSobreVitaFortis {
     /*posição da luz*/
     position: relative;
     display: inline-block;
     margin-top: 2rem;
     overflow: hidden;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .luzSobreVitaFortis::before {
@@ -976,11 +1023,13 @@ h4 {
     width: 45%;
     transform: translateX(-120%) skewX(-20deg);
     background: linear-gradient(120deg, transparent, rgba(255, 255, 255, .7), transparent);
+    opacity: 0;
 }
 
 .luzSobreVitaFortis:hover::before {
     /*dispara a luz no hover */
-    animation: luz-passando 1s ease forwards;
+    opacity: 1;
+    animation: luz-passando 2s ease forwards;
 }
 
 @keyframes luz-passando {
@@ -1017,7 +1066,7 @@ footer p {
     text-align: left;
     transition: transform 0.3s ease;
     cursor: pointer;
-    
+
 }
 
 footer p:hover {
@@ -1031,7 +1080,8 @@ footer p:hover {
     font-weight: 600;
 }
 
-.bolaFundoPagamento { /*círculo branco atrás de cada bandeira */
+.bolaFundoPagamento {
+    /*círculo branco atrás de cada bandeira */
     width: 4rem;
     height: 4rem;
     border-radius: 50%;
@@ -1040,18 +1090,23 @@ footer p:hover {
     place-items: center;
 }
 
-.bolaFundoPagamento img { /*tamanho da logo dentro do círculo*/
+.bolaFundoPagamento img {
+    /*tamanho da logo dentro do círculo*/
     max-width: 90%;
     max-height: 90%;
     height: auto;
     object-fit: contain;
 }
 
-h6{ /*títulos do rodapé*/
+h6 {
+    /*títulos do rodapé*/
     font-size: 1.1rem;
 }
 
-
+#tituloRedesSociaisRodape {
+    /*impedindo a quebra de linha em "nos acompanhe nas redes sociais"*/
+    white-space: nowrap;
+}
 
 
 
@@ -1090,7 +1145,12 @@ h6{ /*títulos do rodapé*/
         overflow: visible;
     }
 
-    /*SUB-BOTÕES DE MODA E ACESSÓRIOS*/
+    /*ESPORTES*/
+    .titulo-seu-esporte h3 {
+        /*título qual é sua atividade física*/
+        font-size: 2.5rem;
+        padding-left: 0rem !important;
+    }
 }
 
 @media (min-width: 1311px) {
@@ -1192,11 +1252,22 @@ h6{ /*títulos do rodapé*/
 
     /*SUB-BOTÕES DE MODA E ACESSÓRIOS*/
 
+    .subBtn {
+        /*largura mínima para os subbotoes*/
+        min-width: 6rem;
+    }
+
+    /*OS PRODUTOS MAIS VENDIDOS*/
+
+    .todosOsMaisVendidos {
+        /*pegando todos os cards dos produtos mais vendidos*/
+        margin-left: -2rem;
+    }
+
     /*ESPORTES*/
 
     .titulo-seu-esporte {
         /*título qual é sua atividade física*/
-        display: flex;
         gap: .5rem;
         margin-bottom: 1rem;
     }
@@ -1220,6 +1291,191 @@ h6{ /*títulos do rodapé*/
         width: 100%;
     }
 
+    /*BANNER WWHEY*/
+
+    .banner-wheyProtein {
+        /*altura do banner*/
+        max-height: none;
+        height: auto;
+    }
+
+    .banner-wheyProtein img {
+        /*imagem do banner*/
+        height: 22rem;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .tituloWhey {
+        /*título*/
+        white-space: nowrap;
+        font-size: 2.9rem;
+    }
+
+    .subTituloWhey {
+        /*subtítulo*/
+        font-size: 1.2rem;
+    }
+
+    .itens-whey {
+        /*itens com verificações*/
+        flex-direction: column;
+        align-items: center;
+        margin-top: 4rem;
+        gap: 0.5rem;
+        white-space: nowrap;
+        font-size: .9rem;
+        padding: 1rem;
+    }
+
+    /*TELA AMARELA COM FILTRÁVEIS*/
+
+    #fundoTelaComFiltros {
+        /*habilita a barra de rolar*/
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .filtros-grid {
+        /*mantém 2 linhas*/
+        display: grid;
+        grid-template-columns: repeat(4, minmax(10rem, 1fr));
+        grid-auto-rows: 1fr;
+        gap: 1rem;
+        width: fit-content;
+        min-width: 100%;
+        box-sizing: border-box;
+    }
+
+    #fundoTelaComFiltros::-webkit-scrollbar {
+        /*customizando a scrollbar*/
+        height: 0.3rem;
+    }
+
+    #fundoTelaComFiltros::-webkit-scrollbar-track {
+        /*customizando a scrollbar*/
+        background: transparent;
+    }
+
+    #fundoTelaComFiltros::-webkit-scrollbar-thumb {
+        /*customizando a scrollbar*/
+        background-color: rgba(192, 191, 191, 0.8);
+        border-radius: 0.3rem;
+    }
+
+    .filtro-card:hover {
+        /*mudanças para cima ao passar o mouse em cada card*/
+        transform: translateY(-2px);
+    }
+
+    /*SOBRE A VITA FORTIS*/
+
+    h4 {
+        /*título você já conhece a vita fortis*/
+        padding: .5rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    /*rodapé não incluindo 768*/
+
+    /*RODAPÉ*/
+
+    .primeira-linha-rodape {
+        /*permite as quebras de linha*/
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .primeira-linha-rodape>div {
+        /*define as larguras*/
+        flex: 1 1 50%;
+        max-width: 50%;
+    }
+
+    .primeira-linha-rodape .col-md-2:nth-child(1),
+    .primeira-linha-rodape .col-md-2:nth-child(2) {
+        /*primeira linha: logo + fale conosco*/
+        order: 1;
+    }
+
+    .primeira-linha-rodape .col-md-2:nth-child(3),
+    .primeira-linha-rodape .col-md-2:nth-child(4) {
+        /*segunda linha: parceiro + institucional*/
+        order: 2;
+    }
+
+    .primeira-linha-rodape .col-md-2:nth-child(5) {
+        /*terceira linha: redes sociais centralizadas */
+        order: 3;
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    footer h6 {
+        /*alinhando título com texto */
+        text-align: left;
+    }
+
+    #tituloRedesSociaisRodape {
+        /*centralizando "redes sociais"*/
+        text-align: center;
+    }
+
+    .primeira-linha-rodape .logo-footer {
+        /*tamanho da logo*/
+        max-width: 8rem;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 345px) {
+    /*galaxy z fold 5*/
+
+    /*SUB-BOTÕES DE MODA E ACESSÓRIOS*/
+
+    .subBtn {
+        /*largura mínima para os subbotoes*/
+        min-width: 5.8rem;
+    }
+}
+
+@media (max-width: 360px) {
+    /*medida do s8+*/
+
+    /*BANNER WHEY*/
+
+    .tituloWhey {
+        /*título*/
+        white-space: nowrap;
+        font-size: 2.6rem;
+    }
+
+    .subTituloWhey {
+        /*subtítulo*/
+        font-size: 1.2rem;
+    }
+
+    .itens-whey {
+        /*itens com verificações*/
+        flex-direction: column;
+        align-items: center;
+        margin-top: 4rem;
+        gap: 0.5rem;
+        white-space: nowrap;
+        font-size: .85rem;
+    }
+
+    /*SOBRE A VITA FORTIS*/
+
+    h4 {
+        /*título você já conhece a vita fortis*/
+        padding: .5rem;
+        font-size: 2rem;
+    }
 }
 
 @media (min-width: 820px) and (max-width: 829px) {
@@ -1229,6 +1485,17 @@ h6{ /*títulos do rodapé*/
     #botoesCategoriasCorpo {
         /*margem esquerda no ipad air*/
         margin-left: 0.3rem;
+    }
+
+    /*ESPORTES*/
+    .titulo-seu-esporte h3 {
+        /*título qual é sua atividade física*/
+        font-size: 2rem;
+    }
+
+    .titulo-seu-esporte {
+        /*distância do título pros cards*/
+        flex: 1;
     }
 }
 
@@ -1240,20 +1507,54 @@ h6{ /*títulos do rodapé*/
         /*aumentando a largura dos botões a medida que a tela cresce*/
         flex: 1 1 auto;
     }
+
+    /*TÍTULO ESPORTES*/
+    .titulo-seu-esporte h3 {
+        /*título qual é sua atividade física*/
+        font-size: 2.5rem;
+        padding-left: .3rem !important;
+    }
 }
 
+@media (min-width: 853px) and (max-width: 1024px) {
+    /*em telas maiores que 853px e menor que 1024px de largura*/
 
+    /*ESPORTES*/
 
-/* responsividade da TELA COM OPÇÕES/QUADRADOS FILTRÁVEIS */
-/* @media (max-width: 992px){
-    .filtros-grid{ grid-template-columns: repeat(3, 1fr); }
-} 
+    .titulo-seu-esporte {
+        /*distância entre o título e os cards*/
+        flex: 1;
+    }
 
-@media (max-width: 768px){
-    .filtros-grid{ grid-template-columns: repeat(2, 1fr); }
 }
 
-@media (max-width: 480px){
-    .filtro-card{ height: 96px; }
-    .filtro-card span{ font-size:.9rem; }
-} */
+@media (min-width: 1280px) and (max-width: 1285px) {
+    /*dimensões do nest hub max*/
+
+    /*ESPORTES*/
+    .titulo-seu-esporte h3 {
+        /*título qual é sua atividade física*/
+        font-size: 3rem;
+    }
+
+    .titulo-seu-esporte {
+        /*distância entre o título e os cards*/
+        flex: .8;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 853px) {
+
+    /*RODAPÉ*/
+    
+    #tituloRedesSociaisRodape {
+        /*forçando a quebra de "nos acompanhe nas redes sociais" em telas pequenas*/
+        white-space: pre;
+    }
+
+    .quebra-sm::after {
+        /*forçando a quebra de "nos acompanhe nas redes sociais" em telas pequenas*/
+        content: "\A";
+        white-space: pre;
+    }
+}

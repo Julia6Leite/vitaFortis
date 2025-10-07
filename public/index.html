@@ -83,6 +83,7 @@
         <label for="menuToggle" id="menuIcon" class="d-lg-none" style="cursor: pointer;">
             <i class="fas fa-bars fa-lg text-white"></i>
         </label>
+
     </header>
 
     <main>
@@ -342,7 +343,7 @@
 
         <!--cards dos produtos mais vendidos-->
         <div class="container-fluid py-4 px-5 overflow-auto">
-            <div class="row flex-nowrap g-3">
+            <div class="row flex-nowrap g-3 todosOsMaisVendidos">
 
                 <!--primeiro produto-->
                 <div class="col-auto produtoMaisVendido">
@@ -662,7 +663,7 @@
         <section class="banner-wheyProtein position-relative">
             <img src="assets/imagens/wheyBanner" class="img-fluid w-100" alt="Banner Whey Protein">
             <div class="overlay"></div>
-            <div class="container text-center position-absolute top-50 start-50 translate-middle">
+            <div class="position-absolute top-50 start-50 translate-middle text-center w-100">
                 <h1 class="tituloWhey">WHEY PROTEIN</h1>
                 <p class="subTituloWhey">A força que você precisa na construção e na recuperação dos músculos</p>
                 <div class="d-flex justify-content-center gap-4 itens-whey">
@@ -880,18 +881,15 @@
 
         <!--sobre a VitaFortis-->
         <section id="fundoSobreVitaFortis">
-            <div class="logoTituloSobreVitaFortis">
-                <img src="assets/imagens/logo_vitafortisBarraPesquisaSemFundo.png" alt="Vita Fortis"
-                    class="logoSobreVitaFortis">
-                <h4 class="luzSobreVitaFortis">VOCÊ JÁ CONHECE A VITA FORTIS?</h4>
+            <div class="backgroundLogoSobreVitaFortis">
             </div>
+            <h4 class="luzSobreVitaFortis">VOCÊ JÁ CONHECE A VITA FORTIS?</h4>
         </section>
-
 
         <!--rodapé-->
         <footer class="text-white pt-3 pb-1">
             <div class="container-fluid px-4">
-                <div class="row">
+                <div class="row primeira-linha-rodape">
 
                     <!-- logo -->
                     <div class="col-md-2 mb-1">
@@ -927,37 +925,34 @@
 
                     <!-- redes sociais -->
                     <div class="col-md-2 mb-4">
-                        <h6 class="fw-bold mb-3 text-nowrap">Nos acompanhe nas redes sociais</h6>
-                        <a href="#" class="text-white me-3 redesSociaisRodape"><i class="fab fa-whatsapp fa-lg"></i></a>
-                        <a href="#" class="text-white me-3 redesSociaisRodape"><i
+                        <h6 id="tituloRedesSociaisRodape" class="fw-bold mb-3">Nos acompanhe <span
+                                class="quebra-sm">nas</span>redes sociais</h6>
+                        <a href="#" class="text-white me-2 redesSociaisRodape"><i class="fab fa-whatsapp fa-lg"></i></a>
+                        <a href="#" class="text-white me-2 redesSociaisRodape"><i
                                 class="fab fa-instagram fa-lg"></i></a>
-                        <a href="#" class="text-white me-3 "><i class="fab fa-facebook fa-lg"></i></a>
+                        <a href="#" class="text-white me-2 redesSociaisRodape"><i class="fab fa-facebook fa-lg"></i></a>
                     </div>
+                </div>
 
-                    <!-- linha clara -->
-                    <hr class="bg-light">
+                <!-- linha clara -->
+                <hr class="bg-light">
 
-                    <!-- pagamento -->
-                    <div class="row">
-                        <div class="col-12">
-                            <h6 class="fw-bold text-center mb-4">Formas de pagamento</h6>
-                            <div
-                                class="payments d-flex flex-wrap justify-content-center align-items-center gap-3 gap-md-4">
-                                <span class="bolaFundoPagamento"><img src="assets/imagens/exemplo_pagamento"></span>
-                                <span class="bolaFundoPagamento"><img
-                                        src="assets/imagens/payments/mastercard.svg"></span>
-                                <span class="bolaFundoPagamento"><img
-                                        src="assets/imagens/payments/hipercard.svg"></span>
-                                <span class="bolaFundoPagamento"><img src="assets/imagens/payments/elo.svg"></span>
-                                <span class="bolaFundoPagamento"><img src="assets/imagens/payments/boleto.svg"></span>
-                                <span class="bolaFundoPagamento"><img src="assets/imagens/payments/bb.svg"></span>
-                                <span class="bolaFundoPagamento"><img src="assets/imagens/payments/caixa.svg"></span>
-                                <span class="bolaFundoPagamento"><img src="assets/imagens/payments/paypal.svg"></span>
-                                <span class="bolaFundoPagamento"><img src="assets/imagens/payments/pix.svg"></span>
-                            </div>
+                <!-- pagamento -->
+                <div class="row formas-pagamento">
+                    <div class="col-12">
+                        <h6 class="fw-bold text-center mb-4">Formas de pagamento</h6>
+                        <div class="payments d-flex flex-wrap justify-content-center align-items-center gap-3 gap-md-4">
+                            <span class="bolaFundoPagamento"><img src="assets/imagens/exemplo_pagamento"></span>
+                            <span class="bolaFundoPagamento"><img src="assets/imagens/payments/mastercard.svg"></span>
+                            <span class="bolaFundoPagamento"><img src="assets/imagens/payments/hipercard.svg"></span>
+                            <span class="bolaFundoPagamento"><img src="assets/imagens/payments/elo.svg"></span>
+                            <span class="bolaFundoPagamento"><img src="assets/imagens/payments/boleto.svg"></span>
+                            <span class="bolaFundoPagamento"><img src="assets/imagens/payments/bb.svg"></span>
+                            <span class="bolaFundoPagamento"><img src="assets/imagens/payments/caixa.svg"></span>
+                            <span class="bolaFundoPagamento"><img src="assets/imagens/payments/paypal.svg"></span>
+                            <span class="bolaFundoPagamento"><img src="assets/imagens/payments/pix.svg"></span>
                         </div>
                     </div>
-
                 </div>
 
                 <!-- linha clara -->
