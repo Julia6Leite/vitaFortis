@@ -123,6 +123,7 @@ header {
 #carrinhoArea {
     /*carrinho de compras*/
     color: rgba(253, 209, 1, 1);
+    position: relative;
 }
 
 #carrinhoArea:hover {
@@ -133,6 +134,13 @@ header {
 #areaLoginECarrinho {
     /*distância da área do login e do carrinho da margem direita */
     margin-right: 3.5rem;
+}
+
+#contadorCarrinho {
+    /*número de itens no carrinho*/
+    font-size: 0.6rem;
+    padding: 0.2rem 0.3rem;
+    border: 1px solid #00000020;
 }
 
 /*CABEÇALHO PARTE DE BAIXO*/
@@ -1546,7 +1554,7 @@ h6 {
 @media (min-width: 768px) and (max-width: 853px) {
 
     /*RODAPÉ*/
-    
+
     #tituloRedesSociaisRodape {
         /*forçando a quebra de "nos acompanhe nas redes sociais" em telas pequenas*/
         white-space: pre;

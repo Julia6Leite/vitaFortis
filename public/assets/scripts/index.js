@@ -1,6 +1,8 @@
+/*JS da página inicial*/
+
 document.addEventListener("DOMContentLoaded", () => {
 
-  //alterna os sub-botões de moda e acessórios
+  //Alterna os sub-botões de moda e acessórios
   const btnModa = document.getElementById("botaoModa");
   const btnAcessorios = document.getElementById("botaoAcessorios");
   const subModa = document.getElementById("subModa");
@@ -17,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
-  //muda a cor de fundo dos cards quando clica em algum sub-botão de moda e acessórios
+  //Muda a cor de fundo dos cards quando clica em algum sub-botão de moda e acessórios
   const subBtns = document.querySelectorAll("#subModa .subBtn, #subAcessorios .subBtn");
   const cardsContainer = document.getElementById("cardsOutletFundo");
 
@@ -30,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
-  //preenchendo o coração do favorito ao clicar
+  //Preenchendo o coração do favorito ao clicar
   document.querySelectorAll('.favorito-btn').forEach(function (btn) {
     btn.addEventListener('click', function () {
       const icon = this.querySelector('i');
@@ -38,6 +40,13 @@ document.addEventListener("DOMContentLoaded", () => {
       icon.classList.toggle('bi-heart-fill');
     });
   });
+
+
+  //Apenas a "preparação" da função de atualizar o número de itens no carrinho
+  function atualizarCarrinho(qtd) {
+    const contador = document.getElementById('contadorCarrinho');
+    contador.textContent = qtd;
+  }
 
 });
 
