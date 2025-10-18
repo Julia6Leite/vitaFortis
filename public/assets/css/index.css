@@ -3,7 +3,7 @@
 /*cores do documento:
 
 rgba(253, 209, 1, 0.8) amarelo mais claro;
-rgba(253, 209, 1, 1) amarelo mais escuro;
+rgba(253, 209, 1, 1) ou #fdd101 amarelo mais escuro;
 rgba(170, 142, 0, 0.8) dourado;
 linear-gradient(180deg, #810202, #000000) cabeçalho vinho e preto;
 linear-gradient(180deg, #dd2424, #131313) botão quando passa o mouse - vermelho e quase preto
@@ -167,6 +167,18 @@ header {
     transform: scale(1.1);
 }
 
+#opcaoFidelidadeCab {
+    /*opção "clube fidelidade"*/
+    color: white;
+}
+
+#fundoFidelidadeCab {
+    /*background da opção "clube fidelidade"*/
+    background-color: rgb(170, 142, 0);
+    border-radius: .2rem;
+    margin-right: .5rem;
+}
+
 #opcaoCategorias {
     /*opção "categorias"*/
     color: white;
@@ -174,7 +186,7 @@ header {
 
 #fundoCategorias {
     /*background da opção "categorias"*/
-    background-color: rgba(253, 209, 1, 0.8);
+    background-color: rgba(0, 0, 0, 0.8);
     border-radius: .2rem;
 }
 
@@ -217,7 +229,75 @@ header {
 
 #carrossel img {
     /*altura da imagem do carrossel*/
-    height: 80vh;
+    height: 88vh;
+}
+
+.slide-hero {
+    /*slide do clube fidelidade*/
+    min-height: 88vh;
+    background: rgba(170, 142, 0, 0.8);
+}
+
+.tituloSlidClubeF {
+    /*título do slide do clube fidelidade*/
+    font-size: 3.5rem;
+    color: #ffffff;
+    margin-top: 5rem;
+    margin-bottom: 1.5rem;
+    background: #810202;
+    border: .1px solid rgb(58, 58, 58);
+    padding: 0rem .2rem .1rem .2rem;
+    border-radius: .2rem;
+}
+
+.subTituloSlidClubeF {
+    /*subtítulo do slide do clube fidelidade*/
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 2.7rem;
+}
+
+#marcaTexto {
+    /*palavra Clube Fidelidade diferente do resto do texto*/
+    color: #000;
+    font-size: 1.5rem;
+}
+
+.itensSlidClubeF {
+    /*os 3 benefícios do slide do clube fidelidade*/
+    color: #ffffff;
+    font-weight: 450;
+    font-size: 1.1rem;
+}
+
+/*cor do check, do presente e do diamante no slide do clube fidelidade*/
+.fa-check {
+    color: #146933;
+}
+.fa-gift {
+    color: #810202;
+}
+.fa-gem {
+    color: #646161;
+}
+
+.btnQueroClubF {
+    /*botão quero fazer parte do clube fidelidade*/
+    border: 1px solid;
+    padding: .4rem .6rem .5rem .6rem;
+    border-radius: .2rem;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    display: inline-block;
+    margin-top: 2rem;
+}
+
+.btnQueroClubF:hover {
+    /*botão quero fazer parte do clube fidelidade quando passa o mouse*/
+    background: linear-gradient(180deg, #810202, #000000);
+    border: none;
 }
 
 /*AS CATEGORIAS EM BOTÕES QUE APARECEM NO MAIN*/
@@ -994,8 +1074,6 @@ h2 {
     background-blend-mode: darken;
     z-index: 0;
     background-size: clamp(21rem, 25vw, 30rem) auto;
-    /* 🔹 torna a logo responsiva */
-
 }
 
 h4 {
@@ -1242,7 +1320,7 @@ h6 {
         left: 0;
         width: 100%;
         z-index: 20;
-        background-color: #000;
+        background-color: #2e0101;
         opacity: 0.9;
     }
 
@@ -1250,6 +1328,50 @@ h6 {
         /*layout interno vertical/estilização interna do nav quando aberto*/
         flex-direction: column;
         align-items: center;
+    }
+
+    #fundoCategorias {
+        /*afasta o background de clube fidelidade do background de categorias*/
+        margin-top: .4rem;
+    }
+
+    /*CARROSSEL/CLUBE FIDELIDADE*/
+
+    #carrossel img {
+        /*altura da imagem do carrossel*/
+        height: 95vh;
+    }
+
+    .slide-hero {
+        /*slide do clube fidelidade*/
+        min-height: 95vh;
+    }
+
+    .tituloSlidClubeF {
+        /*título do slide do clube fidelidade*/
+        font-size: 2.3rem;
+        margin-top: 3rem;
+        padding: 0rem .2rem 0rem .2rem;
+    }
+
+    .subTituloSlidClubeF {
+        /*subtítulo do slide do clube fidelidade*/
+        font-size: 1.2rem;
+    }
+
+    #marcaTexto {
+        /*palavra Clube Fidelidade diferente do resto do texto*/
+        font-size: 1.3rem;
+    }
+
+    .itensSlidClubeF {
+        /*os 3 benefícios do slide do clube fidelidade*/
+        font-size: 1rem;
+    }
+
+    .btnQueroClubF {
+        /*botão quero fazer parte do clube fidelidade*/
+        margin-top: 1.8rem;
     }
 
     /*BOTÕES AMARELOS DE CATEGORIAS NO CORPO DO SITE*/

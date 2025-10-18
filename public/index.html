@@ -70,6 +70,11 @@
         <!--menu/parte debaixo do cabeçalho-->
         <nav id="cabecalhoParteDeBaixo">
             <div class="container d-flex justify-content-center py-1">
+                <div id="fundoFidelidadeCab">
+                    <a id="opcaoFidelidadeCab" href="#"
+                        class="nav-link text-uppercase mx-3 d-flex align-items-center"><i
+                            class="fas fa-star me-2"></i>CLUBE FIDELIDADE</a>
+                </div>
                 <div id="fundoCategorias">
                     <a id="opcaoCategorias" href="#" class="nav-link text-uppercase mx-3 d-flex align-items-center"><i
                             class="fas fa-bars me-2"></i>CATEGORIAS</a>
@@ -97,33 +102,56 @@
             <i class="fab fa-whatsapp fa-2x"></i>
         </button>
 
-        <!--carrossel clube fidelidade-->
-        <div id="carrossel" class="carousel slide" data-bs-ride="carousel">
+        <!--carrossel-->
+        <div id="carrossel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="12000">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carrossel" data-bs-slide-to="0" class="active"
                     aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#carrossel" data-bs-slide-to="1" aria-label="Slide 2"></button>
                 <button type="button" data-bs-target="#carrossel" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
+
+            <!--primeiro slide - clube fidelidade-->
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="assets/imagens/imagemExemploCarrossel" class="d-block w-100" alt="...">
+                    <div class="slide-hero d-flex justify-content-center text-center">
+                        <div class="container">
+                            <p class="tituloSlidClubeF lh-1 fw-bold">Você treina, a gente recompensa!</p>
+                            <p class="subTituloSlidClubeF">Cadastre-se no nosso <a id="marcaTexto">Clube Fidelidade</a>
+                                e receba vantagens
+                                a cada compra</p>
+                            <p class="itensSlidClubeF"><i class="fas fa-check me-2"></i>Ganhe pontos a cada
+                                compra</p>
+                            <p class="itensSlidClubeF"><i class="fas fa-gift me-2"></i>Troque pontos por produtos
+                            </p>
+                            <p class="itensSlidClubeF"><i class="far fa-gem me-2"></i>Benefícios excluivos para
+                                membros VIP</p>
+                            <a href="" class="btnQueroClubF">Quero fazer parte</a>
+                        </div>
+                    </div>
                 </div>
+                <!--segundo slide-->
                 <div class="carousel-item">
                     <img src="assets/imagens/imagemExemploCarrossel" class="d-block w-100" alt="...">
                 </div>
+                <!--terceiro slide-->
                 <div class="carousel-item">
                     <img src="assets/imagens/imagemExemploCarrossel" class="d-block w-100" alt="...">
                 </div>
             </div>
+
+            <!--botão p/trás-->
             <button class="carousel-control-prev" type="button" data-bs-target="#carrossel" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
+
+            <!--botão p/frente-->
             <button class="carousel-control-next" type="button" data-bs-target="#carrossel" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
+
         </div>
 
         <h1> <!--título o que você procura-->
@@ -921,9 +949,12 @@
                     <!-- institucional -->
                     <div class="col-md-2 mb-4">
                         <h6 class="fw-bold mb-3">Institucional</h6>
-                        <p class="mb-1"><a href="#" class="text-white text-decoration-none">Programa Fidelidade</a></p>
-                        <p class="mb-1"><a href="#" class="text-white text-decoration-none">Sobre a Vita Fortis</a></p>
-                        <p class="mb-1"><a href="#" class="text-white text-decoration-none">Políticas da empresa</a></p>
+                        <p class="mb-1"><a href="#" class="text-white text-decoration-none">Programa Fidelidade</a>
+                        </p>
+                        <p class="mb-1"><a href="#" class="text-white text-decoration-none">Sobre a Vita Fortis</a>
+                        </p>
+                        <p class="mb-1"><a href="#" class="text-white text-decoration-none">Políticas da empresa</a>
+                        </p>
                         <p class="mb-1"><a href="#" class="text-white text-decoration-none">Endereços</a></p>
                     </div>
 
