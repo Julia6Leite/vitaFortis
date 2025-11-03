@@ -281,6 +281,29 @@ h5{ /*os subtítulos*/
     cursor: default;
 }
 
+.favorito-btn {
+    /*tirando o fundo cinza do botão de coração/favorito*/
+    background-color: transparent;
+    border: none;
+}
+
+.favorito-btn:hover {
+    /*tirando o fundo cinza do botão de coração/favorito quando passa o mouse*/
+    background-color: transparent;
+    border: none;
+}
+
+.favorito-btn i {
+    /*coração em si*/
+    font-size: 1.1rem;
+    color: #810202;
+}
+
+.favorito-btn:hover i::before {
+    /*coração preenchido ao passar o mouse*/
+    content: "\f415";
+}
+
 .card-img-top.clubeFidelidade {
     /*imagem do produto*/
     max-width: 7rem;
