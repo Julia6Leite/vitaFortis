@@ -235,7 +235,7 @@ header {
 .slide-hero {
     /*slide do clube fidelidade*/
     min-height: 88vh;
-    background: rgba(170, 142, 0, 0.8);
+    background: #aa8e00cc;
 }
 
 .tituloSlidClubeF {
@@ -244,8 +244,7 @@ header {
     color: #ffffff;
     margin-top: 5rem;
     margin-bottom: 1.5rem;
-    background: #810202;
-    border: .1px solid rgb(58, 58, 58);
+    background: radial-gradient(circle at center,#810202 10%,#810202 40%,#aa8e00cc 100%);
     padding: 0rem .2rem .1rem .2rem;
     border-radius: .2rem;
 }
@@ -292,12 +291,15 @@ header {
     transition: transform 0.3s ease;
     display: inline-block;
     margin-top: 2rem;
+    background: linear-gradient(180deg, #810202ea, #000000ea);
+    border: none;
+    transition: transform 0.3s ease;
 }
 
 .btnQueroClubF:hover {
     /*botão quero fazer parte do clube fidelidade quando passa o mouse*/
     background: linear-gradient(180deg, #810202, #000000);
-    border: none;
+    transform: scale(1.1);
 }
 
 /*AS CATEGORIAS EM BOTÕES QUE APARECEM NO MAIN*/

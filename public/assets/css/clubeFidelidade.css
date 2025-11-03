@@ -1,0 +1,449 @@
+/*CSS DA PÁGINA DE CLUBE FIDELIDADE*/
+
+/*CORPO*/
+
+body {
+    /*cor de fundo*/
+    background-color: #eeece7;
+    overflow-x: hidden;
+    /*remove a barra de rolar embaixo*/
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/*CABEÇALHO*/
+
+/*CABEÇALHO PARTE DE CIMA*/
+
+header {
+    /*fixa o cabeçalho mesmo ao rolar a tela*/
+    position: sticky;
+}
+
+#cabecalhoParteDeCima {
+    /*parte de cima do cabeçalho*/
+    background: linear-gradient(180deg, #000000, #810202);
+}
+
+#logoCabecalho img {
+    /*logo do cabeçalho*/
+    max-height: 5rem;
+    transition: transform 0.3s ease;
+}
+
+#logoCabecalho img:hover {
+    /*logo do cabeçalho quando passa o mouse*/
+    transform: scale(1.08);
+}
+
+#barraDePesquisa {
+    /*tamanho da barra de pesquisa*/
+    width: 50%;
+    max-width: 25rem;
+}
+
+#barraDePesquisaToda {
+    /*posição da barra de pesquisa com o botão/lupa*/
+    margin-left: 15%;
+    margin-right: 5%;
+}
+
+#botaoLupa {
+    /*parte da lupa na barra de pesquisa*/
+    background-color: rgba(253, 209, 1, 0.8);
+}
+
+#botaoLupa:hover {
+    /*parte da lupa na barra de pesquisa quando passa o mouse*/
+    background-color: rgba(170, 142, 0, 0.8);
+}
+
+.input-group .btn:hover {
+    /*lupa da caixa de pesquisa quando passa o mouse em cima*/
+    color: white;
+}
+
+.input-group .form-control:focus {
+    /*lupa da caixa de pesquisa quando passa o mouse em cima*/
+    border-color: transparent;
+    box-shadow: none;
+}
+
+#iconePerfil {
+    /*ícone de boneco no "meu perfil"*/
+    color: rgba(253, 209, 1, 1);
+    font-size: 1.3rem;
+    transition: transform 0.3s ease;
+}
+
+#iconePerfil:hover {
+    /*ícone de boneco no perfil quando passa o mouse*/
+    color: rgba(253, 209, 1, 1);
+    font-size: 1.3rem;
+    transform: scale(1.08);
+    cursor: pointer;
+}
+
+#meuPerfilArea a {
+    /*texto "meu perfil"*/
+    color: white;
+    font-size: .95rem;
+}
+
+#carrinhoArea {
+    /*carrinho de compras*/
+    color: rgba(253, 209, 1, 1);
+    position: relative;
+}
+
+#carrinhoArea:hover {
+    /*carrinho de compras*/
+    cursor: pointer;
+}
+
+#areaLoginECarrinho {
+    /*distância da área do login e do carrinho da margem direita */
+    margin-right: 3.5rem;
+}
+
+#contadorCarrinho {
+    /*número de itens no carrinho*/
+    font-size: 0.6rem;
+    padding: 0.2rem 0.3rem;
+    border: 1px solid #00000020;
+}
+
+/*CABEÇALHO PARTE DE BAIXO*/
+
+#cabecalhoParteDeBaixo {
+    /*parte de baixo do cabeçalho (transparente)*/
+    background-color: #4e0202;
+    opacity: 90%;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    font-weight: 600;
+}
+
+.nav-link.text-uppercase.mx-3 {
+    /*opções do menu*/
+    color: rgba(253, 209, 1, 1);
+    font-size: .9rem;
+    transition: transform 0.3s ease;
+}
+
+.nav-link.text-uppercase.mx-3:hover {
+    /*opções do menu quando passa o mouse*/
+    transform: scale(1.1);
+}
+
+#menuIcon {
+    /*esconde o ícone hambúrger em telas grandes*/
+    display: none;
+}
+
+/*INÍCIO DO CORPO DO SITE*/
+
+/*BOTÃO ZAP*/
+
+.btn-zap {
+    /*botão do whatsapp*/
+    position: fixed;
+    bottom: 1.2rem;
+    right: .5rem;
+    background-color: #4fce5d;
+    color: white;
+    border: none;
+    padding: 0.5rem 0.7rem 0.5rem 0.7rem;
+    border-radius: 50%;
+    font-size: .75rem;
+    font-weight: bold;
+    box-shadow: 0 0.25rem 0.37rem rgba(0, 0, 0, 0.3);
+    z-index: 1050;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    gap: .8rem;
+    transition: transform 0.3s ease;
+}
+
+.btn-zap:hover {
+    /*botão do whatsapp quando passa o mouse*/
+    transform: scale(1.05);
+    background-color: #1f5c0f;
+}
+
+/*PARTE DO CLUBE FIDELIDADE*/
+
+#fundoPaginaClubeFidelidade{ /*distância entre o topo/fim e a página*/
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    background: linear-gradient(180deg, #000000, #810202);
+    border-radius: 2rem;
+}
+
+.resgatarAgora{ /*botão "resgatar agora"*/
+    background: linear-gradient(180deg, #000000, #810202);
+    color: white;
+    padding: .3rem .4rem .3rem .4rem;
+}
+
+.resgatarAgora:hover{ /*botão "resgatar agora" quando passa o mouse*/
+    color: white;
+}
+
+.resgatarAgora:focus:hover{ /*botão "resgatar agora" quando clica*/
+    color: white;
+}
+
+.ganharMaisPontos{ /*botão "ganhar mais pontos"*/
+    background-color: rgb(170, 142, 0);
+    color: white;
+    padding: .3rem .4rem .3rem .4rem;
+}
+
+.ganharMaisPontos:hover{ /*botão "ganhar mais pontos" quando passa o mouse*/
+    background-color: rgb(170, 142, 0);
+    color: white;
+}
+
+.ganharMaisPontos:focus:hover{ /*botão "ganhar mais pontos" quando clica*/
+    background-color: rgb(170, 142, 0);
+    color: rgb(255, 255, 255);
+}
+
+.progress.rounded-pill { /*o trilho - parte clara - do progresso*/
+    --bs-progress-bg: #dadada;
+    box-shadow: 0 2px 8px rgba(0,0,0,.06);
+}
+
+:root{ /*linha de progresso para vita diamante*/
+    --vf-brand:#000000;     
+    --vf-cyan:#810202;     
+}
+
+.bg-primary-grad{ /*é o que permite colorir a barra de progresso*/
+    background: linear-gradient(90deg, var(--vf-brand), var(--vf-cyan)) !important;
+}
+
+.tiers .medal{ /*parte redonda de fundo do diamante*/
+    width: 2.1rem; 
+    height:2.1rem; 
+    border-radius:50%;
+    display:grid; 
+    place-items:center; 
+    font-weight:800;
+    background-color: rgb(170, 142, 0);
+}
+
+.fa-gem{ /*o diamante em si*/
+    color:#ffffff;
+}
+
+.card-hero{ /*fundo da parte de cima - com nome, progresso...*/
+    background: #eeece7;
+    border-radius: 2rem;
+}
+
+h5{ /*os subtítulos*/
+    color: #000;
+}
+
+.text-muted.small { /*os pequenos textos em "benefícios do seu nível"*/
+    color: #000000 !important;
+}
+
+.benef-card{ /*fundo dos "benefícios do seu nível"*/
+    background:#eeece7; 
+}
+
+.card{ /*todos os fundos exceto: o fundo só da parte da frase "catálogo de recompensas", o fundo dos cards "benefícios do seu nível" e as imagens dos cards*/
+    border-radius: 1rem;
+}
+
+/*CARDS DOS PRODUTOS*/
+
+.cardDeTodosOsProdutosClubeFidelidade{ /*card pegando todos os produtos*/
+    min-width: 15rem;
+}
+
+.card.h-100.clubeFidelidade {
+    /*o card em si do produto*/
+    box-shadow: .1rem .1rem .6rem rgb(100, 100, 100);
+    cursor: pointer;
+}
+
+.card.h-100.clubeFidelidadeVD {
+    /*o card em si do produto VD*/
+    box-shadow: .1rem .1rem .6rem rgb(100, 100, 100);
+    cursor: pointer;
+    background-color: #dd7b7b23;
+    cursor: default;
+}
+
+.card-img-top.clubeFidelidade {
+    /*imagem do produto*/
+    max-width: 7rem;
+    margin: 1rem auto 0rem auto;
+    transition: transform 0.5s ease;
+}
+
+.card-img-top.clubeFidelidade:hover {
+    /*imagem do produto quando passa o mouse*/
+    transform: scale(1.05);
+}
+
+.card-img-top.clubeFidelidadeVD{
+    /*imagem do produto VD*/
+    max-width: 7rem;
+    margin: 1rem auto 0rem auto;
+}
+
+.card-title.clubeFidelidade{ /*nome do produto*/
+    font-size: 1rem;
+}
+
+.badge.fw-bold.rounded-pill { /*pontos*/
+    background: linear-gradient(180deg, #000000, #810202);
+    color: #ffffff;
+    font-size: .7rem;
+}
+
+.badge.rounded-pill.mb-2 { /*exclusivo Vita Diamante*/
+    background-color: #f8cbcb; 
+    color: #292929;            
+    padding-inline: .75rem;     
+}
+
+.btn.comprarClubeFidelidade {
+    /*botão "comprar" nos produtos*/
+    background-color: rgba(158, 136, 25, 0.8);
+    color: rgb(255, 255, 255);
+    border: none;
+    font-weight: 650;
+    transition: transform 0.3s ease;
+    white-space: nowrap;
+    margin-top: 2rem;
+}
+
+.btn.comprarClubeFidelidade:hover {
+    /*botões de comprar individuais, mas pegando todos, quando passa o mouse*/
+    background-color: rgb(145, 121, 2);
+    transform: scale(1.02);
+}
+
+.btn.comprarClubeFidelidade:focus {
+    /*mantém a palavra branca ao clicar no botão*/
+    color: white;
+}
+
+.btn.comprarClubeFidelidadeVD {
+    /*botão "comprar" nos produtos exclusivos vita diamante*/
+    background-color: rgba(158, 136, 25, 0.288);
+    color: rgb(255, 255, 255);
+    border: none;
+    font-weight: 650;
+    white-space: nowrap;
+    cursor: default;
+}
+
+.btn.comprarClubeFidelidadeVD:focus {
+    /*mantém a palavra branca ao clicar no botão*/
+    color: white;
+}
+
+
+
+
+
+
+/*RESPONSIVIDADE*/
+@media (max-width: 768px) {
+    /*em telas menores que 768px de largura (referência: ipad mini)*/
+
+    /*CABEÇALHO PARTE DE CIMA*/
+    #cabecalhoParteDeCima {
+        /*parte de cima do cabeçalho*/
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    #logoCabecalho {
+        /*logo*/
+        margin-top: 0.2rem;
+    }
+
+    #areaMeuPerfil {
+        /*área de login e carrinho*/
+        margin-right: 0.8rem;
+    }
+
+    #meuPerfilArea a {
+        /*texto faça login/cadastre-se*/
+        font-size: 0.85rem;
+    }
+
+    #cabecalhoParteDeCima>.flex-grow-1 {
+        /*joga a barra de pesquisa para baixo + margens*/
+        order: 2;
+        flex: 0 0 100%;
+        margin: 1.5rem 0 3rem 0;
+    }
+
+    #barraDePesquisaToda {
+        /*remove as margens internas da barra de pesquisa*/
+        margin: 0;
+    }
+
+    .input-group {
+        /*ajusta a largura da barra de pesquisa*/
+        width: 90%;
+        max-width: 25rem;
+    }
+
+    /*CABEÇALHO PARTE DE BAIXO*/
+    #cabecalhoParteDeBaixo {
+        /*esconde o menu*/
+        display: none;
+    }
+
+    #menuIcon {
+        /*exibe o hambúrguer*/
+        display: inline-block;
+        position: absolute;
+        z-index: 30;
+        top: 80%;
+        padding: 0.5rem;
+    }
+
+    #menuToggle:checked+#cabecalhoParteDeBaixo {
+        /*menu ao clicar no hambúrguer*/
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        z-index: 20;
+        background-color: #2e0101;
+        opacity: 0.9;
+    }
+
+    #menuToggle:checked+#cabecalhoParteDeBaixo .container {
+        /*layout interno vertical/estilização interna do nav quando aberto*/
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /*PARTE DO CLUBE FIDELIDADE*/
+    #fundoPaginaClubeFidelidade{ /*distância entre o topo/fim e a página*/
+        margin-top: 4rem;
+        margin-left: 1rem;
+    }
+}
+
+@media (min-width: 992px){ /*em telas maiores que 992px de largura*/
+    .aside-sticky{ /*posição do aside*/
+        position: sticky; 
+        top: 5,5rem; 
+    }
+}
