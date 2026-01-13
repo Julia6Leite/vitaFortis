@@ -122,6 +122,7 @@ header {
     width: 100%;
     z-index: 10;
     font-weight: 600;
+    box-shadow: 0 0.25rem 0.37rem rgba(0, 0, 0, 0.3);
 }
 
 .nav-link.text-uppercase.mx-3 {

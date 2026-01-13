@@ -34,7 +34,7 @@
             <div class="flex-grow-1 d-flex justify-content-center px-2">
                 <div id="barraDePesquisaToda" class="input-group rounded-pill justify-content-center">
                     <input id="barraDePesquisa" type="text" class="form-control border-0 rounded-start-pill"
-                        placeholder="O que está buscando?">
+                        placeholder="O que você está buscando?">
                     <button id="botaoLupa" class="btn rounded-end-pill">
                         <i class="fas fa-search"></i>
                     </button>
@@ -57,7 +57,7 @@
                 <div id="carrinhoArea" class="position-relative">
                     <i class="fas fa-shopping-cart fa-lg"></i>
                     <span id="contadorCarrinho"
-                        class="badge bg-warning text-dark position-absolute top-0 start-100 translate-middle rounded-pill">
+                        class="badge text-white position-absolute top-0 start-100 translate-middle rounded-pill">
                         0
                     </span>
                 </div>
@@ -75,10 +75,7 @@
                         class="nav-link text-uppercase mx-3 d-flex align-items-center"><i
                             class="fas fa-star me-2"></i>CLUBE FIDELIDADE</a>
                 </div>
-                <div id="fundoCategorias">
-                    <a id="opcaoCategorias" href="#" class="nav-link text-uppercase mx-3 d-flex align-items-center"><i
-                            class="fas fa-bars me-2"></i>CATEGORIAS</a>
-                </div>
+                <a href="#" class="nav-link text-uppercase mx-3"><i class="fas fa-bars me-2"></i>CATEGORIAS</a>
                 <a href="#" class="nav-link text-uppercase mx-3">NOVIDADES</a>
                 <a href="#" class="nav-link text-uppercase mx-3">MARCAS</a>
                 <a href="#" class="nav-link text-uppercase mx-3">KITS</a>
@@ -103,7 +100,7 @@
         </button>
 
         <!--carrossel-->
-        <div id="carrossel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="12000">
+        <div id="carrossel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="12000000"> <!--12000-->
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carrossel" data-bs-slide-to="0" class="active"
                     aria-current="true" aria-label="Slide 1"></button>
@@ -114,19 +111,36 @@
             <!--primeiro slide - clube fidelidade-->
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <div class="slide-hero d-flex justify-content-center text-center">
-                        <div class="container">
-                            <p class="tituloSlidClubeF lh-1 fw-bold">Você treina, a gente recompensa!</p>
-                            <p class="subTituloSlidClubeF">Cadastre-se no nosso <a id="marcaTexto">Clube Fidelidade</a>
-                                e receba vantagens
-                                a cada compra</p>
-                            <p class="itensSlidClubeF"><i class="fas fa-check me-2"></i>Ganhe pontos a cada
-                                compra</p>
-                            <p class="itensSlidClubeF"><i class="fas fa-gift me-2"></i>Troque pontos por produtos
-                            </p>
-                            <p class="itensSlidClubeF"><i class="far fa-gem me-2"></i>Benefícios excluivos para
-                                membros VIP</p>
-                            <a href="" class="btnQueroClubF">Quero fazer parte</a>
+                    <div class="slide-hero">
+                        <div class="container-fluid p-0">
+                            <div class="row g-0 hero-row">
+                                <!--lado esquerdo-->
+                                <div
+                                    class="col-md-6 hero-left d-flex align-items-center justify-content-center text-center">
+                                    <p class="tituloSlidClubeF lh-1 fw-bold m-0">Vita Fortis<br><a
+                                            id="marcaTextoTitulo">Clube Fidelidade<i class="fas fa-star"></i></a></i>
+                                    </p>
+                                </div>
+                                <!--lado direito-->
+                                <div class="col-md-6 hero-right d-flex align-items-center">
+                                    <div class="container py-4 text-center text-md-start">
+                                        <p class="subTituloSlidClubeF">
+                                            Cadastre-se no nosso <a id="marcaTexto">Clube Fidelidade<i
+                                                    class="fas fa-star"></i></a> e receba diversas
+                                            vantagens</p>
+                                        <p class="itensSlidClubeF"><i class="fas fa-check me-2"></i>Ganhe pontos a cada
+                                            compra</p>
+                                        <p class="itensSlidClubeF"><i class="fas fa-gift me-2"></i>Troque pontos por
+                                            produtos</p>
+                                        <p class="itensSlidClubeF"><i class="far fa-gem me-2"></i>Benefícios excluivos
+                                            para membros VIP</p>
+                                        <div class="text-center">
+                                            <a href="" class="btnQueroClubF">Assine agora</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -196,11 +210,11 @@
                             <i class="bi bi-heart"></i>
                         </button>
                         <!--imagem-->
-                        <img src="assets/imagens/imagemExemploProdutosPromocao" class="card-img-top ofertas"
+                        <img src="assets/imagens/creatina" class="card-img-top ofertas"
                             alt="Imagem 1 - produto em oferta">
                         <div class="card-body d-flex flex-column">
                             <!--nome-->
-                            <h5 class="card-title ofertas">Creatina Growth (250g)</h5>
+                            <h5 class="card-title ofertas">Creatina FTW (300g)</h5>
                             <div class="ofertas mb-3">
                                 <!--preço-->
                                 <div class="text-muted small mb-1">
@@ -266,7 +280,7 @@
                         </div>
                     </div>
                 </div>
-                
+
             </div>
         </div>
 
@@ -338,31 +352,41 @@
 
         <!--as categoria com imagens/"por categoria"-->
         <section class="categoriesImagens-section">
-            <div class="categoriesImagens-grid">
-                <div class="categoryImagens-card">
-                    <img src="assets/imagens/proteina_exemplo.png" alt="Termogênicos" class="categoryImagens-img">
-                    <button class="categoryImagens-btn">AMINOÁCIDOS</button>
-                </div>
-                <div class="categoryImagens-card">
-                    <img src="assets/imagens/proteina_exemplo.png" alt="Hipercalóricos" class="categoryImagens-img">
-                    <button class="categoryImagens-btn">CARBOIDRATOS</button>
-                </div>
-                <div class="categoryImagens-card">
-                    <img src="assets/imagens/proteina_exemplo.png" alt="Pré‑Treino" class="categoryImagens-img">
-                    <button class="categoryImagens-btn">PRÉ‑TREINOS</button>
-                </div>
-                <div class="categoryImagens-card">
-                    <img src="assets/imagens/proteina_exemplo.png" alt="Proteína" class="categoryImagens-img">
-                    <button class="categoryImagens-btn">PROTEÍNAS</button>
-                </div>
-                <div class="categoryImagens-card">
-                    <img src="assets/imagens/proteina_exemplo.png" alt="Creatina" class="categoryImagens-img">
-                    <button class="categoryImagens-btn">TERMOGÊNICOS</button>
-                </div>
-                <div class="categoryImagens-card">
-                    <img src="assets/imagens/proteina_exemplo.png" alt="Vitaminas" class="categoryImagens-img">
-                    <button class="categoryImagens-btn">VITAMINAS</button>
-                </div>
+            <div class="grid-categorias">
+                <a class="category-card" href="#">
+                    <img class="img-normal" src="assets/imagens/proteina_exemplo.png" alt="Aminoácidos">
+                    <img class="img-hover" src="" alt="">
+                    <span class="categoryImagens-btn">AMINOÁCIDOS</span>
+                </a>
+
+                <a class="category-card" href="#">
+                    <img class="img-normal" src="assets/imagens/proteina_exemplo.png" alt="Creatinas">
+                    <img class="img-hover" src="" alt="">
+                    <span class="categoryImagens-btn">CREATINAS</span>
+                </a>
+
+                <a class="category-card" href="#">
+                    <img class="img-normal" src="assets/imagens/proteina_exemplo.png" alt="Emagrecedores">
+                    <img class="img-hover" src="" alt="">
+                    <span class="categoryImagens-btn">EMAGRECEDORES</span>
+                </a>
+                <a class="category-card" href="#">
+                    <img class="img-normal" src="assets/imagens/proteina_exemplo.png" alt="Pré-treinos">
+                    <img class="img-hover" src="assets/imagens/imagem-com-fundo-chat.categorias.png" alt="">
+                    <span class="categoryImagens-btn">PRÉ-TREINOS</span>
+                </a>
+
+                <a class="category-card" href="#">
+                    <img class="img-normal" src="assets/imagens/proteina_exemplo.png" alt="Proteínas">
+                    <img class="img-hover" src="" alt="">
+                    <span class="categoryImagens-btn">PROTEÍNAS</span>
+                </a>
+
+                <a class="category-card" href="#">
+                    <img class="img-normal" src="assets/imagens/proteina_exemplo.png" alt="Emagrecedores">
+                    <img class="img-hover" src="" alt="">
+                    <span class="categoryImagens-btn">VITAMINAS E MINERAIS</span>
+                </a>
             </div>
         </section>
 
@@ -667,24 +691,24 @@
 
         <section id="fundoSeuEsporte">
             <div class="titulo-seu-esporte">
-                <h3>QUAL É A SUA</h3>
-                <h3 id="seuEsporteTituloDois">ATIVIDADE FÍSICA?</h3>
+                <h3>QUAL É O SEU</h3>
+                <h3 id="seuEsporteTituloDois">ESPORTE?</h3>
             </div>
 
-            <div class="categoriesImagens-grid">
-                <div class="categoryImagens-card">
+            <div class="grid-esportes">
+                <div class="categoryImagens-card-esportes">
                     <img src="assets/imagens/corrida" alt="Corrida" class="categoryImagens-img esportes">
                     <button class="categoryImagens-btn">CORRIDA</button>
                 </div>
-                <div class="categoryImagens-card">
+                <div class="categoryImagens-card-esportes">
                     <img src="assets/imagens/futebol" alt="Futebol" class="categoryImagens-img esportes">
                     <button class="categoryImagens-btn">FUTEBOL</button>
                 </div>
-                <div class="categoryImagens-card">
+                <div class="categoryImagens-card-esportes">
                     <img src="assets/imagens/musculacao" alt="Musculação" class="categoryImagens-img esportes">
                     <button class="categoryImagens-btn">MUSCULAÇÃO</button>
                 </div>
-                <div class="categoryImagens-card">
+                <div class="categoryImagens-card-esportes">
                     <img src="assets/imagens/pilates.jpg" alt="Pilates" class="categoryImagens-img esportes">
                     <button class="categoryImagens-btn">PILATES</button>
                 </div>
@@ -940,32 +964,32 @@
                     <!-- seja parceiro -->
                     <div class="col-md-2 mb-4">
                         <h6 class="fw-bold mb-3">Seja nosso parceiro</h6>
-                        <p class="mb-1"><a href="#" class="text-white text-decoration-none">Quero ser
+                        <p class="mb-1"><a href="#" class="text-black text-decoration-none">Quero ser
                                 <strong>afiliado</strong></a></p>
-                        <p class="mb-1"><a href="#" class="text-white text-decoration-none">Quero fazer parte da
+                        <p class="mb-1"><a href="#" class="text-black text-decoration-none">Quero fazer parte da
                                 <strong>equipe</strong></a></p>
                     </div>
 
                     <!-- institucional -->
                     <div class="col-md-2 mb-4">
                         <h6 class="fw-bold mb-3">Institucional</h6>
-                        <p class="mb-1"><a href="#" class="text-white text-decoration-none">Programa Fidelidade</a>
+                        <p class="mb-1"><a href="#" class="text-black text-decoration-none">Programa Fidelidade</a>
                         </p>
-                        <p class="mb-1"><a href="#" class="text-white text-decoration-none">Sobre a Vita Fortis</a>
+                        <p class="mb-1"><a href="#" class="text-black text-decoration-none">Sobre a Vita Fortis</a>
                         </p>
-                        <p class="mb-1"><a href="#" class="text-white text-decoration-none">Políticas da empresa</a>
+                        <p class="mb-1"><a href="#" class="text-black text-decoration-none">Políticas da empresa</a>
                         </p>
-                        <p class="mb-1"><a href="#" class="text-white text-decoration-none">Endereços</a></p>
+                        <p class="mb-1"><a href="#" class="text-black text-decoration-none">Endereços</a></p>
                     </div>
 
                     <!-- redes sociais -->
                     <div class="col-md-2 mb-4">
                         <h6 id="tituloRedesSociaisRodape" class="fw-bold mb-3">Nos acompanhe <span
-                                class="quebra-sm">nas</span>redes sociais</h6>
-                        <a href="#" class="text-white me-2 redesSociaisRodape"><i class="fab fa-whatsapp fa-lg"></i></a>
-                        <a href="#" class="text-white me-2 redesSociaisRodape"><i
+                                class="quebra-sm">nas</span> redes sociais</h6>
+                        <a href="#" class="text-black me-2 redesSociaisRodape"><i class="fab fa-whatsapp fa-lg"></i></a>
+                        <a href="#" class="text-black me-2 redesSociaisRodape"><i
                                 class="fab fa-instagram fa-lg"></i></a>
-                        <a href="#" class="text-white me-2 redesSociaisRodape"><i class="fab fa-facebook fa-lg"></i></a>
+                        <a href="#" class="text-black me-2 redesSociaisRodape"><i class="fab fa-facebook fa-lg"></i></a>
                     </div>
                 </div>
 

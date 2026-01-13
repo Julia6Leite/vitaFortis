@@ -5,11 +5,15 @@
 rgba(253, 209, 1, 0.8) amarelo mais claro;
 rgba(253, 209, 1, 1) ou #fdd101 amarelo mais escuro;
 rgba(170, 142, 0, 0.8) dourado;
-linear-gradient(180deg, #810202, #000000) cabeçalho vinho e preto;
+linear-gradient(180deg, #1b1b1b, #be2929) cabeçalho vinho e preto;
 linear-gradient(180deg, #dd2424, #131313) botão quando passa o mouse - vermelho e quase preto
-#eeece7 off white
 rgba(158, 136, 25, 0.8) cor do botão "comprar" nos produtos em oferta
 
+
+fundo off white do cabeçalho #F8F1E7
+fundo off white do corpo do site #eeece7
+detalhes laranja #F75326
+laranja escuro (hover) #be401d
 */
 
 /*CORPO*/
@@ -35,7 +39,7 @@ header {
 
 #cabecalhoParteDeCima {
     /*parte de cima do cabeçalho*/
-    background: linear-gradient(180deg, #000000, #810202);
+    background-color: #F8F1E7;
 }
 
 #logoCabecalho img {
@@ -63,12 +67,13 @@ header {
 
 #botaoLupa {
     /*parte da lupa na barra de pesquisa*/
-    background-color: rgba(253, 209, 1, 0.8);
+    background-color: #F75326;
+    color: white;
 }
 
 #botaoLupa:hover {
     /*parte da lupa na barra de pesquisa quando passa o mouse*/
-    background-color: rgba(170, 142, 0, 0.8);
+    background-color: #be401d;
 }
 
 .input-group .btn:hover {
@@ -84,14 +89,14 @@ header {
 
 #iconeLogin {
     /*ícone de boneco no login*/
-    color: rgba(253, 209, 1, 1);
+    color: #F75326;
     font-size: 1.3rem;
     transition: transform 0.3s ease;
 }
 
 #iconeLogin:hover {
     /*ícone de boneco no login quando passa o mouse*/
-    color: rgba(253, 209, 1, 1);
+    color: #be401d;
     font-size: 1.3rem;
     transform: scale(1.08);
     cursor: pointer;
@@ -99,13 +104,13 @@ header {
 
 #loginArea span {
     /*texto "seja bem-vindo"*/
-    color: rgba(253, 209, 1, 1);
+    color: #F75326;
     font-size: .9rem;
 }
 
 #loginArea a {
     /*texto faça login/cadastre-se*/
-    color: white;
+    color: #000000;
     font-size: .95rem;
     text-decoration: none;
 }
@@ -122,7 +127,7 @@ header {
 
 #carrinhoArea {
     /*carrinho de compras*/
-    color: rgba(253, 209, 1, 1);
+    color: rgb(0, 0, 0);
     position: relative;
 }
 
@@ -141,23 +146,25 @@ header {
     font-size: 0.6rem;
     padding: 0.2rem 0.3rem;
     border: 1px solid #00000020;
+    background-color: #F75326;
 }
 
 /*CABEÇALHO PARTE DE BAIXO*/
 
 #cabecalhoParteDeBaixo {
     /*parte de baixo do cabeçalho (transparente)*/
-    background-color: #4e0202;
+    background-color: #f75326;
     opacity: 90%;
     position: absolute;
     width: 100%;
     z-index: 10;
     font-weight: 600;
+    box-shadow: 0 0.25rem 0.37rem rgba(0, 0, 0, 0.3);
 }
 
 .nav-link.text-uppercase.mx-3 {
     /*opções do menu*/
-    color: rgba(253, 209, 1, 1);
+    color: rgb(255, 255, 255);
     font-size: .9rem;
     transition: transform 0.3s ease;
 }
@@ -174,26 +181,21 @@ header {
 
 #fundoFidelidadeCab {
     /*background da opção "clube fidelidade"*/
-    background-color: rgb(170, 142, 0);
+    background-color: rgb(255, 213, 0);
     border-radius: .2rem;
     margin-right: .5rem;
-}
-
-#opcaoCategorias {
-    /*opção "categorias"*/
-    color: white;
-}
-
-#fundoCategorias {
-    /*background da opção "categorias"*/
-    background-color: rgba(0, 0, 0, 0.8);
-    border-radius: .2rem;
 }
 
 #menuIcon {
     /*esconde o ícone hambúrger em telas grandes*/
     display: none;
 }
+
+
+
+
+
+
 
 /*INÍCIO DO CORPO DO SITE*/
 
@@ -227,6 +229,12 @@ header {
 
 /*CARROSSEL/CLUBE FIDELIDADE*/
 
+#carrossel {
+    /*"margem" preta embaixo do carrosel*/
+    box-shadow: 0rem .2rem .5rem rgb(121, 121, 121);
+    margin-bottom: 1rem;
+}
+
 #carrossel img {
     /*altura da imagem do carrossel*/
     height: 88vh;
@@ -235,23 +243,32 @@ header {
 .slide-hero {
     /*slide do clube fidelidade*/
     min-height: 88vh;
-    background: #aa8e00cc;
+}
+
+.slide-hero .hero-left {
+    /*slide do clube fidelidade do lado esquerdo*/
+    height: 88vh;
 }
 
 .tituloSlidClubeF {
-    /*título do slide do clube fidelidade*/
+    /*título do slide esquerdo do clube fidelidade*/
     font-size: 3.5rem;
-    color: #ffffff;
+    color: #000000;
     margin-top: 5rem;
     margin-bottom: 1.5rem;
-    background: radial-gradient(circle at center,#810202 10%,#810202 40%,#aa8e00cc 100%);
     padding: 0rem .2rem .1rem .2rem;
     border-radius: .2rem;
 }
 
+#marcaTextoTitulo {
+    /*parte amarela do título do slide esquerdo*/
+    color: rgba(253, 209, 1, 0.8);
+    -webkit-text-stroke: .3px #000000;
+}
+
 .subTituloSlidClubeF {
-    /*subtítulo do slide do clube fidelidade*/
-    color: #ffffff;
+    /*primeira frase do lado direito*/
+    color: #000000;
     font-size: 1.4rem;
     font-weight: 600;
     margin-bottom: 2.7rem;
@@ -259,48 +276,61 @@ header {
 
 #marcaTexto {
     /*palavra Clube Fidelidade diferente do resto do texto*/
-    color: #000;
-    font-size: 1.5rem;
+    color: rgba(253, 209, 1, 0.8);
+    font-size: 1.6rem;
+    -webkit-text-stroke: .3px #000000;
 }
 
 .itensSlidClubeF {
     /*os 3 benefícios do slide do clube fidelidade*/
-    color: #ffffff;
-    font-weight: 450;
+    color: #202020;
+    font-weight: 500;
     font-size: 1.1rem;
+    margin-left: 1rem;
 }
 
-/*cor do check, do presente e do diamante no slide do clube fidelidade*/
+/*cor do check, do presente e do diamante no slide do clube fidelidade:*/
 .fa-check {
     color: #146933;
 }
+
 .fa-gift {
     color: #810202;
 }
+
 .fa-gem {
     color: #646161;
 }
 
 .btnQueroClubF {
     /*botão quero fazer parte do clube fidelidade*/
-    border: 1px solid;
-    padding: .4rem .6rem .5rem .6rem;
-    border-radius: .2rem;
-    color: white;
+    padding: .4rem 3rem .5rem 3rem;
+    border-radius: 1rem;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     transition: transform 0.3s ease;
     display: inline-block;
     margin-top: 2rem;
-    background: linear-gradient(180deg, #810202ea, #000000ea);
-    border: none;
+    background-color: rgba(253, 209, 1, 0.8);
     transition: transform 0.3s ease;
+    font-weight: 600;
 }
 
 .btnQueroClubF:hover {
     /*botão quero fazer parte do clube fidelidade quando passa o mouse*/
-    background: linear-gradient(180deg, #810202, #000000);
-    transform: scale(1.1);
+    transform: scale(1.08);
 }
+
+.hero-row {
+    /*transição entre os dois lados*/
+    background: linear-gradient(to right, #EDE8D0 0%, #ffd5b9 70%);
+}
+
+
+
+
+
+
 
 /*AS CATEGORIAS EM BOTÕES QUE APARECEM NO MAIN*/
 
@@ -328,7 +358,7 @@ h1 {
 
 .btn.categoriasCorpo {
     /*os botões categorias individuais, mas pegando todos*/
-    background-color: rgba(145, 121, 2, 0.8);
+    background-color: #f75326ef;
     color: rgb(255, 255, 255);
     border: none;
     font-weight: 700;
@@ -339,7 +369,7 @@ h1 {
 
 .btn.categoriasCorpo:hover {
     /*os botões categorias individuais, mas pegando todos, quando passa o mouse*/
-    background-color: rgb(145, 121, 2);
+    background-color: #be401d;
     transform: scale(1.02);
 }
 
@@ -373,6 +403,11 @@ h1 {
     background-color: rgb(119, 119, 119);
 }
 
+
+
+
+
+
 /*PRODUTOS EM OFERTAS*/
 
 /*TÍTULO*/
@@ -380,7 +415,7 @@ h1 {
 h2 {
     /*título "ofertas" / todos os títulos no corpo com o fundo em degradê vinho e preto*/
     text-align: center;
-    background: linear-gradient(180deg, #000000, #810202);
+    background: linear-gradient(180deg, #be401d, #F75326);
     color: white;
     border-radius: .3rem;
     font-weight: 700;
@@ -410,7 +445,7 @@ h2 {
 
 .card-img-top.ofertas {
     /*imagem do produto em promoção*/
-    max-width: 10rem;
+    max-width: 15rem;
     margin: 1rem auto 0rem auto;
     transition: transform 0.5s ease;
 }
@@ -418,6 +453,11 @@ h2 {
 .card-img-top.ofertas:hover {
     /*imagem do produto em promoção quando passa o mouse*/
     transform: scale(1.08);
+    z-index: 0;
+}
+
+.card-title.ofertas{ /*para evitar que a imagem cubra o nome no hover*/
+    z-index: 1;
 }
 
 .card-text.flex-grow-1.ofertas {
@@ -427,7 +467,7 @@ h2 {
 
 .btn.comprarOfertas {
     /*botão "comprar" nos produtos em oferta*/
-    background-color: rgba(158, 136, 25, 0.8);
+    background-color: #F75326;
     color: rgb(255, 255, 255);
     border: none;
     font-weight: 650;
@@ -437,7 +477,7 @@ h2 {
 
 .btn.comprarOfertas:hover {
     /*botões de comprar individuais, mas pegando todos, quando passa o mouse*/
-    background-color: rgb(145, 121, 2);
+    background-color: #be401d;
     transform: scale(1.02);
 }
 
@@ -446,70 +486,115 @@ h2 {
     color: white;
 }
 
+.card.ofertas .card-body{ /*distância entre a imagem e o nome do produto*/
+    padding-top: .1rem; 
+}
+
+
+
+
+
+
 /*POR CATEGORIAS COM IMAGENS*/
 
 .categoriesImagens-section {
-    /*parte preta dos cards das categorias com imagens*/
+    /*fundo laranja clarinho atrás das categorias*/
     margin: 1rem 1rem 0.5rem 1rem;
     padding: 1rem;
-    background-color: #19191b;
-    border-radius: 0.5rem;
+    background-color: #f7532621;
+    border-radius: 1rem;
+    box-shadow: .1rem .1rem .6rem rgb(100, 100, 100);
+    width: 95%;
+    margin: 1rem auto 0.5rem auto;
+    justify-content: center;
 }
 
-.categoriesImagens-grid {
-    /*deixa tudo em uma linha só com barra de rolar/disposição dos cards*/
+.grid-categorias .category-card{ /*fundo branco de cada categoria*/
     display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    gap: 0.5rem;
-}
-
-.categoryImagens-card {
-    /*parte vinho degradê dos cards das categorias com imagens*/
-    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
-    padding: 0.5rem;
-    background: radial-gradient(circle farthest-corner at center, #ad3939 20%, #831b1b 60%, #19191b 100%);
-    border-radius: 0.5rem;
-    transition: transform 0.3s ease;
+    gap: .5rem;
+    padding: .75rem;
+    border-radius: .5rem;
+    background: linear-gradient(to top, rgba(247, 83, 38, 0.692) 0%,rgba(247, 83, 38, 0.041) 25%);
+    text-decoration: none;
+    position: relative;      
+    overflow: hidden;  
 }
 
-.categoryImagens-card:hover {
-    /*parte vinho degradê dos cards das categorias com imagens quando passa o mouse*/
-    background: rgba(173, 57, 57, 0.39);
-    transform: scale(1.02, 1.0);
-}
-
-.categoryImagens-img {
-    /*imagem dos cards/foto dos produtos*/
+.category-card img{ /*(primeira) imagem de cada card*/
+    display: block;
     max-height: 10rem;
     width: auto;
     object-fit: contain;
 }
 
 .categoryImagens-btn {
-    /*botão/nome dos produtos*/
+    /*botão/nome das categorias*/
     background: none;
     border: none;
-    color: #fff;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     font-weight: 600;
     white-space: nowrap;
+    font-weight: 800;
+    color: white;
+    z-index: 3;
 }
 
-.categoriesImagens-grid::-webkit-scrollbar {
-    /*necessário para conseguir editar a estética da barra de rolar dos cards com imagens*/
-    height: 0.3rem;
+.category-card:hover .categoryImagens-img{ /*faz a imagem da frente sumir no hover*/
+    opacity: 0;
+    transition: opacity .25s ease;
 }
 
-.categoriesImagens-grid::-webkit-scrollbar-thumb {
-    /*estética do pegador dos cards com imagens*/
-    background-color: rgba(192, 191, 191, 0.8);
-    border-radius: 0.3rem;
-    cursor: pointer;
+.category-card:hover .img-normal{ /*faz a imagem da frente sumir no hover totalmente - ou fica atrás da segunda imagem*/
+    opacity: 0;
 }
+
+.category-card:hover .img-hover{ /*faz imagem do hover aparecer*/
+    opacity: 1;
+}
+
+.category-card .img-hover{ /*imagem do hover*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.25); 
+    width: 100%;
+    height: 100%;
+    max-height: none;        
+    object-fit: contain;
+    object-position: center;
+    opacity: 0;
+    transition: opacity .5s ease, transform .5s ease;
+    z-index: 1;
+}
+
+.grid-categorias .category-card::after{ /*overlay degradê*/
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(247, 83, 38, 0.692) 0%,rgba(0, 0, 0, 0.397) 25%);
+    opacity: 0;
+    z-index: 2;                   
+}
+
+.grid-categorias .category-card:hover::after{ /*ativa o overlay degradê*/
+    opacity: 1;
+}
+
+.grid-categorias {
+    /*tres produtos por linha em "por categoria"*/
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: .5rem;
+}
+
+
+
+
+
+
 
 /*OS PRODUTOS MAIS VENDIDOS*/
 
@@ -517,7 +602,7 @@ h2 {
     /*o card em si do produto*/
     box-shadow: .1rem .1rem .6rem rgb(100, 100, 100);
     cursor: pointer;
-    background-color: rgba(158, 136, 25, 0.61);
+    background-color: #ffdbbb;
 }
 
 .maisVendidos {
@@ -533,7 +618,7 @@ h2 {
     left: 0.5rem;
     width: 2rem;
     height: 2rem;
-    background-color: rgb(100, 85, 11);
+    background-color: #F75326;
     color: #fff;
     font-weight: 700;
     font-size: 1rem;
@@ -557,7 +642,7 @@ h2 {
 
 .card-title.maisVendidos {
     /*nome do produto*/
-    color: #ffffff;
+    color: #000000;
     font-weight: 650;
 }
 
@@ -565,13 +650,13 @@ h2 {
     /*descrição do produto*/
     text-align: justify;
     font-size: .8rem;
-    color: white;
+    color: rgb(0, 0, 0);
     font-weight: 550;
 }
 
 .btn.euQueroMaisVendidos {
     /*botão "eu quero" nos produtos mais vendidos*/
-    background-color: rgb(145, 121, 2);
+    background-color: #F75326;
     color: rgb(255, 255, 255);
     border: none;
     font-weight: 650;
@@ -581,7 +666,7 @@ h2 {
 
 .btn.euQueroMaisVendidos:hover {
     /*os botões eu quero individuais, mas pegando todos, quando passa o mouse*/
-    background-color: rgb(100, 85, 11);
+    background-color: #be401d;
     transform: scale(1.02);
 }
 
@@ -615,13 +700,19 @@ h2 {
     border-radius: 0.25rem;
 }
 
+
+
+
+
+
+
 /*OUTLET*/
 
 .btn.modaEAcessorio {
     /*botões moda e acessórios*/
     background-color: transparent;
-    border: 1px solid rgba(145, 121, 2, 0.8);
-    color: rgba(145, 121, 2, 0.8);
+    border: 1px solid rgb(247, 83, 38);
+    color: rgb(247, 83, 38);
     font-weight: 700;
     box-shadow: .3rem .4rem .6rem rgb(53, 53, 53);
     white-space: nowrap;
@@ -630,7 +721,7 @@ h2 {
 
 .btn.modaEAcessorio:hover {
     /*botões moda e acessórios ao passar o mouse*/
-    background-color: rgba(145, 121, 2, 0.8);
+    background-color: rgb(247, 83, 38);
     border: none;
     color: rgb(255, 255, 255);
     transform: scale(1.02);
@@ -640,7 +731,7 @@ h2 {
     /*sub botões de moda e acessórios - botões individuais, mas pegando todos*/
     text-align: center;
     border: none;
-    background-color: rgba(145, 121, 2, 0.8);
+    background-color: #ff9335;
     color: rgb(255, 255, 255);
     font-weight: 600;
     transition: transform 0.3s ease;
@@ -651,7 +742,7 @@ h2 {
 
 .subBtn:hover {
     /*sub botões de moda e acessórios individuais, quando passa o mouse*/
-    background-color: rgb(145, 121, 2) !important;
+    background-color: #ff7700 !important;
     color: rgb(255, 255, 255) !important;
 }
 
@@ -668,6 +759,25 @@ h2 {
 .subBotoes .col-4 {
     /*largura dos sub-botões*/
     max-width: 30%;
+}
+
+.subBtn.active {
+    /*o sub-botão depois de clicar*/
+    position: relative;
+    background-color: #ff7700;
+    color: #fff !important;
+}
+
+.subBtn.active::after {
+    /*seta para baixo*/
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px 6px 0;
+    border-style: solid;
+    border-color: rgb(255, 119, 0) transparent;
 }
 
 /*PRODUTOS EM OUTLET*/
@@ -696,7 +806,7 @@ h2 {
 
 .btn.comprarProdutosOutlet {
     /*botão "comprar" nos produtos em outlet*/
-    background-color: rgba(158, 136, 25, 0.8);
+    background-color: #F75326;
     color: rgb(255, 255, 255);
     border: none;
     font-weight: 650;
@@ -706,7 +816,7 @@ h2 {
 
 .btn.comprarProdutosOutlet:hover {
     /*os botões de comprar, mas pegando todos, quando passa o mouse*/
-    background-color: rgb(145, 121, 2);
+    background-color: #be401d;
     transform: scale(1.02);
 }
 
@@ -717,39 +827,25 @@ h2 {
 
 #cardsOutletFundo.filtrado {
     /*fundo colorido quando eu clico em um sub-botão*/
-    background-color: rgb(145, 121, 2);
+    background-color: #f7532621;
     margin-top: .5rem;
 }
 
-.subBtn.active {
-    /*o sub-botão depois de clicar*/
-    position: relative;
-    background-color: rgb(145, 121, 2);
-    color: #fff !important;
-}
 
-.subBtn.active::after {
-    /*seta para baixo*/
-    content: "";
-    position: absolute;
-    bottom: -6px;
-    left: 50%;
-    transform: translateX(-50%);
-    border-width: 6px 6px 0;
-    border-style: solid;
-    border-color: rgb(145, 121, 2) transparent;
-}
+
+
 
 /*PARTE QUAL É O SEU ESPORTE*/
 
 #fundoSeuEsporte {
     /*fundo escuro da parte qual é o seu esporte*/
-    background-color: black;
+    background-color: #ff8820;
     margin-top: 1rem;
     margin-bottom: 2rem;
     padding: 1rem;
     display: flex;
     align-items: center;
+    box-shadow: .1rem .1rem .6rem rgb(100, 100, 100);
     /*gap: 2rem;*/
 }
 
@@ -762,17 +858,16 @@ h2 {
     /*título qual é o seu esporte?*/
     color: rgb(255, 255, 255);
     font-size: 3.5rem;
-    font-weight: 650;
+    font-weight: 800;
     padding-left: 2rem;
 }
 
 #seuEsporteTituloDois {
-    /*padding esquerdo do título de baixo*/
-    padding-left: 2rem;
+    /*margem esquerdo do título de baixo*/
+    margin-left: 2.5rem;
 }
 
-.categoriesImagens-grid {
-    /*posição dos cards*/
+.grid-esportes { /*disposição dos cards -> 2 por linha*/
     flex: 1;
     display: grid;
     grid-template-columns: repeat(2, 1fr) !important;
@@ -780,23 +875,66 @@ h2 {
     padding-right: 2rem;
 }
 
-.categoryImagens-card {
-    /*posição das imagens dos cards*/
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.esportes {
-    /*imagens dos esportes*/
+.categoryImagens-card-esportes {
+    /*posição das imagens dos cards aq*/
+    position: relative;
+    overflow: hidden;
     border-radius: .6rem;
-    opacity: 50%;
-    transition: opacity 0.3s ease;
+    cursor: pointer;
+    height: 13rem; 
 }
 
-.esportes:hover {
-    /*hover nas imagens*/
-    opacity: 100%;
+.categoryImagens-card-esportes .categoryImagens-img.esportes{ /*a imagem em si dos esportes*/
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    opacity: .50;
+    transform: scale(1);
+    transition: transform .35s ease, opacity .35s ease;
 }
+
+.categoryImagens-card-esportes .categoryImagens-btn{ /*nome do esporte*/
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.6rem;
+    transition: top .35s ease, transform .35s ease, color .35s ease;
+    z-index: 2;
+    pointer-events: none; 
+}
+
+.categoryImagens-card-esportes::after{ /*overlay*/
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.473);
+    z-index: 1;
+}
+
+.categoryImagens-card-esportes:hover .categoryImagens-img.esportes{ /*imagem mexe e texto vai pra baixo no hover*/
+    transform: scale(1.08);
+    opacity: 1;
+}
+  
+.categoryImagens-card-esportes:hover::after{ /*imagem no hover*/
+    background: rgba(0, 0, 0, 0.151);
+}
+
+.categoryImagens-card-esportes:hover .categoryImagens-btn{ /*texto desce para*/
+    top: calc(100%);          /* vai pro final do card */
+    transform: translate(-50%, -100%); /* ancora no fundo */
+    font-size: 1.3rem;
+}
+
+
+
+
 
 /*BANNER WHEY PROTEIN*/
 
@@ -857,6 +995,7 @@ h2 {
     /*tirando o fundo cinza do botão de coração/favorito*/
     background-color: transparent;
     border: none;
+    z-index: 1;
 }
 
 .favorito-btn:hover {
@@ -868,12 +1007,13 @@ h2 {
 .favorito-btn i {
     /*coração em si*/
     font-size: 1.1rem;
-    color: #810202;
+    color: #F75326;
 }
 
 .favorito-btn:hover i::before {
     /*coração preenchido ao passar o mouse*/
     content: "\f415";
+    color:#F75326;
 }
 
 .card-img-top.produtosWheyProtein {
@@ -895,7 +1035,7 @@ h2 {
 
 .btn.comprarProdutosWheyProtein {
     /*botão "comprar" nos produtos whey protein*/
-    background-color: rgba(158, 136, 25, 0.8);
+    background-color: #F75326;
     color: rgb(255, 255, 255);
     border: none;
     font-weight: 650;
@@ -905,7 +1045,7 @@ h2 {
 
 .btn.comprarProdutosWheyProtein:hover {
     /*os botões de comprar, mas pegando todos, quando passa o mouse*/
-    background-color: rgb(145, 121, 2);
+    background-color: #be401d;
     transform: scale(1.02);
 }
 
@@ -914,11 +1054,17 @@ h2 {
     color: white;
 }
 
+
+
+
+
+
 /*TELA COM OPÇÕES/QUADRADOS FILTRÁVEIS*/
 
 #fundoTelaComFiltros {
-    /*fundo preto*/
-    background: #000;
+    /*fundo laranja*/
+    box-shadow: 0rem .1rem .6rem rgb(100, 100, 100);
+    background-color: #ffdbbb;
     padding: 1rem;
 }
 
@@ -931,8 +1077,8 @@ h2 {
 
 .filtro-card {
     /*estética dos blocos amarelos*/
-    background: #f2c100;
-    border-radius: .3rem;
+    background: #F75326;
+    border-radius: .5rem;
     min-height: 12rem;
     display: flex;
     align-items: center;
@@ -947,7 +1093,7 @@ h2 {
     z-index: 2;
     font-weight: 700;
     font-size: 1.2rem;
-    color: #000;
+    color: #ffffff;
 }
 
 .filtro-card::after {
@@ -960,6 +1106,7 @@ h2 {
     background-position: center;
     background-repeat: no-repeat;
     opacity: 0;
+    border-radius: .5rem;
 }
 
 .filtro-card::before {
@@ -971,6 +1118,7 @@ h2 {
     z-index: 1;
     opacity: 0;
     transition: opacity .3s ease;
+    border-radius: .5rem;
 }
 
 .filtro-card:hover::before {
@@ -986,7 +1134,7 @@ h2 {
 .filtro-card:hover span {
     /*mudança de cor da palavra ao passar o mouse*/
     color: #fff;
-    background: #380202;
+    background: #F75326;
     padding: .1rem .5rem .1rem .5rem;
     border-radius: .3rem;
     box-shadow: .3rem .4rem .6rem rgb(0, 0, 0);
@@ -1030,6 +1178,13 @@ h2 {
     --bg: url(../imagens/carboidrato_telafiltraveis);
 }
 
+
+
+
+
+
+
+
 /*CARDS VERTICAIS*/
 
 .card.cardsVerticais {
@@ -1048,6 +1203,13 @@ h2 {
     display: block;
     width: 100%;
 }
+
+
+
+
+
+
+
 
 /*SOBRE A VITA FORTIS*/
 
@@ -1080,9 +1242,9 @@ h2 {
 
 h4 {
     /*título você já conhece a vita fortis*/
-    color: #f2c100;
+    color: #F75326;
     font-size: 2.5rem;
-    font-weight: 700;
+    font-weight: 800;
 }
 
 #fundoSobreVitaFortis>*:not(.backgroundLogoSobreVitaFortis) {
@@ -1128,12 +1290,19 @@ h4 {
     }
 }
 
+
+
+
+
+
+
+
 /*RODAPÉ*/
 
 footer {
     /*parte de fundo do rodapé*/
-    background: linear-gradient(180deg, #000000, #810202);
-    box-shadow: 0 -0.5rem .5rem rgba(0, 0, 0, 0.3);
+    background-color: #F8F1E7;;
+    box-shadow: 0 -0.5rem .5rem rgba(247, 83, 38, 0.24);
 }
 
 .logo-footer {
@@ -1154,7 +1323,7 @@ footer p {
     text-align: left;
     transition: transform 0.3s ease;
     cursor: pointer;
-
+    color: #000000;
 }
 
 footer p:hover {
@@ -1189,11 +1358,16 @@ footer p:hover {
 h6 {
     /*títulos do rodapé*/
     font-size: 1.1rem;
+    color: #000;
 }
 
 #tituloRedesSociaisRodape {
     /*impedindo a quebra de linha em "nos acompanhe nas redes sociais"*/
     white-space: nowrap;
+}
+
+.bg-light{ /*linhas horizontais*/
+    color: #F75326;
 }
 
 
@@ -1423,6 +1597,17 @@ h6 {
         width: 100%;
     }
 
+    .categoryImagens-card-esportes .categoryImagens-btn{ /*nome do esporte*/
+        font-size: 1.4rem;
+    }
+
+    #seuEsporteTituloDois {
+        /*margem esquerdo do título de baixo*/
+        margin-left: 0rem;
+    }
+
+
+
     /*BANNER WWHEY*/
 
     .banner-wheyProtein {
@@ -1460,7 +1645,7 @@ h6 {
         padding: 1rem;
     }
 
-    /*TELA AMARELA COM FILTRÁVEIS*/
+    /*TELA LARANJA COM FILTRÁVEIS*/
 
     #fundoTelaComFiltros {
         /*habilita a barra de rolar*/
@@ -1501,11 +1686,19 @@ h6 {
         transform: translateY(-2px);
     }
 
+    .filtro-card span {
+        /*estética da palavra dentro de cada bloco amarelo*/
+        font-size: 1rem;
+    }
+
+
+
     /*SOBRE A VITA FORTIS*/
 
     h4 {
         /*título você já conhece a vita fortis*/
         padding: .5rem;
+        font-size: 2.3rem;
     }
 }
 
@@ -1688,5 +1881,17 @@ h6 {
         /*forçando a quebra de "nos acompanhe nas redes sociais" em telas pequenas*/
         content: "\A";
         white-space: pre;
+    }
+}
+
+@media (max-width: 992px) {
+    .grid-categorias {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 576px) {
+    .grid-categorias {
+        grid-template-columns: 1fr;
     }
 }
