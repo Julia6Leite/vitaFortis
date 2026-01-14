@@ -29,7 +29,7 @@ header {
 
 #cabecalhoParteDeCima {
     /*parte de cima do cabeçalho*/
-    background: linear-gradient(180deg, #000000, #810202);
+    background-color: #F8F1E7;
 }
 
 #logoCabecalho img {
@@ -49,15 +49,15 @@ header {
     max-width: 25rem;
 }
 
-#barraDePesquisaToda {
-    /*posição da barra de pesquisa com o botão/lupa*/
-    margin-left: 15%;
-    margin-right: 5%;
-}
+/*#barraDePesquisaToda {
+    /*posição da barra de pesquisa com o botão/lupa
+    
+}*/
 
 #botaoLupa {
     /*parte da lupa na barra de pesquisa*/
-    background-color: rgba(253, 209, 1, 0.8);
+    background-color: #F75326;
+    color: white;
 }
 
 #botaoLupa:hover {
@@ -116,7 +116,7 @@ header {
 
 #carrinhoArea {
     /*carrinho de compras*/
-    color: rgba(253, 209, 1, 1);
+    color: rgb(0, 0, 0);
     position: relative;
 }
 
@@ -135,23 +135,25 @@ header {
     font-size: 0.6rem;
     padding: 0.2rem 0.3rem;
     border: 1px solid #00000020;
+    background-color: #F75326;
 }
 
 /*CABEÇALHO PARTE DE BAIXO*/
 
 #cabecalhoParteDeBaixo {
     /*parte de baixo do cabeçalho (transparente)*/
-    background-color: #4e0202;
+    background-color: #f75326;
     opacity: 90%;
     position: absolute;
     width: 100%;
     z-index: 10;
     font-weight: 600;
+    box-shadow: 0 0.25rem 0.37rem rgba(0, 0, 0, 0.3);
 }
 
 .nav-link.text-uppercase.mx-3 {
     /*opções do menu*/
-    color: rgba(253, 209, 1, 1);
+    color: rgb(255, 255, 255);
     font-size: .9rem;
     transition: transform 0.3s ease;
 }
@@ -166,15 +168,17 @@ header {
     color: white;
 }
 
-#fundoCategorias {
-    /*background da opção "categorias"*/
-    background-color: rgba(253, 209, 1, 0.8);
+#fundoFidelidadeCab {
+    /*background da opção "clube fidelidade"*/
+    background-color: rgb(255, 213, 0);
     border-radius: .2rem;
+    margin-right: .5rem;
 }
 
 #menuIcon {
     /*esconde o ícone hambúrger em telas grandes*/
     display: none;
+    color: #F75326;
 }
 
 /*CORPO DO SITE*/
@@ -261,7 +265,7 @@ header {
 
 .btnAcessarConta {
     /*botão "acessar conta"*/
-    background-color: rgba(145, 121, 2, 0.8);
+    background-color: #F75326;
     border: none;
     border-radius: .2rem;
     padding-top: .3rem;
@@ -272,7 +276,7 @@ header {
 
 .btnAcessarConta:hover {
     /*botão "acessar conta" quando passa o mouse*/
-    background-color: rgb(145, 121, 2);
+    background-color: #be401d;
 }
 
 .fraseCriarConta {
@@ -292,7 +296,7 @@ header {
 
 .btnCriarConta {
     /*botão criar conta*/
-    background-color: rgba(145, 121, 2, 0.8);
+    background-color: #F75326;
     border: none;
     border-radius: .2rem;
     padding-top: .3rem;
@@ -304,7 +308,7 @@ header {
 
 .btnCriarConta:hover {
     /*botão criar conta quando passa o mouse*/
-    background-color: rgb(145, 121, 2);
+    background-color: #be401d;
 }
 
 #cardCadastro {
@@ -317,9 +321,8 @@ header {
 
 footer {
     /*parte de fundo do rodapé*/
-    background: linear-gradient(180deg, #000000, #810202);
-    box-shadow: 0 -0.5rem .5rem rgba(0, 0, 0, 0.3);
-    margin-top: auto;
+    background-color: #F8F1E7;;
+    box-shadow: 0 -0.5rem .5rem rgba(247, 83, 38, 0.24);
 }
 
 .logo-footer {
@@ -340,7 +343,7 @@ footer p {
     text-align: left;
     transition: transform 0.3s ease;
     cursor: pointer;
-
+    color: #000000;
 }
 
 footer p:hover {
@@ -375,11 +378,16 @@ footer p:hover {
 h6 {
     /*títulos do rodapé*/
     font-size: 1.1rem;
+    color: #000;
 }
 
 #tituloRedesSociaisRodape {
     /*impedindo a quebra de linha em "nos acompanhe nas redes sociais"*/
     white-space: nowrap;
+}
+
+.bg-light{ /*linhas horizontais*/
+    color: #F75326;
 }
 
 

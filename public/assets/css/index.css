@@ -189,6 +189,7 @@ header {
 #menuIcon {
     /*esconde o ícone hambúrger em telas grandes*/
     display: none;
+    color: #F75326;
 }
 
 
