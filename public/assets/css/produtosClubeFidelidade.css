@@ -220,10 +220,7 @@ header {
 
 
 
-/*PARTE DO CLUBE FIDELIDADE*/
-
-/*PRIMEIRA PARTE:*/
-
+/*BANNER*/
 #fundoPaginaClubeFidelidade {
     /*distância entre o topo/fim e a página*/
     background: rgba(255, 213, 185, 0.432);
@@ -232,27 +229,18 @@ header {
 }
 
 h1 {
-    /*título clube fidelidade parte preta*/
+    /*título parte preta*/
     color: rgb(0, 0, 0);
     text-align: left;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 2rem;
 }
 
 #clubFidTitulo {
     /*título clube fidelidade parte amarela*/
     color: rgb(253, 211, 1);
     -webkit-text-stroke: .5px #979797;
-    font-size: 1.5rem;
-}
-
-#subTitulo {
-    /*o grande amarelo*/
-    font-size: 2rem;
-    font-weight: 700;
-    line-height: 1.1;
-    color: rgb(253, 211, 1);
-    -webkit-text-stroke: .5px #979797;
+    font-size: 2.5rem;
 }
 
 #descricao {
@@ -311,362 +299,247 @@ h1 {
 
 
 
-/*SEGUNDA PARTE:*/
-.clube-hero-divisaoDois {
-    /*distância entre a primeira e a segunda parte*/
-    padding-top: 3rem;
-}
+/*PRODUTOS*/
 
-h2 {
-    /*título "como funciona" / todos os títulos no corpo com o fundo em degradê laranja*/
-    text-align: center;
-    background-color: #F75326;
-    color: rgb(255, 255, 255);
-    border-radius: .3rem;
+h2{
+    margin: 1rem 0rem 0rem 3rem;
     font-weight: 600;
-    box-shadow: inset 0 0 .6rem .1rem rgba(0, 0, 0, 0.281);
 }
 
-#fundoComoFunciona {
-    /*centralizando o background do título "como funciona"*/
-    display: flex;
-    justify-content: center;
-}
-
-#fundoComoFunciona h2 {
-    /*definindo o tamanho do background do título "como funciona"*/
-    width: 35%;
-    padding-bottom: .1rem;
-}
-
-#descricaoComoFunciona {
-    /*texto da parte "como funciona"*/
-    color: rgb(0, 0, 0);
-    text-align: center;
-    font-weight: 500;
-    font-size: 1rem;
-}
-
-#marcaTexto {
-    /*palavra "clube" no texto da parte "como funciona"*/
-    color: rgb(253, 211, 1);
-    -webkit-text-stroke: .5px #979797;
-    font-size: 1.2rem;
-}
-
-.bg {
-    /*linha laranja abaixo de "como funciona"*/
-    color: #F75326;
-    width: 90%;
-    margin: 3rem auto 0 auto;
-}
-
-
-
-
-
-
-/*NÍVEIS*/
-#tituloNiveis {
-    /*distância entre "como funciona" e "níveis"*/
-    margin-top: 2rem;
-}
-
-.sub {
-    /*frase abaixo do título "níveis"*/
-    color: rgb(0, 0, 0);
-    text-align: center;
-    font-weight: 500;
-    font-size: 1rem;
-    margin-bottom: 2rem;
-}
-
-.grid-niveis {
-    /*posição das caixas dos níveis*/
-    max-width: 68rem;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.6rem;
-}
-
-.card-nivel.vita {
-    /*estética da caixa do nível vita*/
-    background: rgba(195, 231, 174, 0.404);
-    border-radius: 1.1rem;
-    padding: 1.3rem 1.3rem 1.1rem;
-    text-align: left;
-    box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.253);
-    border: 1px solid rgba(13, 80, 24, 0.247);
-}
-
-.card-nivel.diamante {
-    /*estética da caixa do nível diamante*/
-    background: #d4af3736;
-    border-radius: 1.1rem;
-    padding: 1.3rem 1.3rem 1.1rem;
-    text-align: left;
-    box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.253);
-    border: 1px solid rgba(212, 175, 55, .55);
-    box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.253);
-}
-
-.titulo-nivel {
-    /*título "vita" e "vita diamante"*/
-    margin: 0 0 0.8rem;
-    font-size: 1.6rem;
-    color: #1f3f34;
-    font-weight: 700;
-}
-
-.badge {
-    /*as barras coloridas*/
-    height: 2rem;
-    border-radius: 0.6rem;
-    display: flex;
-    align-items: center;
-    padding: 0 0.8rem;
-    margin: 0 0 1rem;
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .25);
-}
-
-.badge-verde {
-    /*a barra verde*/
-    background: linear-gradient(90deg, #4f7d5a 0%, #2f5c3b 60%, #9aa0a6 100%);
-    color: #fff;
-}
-
-.badge-ouro {
-    /*a barra dourada*/
-    background: linear-gradient(90deg, #d7b65f 0%, #9a7a2b 100%);
-    color: #fff;
-}
-
-.texto-badge {
-    /*texto dentro da barra*/
-    font-size: 0.8rem;
-}
-
-.lista-beneficios {
-    /*listas com check*/
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: grid;
-    gap: 10px;
-}
-
-.lista-beneficios li {
-    /*o texto de cada item*/
-    position: relative;
-    padding-left: 28px;
-    color: #000000;
-}
-
-.lista-beneficios li::before {
-    /*os checks + cor do check verde*/
-    content: "✓";
-    position: absolute;
-    left: .2rem;
-    width: 1.25rem;
-    font-weight: 700;
-    color: #4f7d5a;
-}
-
-.card-nivel.diamante .lista-beneficios li::before {
-    /*cor do check dourado*/
-    color: #b98a12;
-}
-
-.assinarClube {
-    /*segundo botão "quero assinar"*/
-    background-color: #f54b1c;
-    color: white;
-    padding: .3rem .4rem .3rem .4rem;
-    font-weight: 500;
-    font-size: .9rem;
-    display: flex;
-    margin: 2rem auto 2rem auto;
-}
-
-.assinarClube:hover {
-    /*segundo botão "quero assinar" quando passa o mouse*/
-    background-color: #be401d;
-    color: white;
-}
-
-
-
-
-
-
-
-/*COMENTÁRIOS*/
-h4 {
-    /*título "Veja o que nossos assinantes estão falando" */
-    padding-top: .7rem;
-    text-align: center;
-    font-weight: 700;
-}
-
-#comentarios {
-    /*fundo amarelinho*/
-    margin: .4rem;
-    border-radius: .3rem;
-    background-color: rgba(255, 255, 84, 0.329);
-    box-shadow: .5rem .3rem 1rem rgba(0, 0, 0, 0.575);
-}
-
-.grid-depoimentos {
-    /*posição dos dois comentários*/
-    max-width: 68rem;
-    margin: 2rem auto 3rem auto;
-    padding-bottom: 2rem;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.3rem;
-}
-
-.dep-card {
-    /*o card do comentário*/
-    background: rgba(255, 255, 255, .72);
-    border-radius: 1rem;
-    padding: 1.1rem 1.1rem 1rem;
-    box-shadow: 0 0.6rem 1rem rgba(0, 0, 0, 0.281);
-}
-
-.dep-topo {
-    /*o conjunto das informações*/
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    margin-bottom: 0.6rem;
-}
-
-.dep-avatar {
-    /*foto*/
-    width: 46px;
-    height: 46px;
-    border-radius: 50%;
-    object-fit: cover;
-    flex: 0 0 auto;
-}
-
-.dep-info {
-    /*nome + tipo da conta + estrelas*/
-    flex: 1;
-    min-width: 0;
-}
-
-.dep-nome {
-    /*nome*/
-    font-weight: 700;
-    color: #000000;
-    line-height: 1.1;
-}
-
-.dep-badge {
-    /*tipo da conta + background do cliente vita*/
-    display: inline-block;
-    margin-top: 0.3rem;
-    padding: .1rem 0.5rem;
-    border-radius: 100rem;
-    font-size: 0.7rem;
-    color: #fff;
-    background-color: #2f5c3b;
-}
-
-#badgeDiamante {
-    /*background do cliente diamante*/
-    background-color: #D4AF37;
-}
-
-.dep-estrelas { /*estrelas*/
-    margin-top: .2rem;
-    font-size: .7rem;
-    color: #D4AF37;
-}
-
-.dep-texto { /*o comentário -> frase*/
-    margin: 0;
-    color: #000000;
-    font-size: .8rem;
-}
-
-
-
-
-
-
-/*PERGUNTAS FREQUENTES*/
-  
-#faq{ /*distância entre o título e a linha clara acima*/
-    padding: 2rem;
-}
-  
-.faq-container{ /*largura de todo o container*/
-    max-width: 61rem;
-    margin: 0 auto;
-}
-
-.faq-item{ /*linhas entre as perguntas*/
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
-  
-.faq-question{ /*a caixa (que está invisível) de cada pergunta*/
-    width: 100%;
-    background: transparent;
-    border: 0;
-    padding: 1rem;
+.card.h-100.ofertas {
+    /*o card em si do produto*/
+    box-shadow: .1rem .1rem .6rem #c59d385e;
     cursor: pointer;
+    border: solid 1px #c59d3877;
+}
+
+.card-img-top.ofertas {
+    /*imagem do produto em promoção*/
+    max-width: 15rem;
+    margin: 1rem auto 0rem auto;
+    transition: transform 0.5s ease;
+}
+
+.card-img-top.ofertas:hover {
+    /*imagem do produto em promoção quando passa o mouse*/
+    transform: scale(1.08);
+    z-index: 0;
+}
+
+.card-title.ofertas{ /*para evitar que a imagem cubra o nome no hover*/
+    z-index: 1;
+}
+
+.card-text.flex-grow-1.ofertas {
+    /*descrição/preço do produto em ofertas*/
+    text-align: center;
+}
+
+.btn.comprarOfertas {
+    /*botão "comprar" nos produtos em oferta*/
+    background-color: #c59d38;
+    color: rgb(255, 255, 255);
+    border: none;
+    font-weight: 650;
+    transition: transform 0.3s ease;
+    white-space: nowrap;
+}
+
+.btn.comprarOfertas:hover {
+    /*botões de comprar individuais, mas pegando todos, quando passa o mouse*/
+    background-color: #9a7a2b;
+    transform: scale(1.02);
+}
+
+.btn.comprarOfertas:focus {
+    /*mantém a palavra branca ao clicar no botão*/
+    color: white;
+}
+
+.card.ofertas .card-body{ /*distância entre a imagem e o nome do produto*/
+    padding-top: .1rem; 
+}
+
+
+
+
+
+
+
+
+
+/*card de assinatura*/
+.overlay{ /*camada escura atrás do card de assinatura*/
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
     display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.1rem;
+    z-index: 100;
+}
+  
+.hidden{ /*é o que permite o card de assinatura abrir e fechar*/
+    display: none; 
+}
+  
+.modal-assinatura{ /*card em si*/
+    width: min(980px, 100%);
+    max-height: 90vh;
+    background: #fff;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,.25);
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-topo{ /*parte amarela*/
+    background: #ebcc01;
+    color: #fff;
+    padding: 1rem 1.3rem;
+    display: flex;
+    align-items: center;
     justify-content: space-between;
 }
   
-.faq-left{ /*distância entre o número e a pergunta*/
-    display: flex;
-    gap: 10px;
+.modal-topo h3{ /*título "clube fidelidade"*/
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+}
+  
+.btn-fechar{ /*o "x" de fechar*/
+    background: transparent;
+    border: 0;
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
 }
 
-.faq-number{ /*o número de cada pergunta*/
-    color: #f75326;
+.modal-conteudo{ /*padding do conteúdo*/
+    padding: 1rem 1.3rem 1.3rem;
+    overflow: auto;
+}
+  
+.modal-sub{ /*palavra "assinatura"*/
     font-weight: 800;
-    min-width: 22px;
-}
-  
-.faq-text{
-    font-weight: 600;
-    font-size: 18px;
-    text-align: left;
-}
-  
-.faq-icon{ /*o ícone +*/
-    color: #f75326;
-    font-size: 28px;
-    line-height: 1;
-    transform: translateY(-1px);
-    transition: transform .18s ease;
+    font-size: .8rem;
+    color: #000000;
 }
 
-.faq-answer{ /*posição da resposta da pergunta*/
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height .25s ease;
+.lista-planos{ /*primeira linha divisória*/
+    border-top: 1px solid #e8e8e8;
 }
   
-.faq-answer-inner{ /*resposta da pergunta*/
-    padding: 0 .5rem 1rem 2.5rem; 
-    color: rgba(0, 0, 0, 0.85);
-    font-size: 16px;
+.plano{ /*cada plano - conjunto*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .5rem;
+    padding: .7rem .5rem .7rem 0rem;
+    border-bottom: 1px solid #e8e8e8;
+    cursor: pointer;
+}
+  
+.plano input[type="radio"]{ /*borda de fora da bolinha de cada opção*/
+    appearance: none;
+    width: .9rem;
+    height: .9rem;
+    border-radius: 50%;
+    border: 1px solid #ad9601;
 }
 
-.faq-item.is-open .faq-answer{ /*estado aberto*/
-    max-height: 19rem; 
+.plano input[type="radio"]:checked{ /*bolinha de dentro de cada opção*/
+    background: radial-gradient(circle, #ebcc01 .26rem, transparent .29rem);
+}
+  
+.plano-info{ /*frasezinha explicando*/
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+}
+  
+.plano-info strong{ /*tempo (mensal, bimestral...)*/
+    font-size: .9rem;
+    color: #000000;
 }
 
-.faq-item.is-open .faq-icon{ /*o ícone + vira um x*/
-    transform: rotate(45deg); 
+.plano-info span{ /*frasezinha explicando*/
+    font-size: .75rem;
+    color: #555;
 }
+
+.modal-rodape{ /*posição do botão*/
+    display: flex;
+    justify-content: flex-end;
+}
+  
+.btn-proximo{ /*botão confirmar assinatura*/
+    border: 0;
+    background: #cfb401; 
+    color: #fff;
+    font-weight: 700;
+    padding: .3rem .5rem;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+.btn-proximo:hover{ /*botão confirmar assinatura quando passa o mouse*/
+    background: #a79001; 
+}
+
+.lista-planos{ /*mantém tudo na horizontal*/
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;   
+}
+
+.beneficios{ /*o conteúdo da parte dos benefícios (embaixo)*/
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e8e8e8;
+}
+  
+.beneficios h4{ /*frase "você receberá"*/
+    font-weight: 800;
+    font-size: .8rem;
+    color: #000000;
+}
+
+.beneficiosLista{ /*a lista como um todo, inclusive as frases*/
+    list-style: none;    
+    padding-left: .5rem;
+    font-size: .9rem;
+    color: #000000;
+}
+
+.beneficiosLista .check{ /*cor (amarela) do check*/
+    color: #ebcc01;      
+}
+
+#marcaTexto{ /*frase "vitaDiamante"*/
+    color: #b19901;
+    font-weight: 700;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -771,23 +644,7 @@ h6 {
 
 
 
-
-
-
-
-
 /*RESPONSIVIDADE*/
-@media (min-width: 992px) {
-    /*em telas maiores que 992px de largura*/
-
-    /*ASIDE*/
-    .aside-sticky {
-        /*posição do aside*/
-        position: sticky;
-        top: 5, 5rem;
-    }
-}
-
 @media (max-width: 768px) {
     /*em telas menores que 768px de largura (referência: ipad mini)*/
 
@@ -864,13 +721,6 @@ h6 {
         /*layout interno vertical/estilização interna do nav quando aberto*/
         flex-direction: column;
         align-items: center;
-    }
-
-    /*PARTE DO CLUBE FIDELIDADE*/
-    #fundoPaginaClubeFidelidade {
-        /*distância entre o topo/fim e a página*/
-        margin-top: 4rem;
-        margin-left: 1rem;
     }
 }
 

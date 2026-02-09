@@ -1,8 +1,6 @@
-/*JS da página inicial*/
-
 document.addEventListener("DOMContentLoaded", () => {
 
-  //Alterna os sub-botões de moda e acessórios
+  /*ALTERNA OS SUB-BOTÕES DE MODA E ACESSÓRIOS*/
   const btnModa = document.getElementById("botaoModa");
   const btnAcessorios = document.getElementById("botaoAcessorios");
   const subModa = document.getElementById("subModa");
@@ -19,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
-  //Muda a cor de fundo dos cards quando clica em algum sub-botão de moda e acessórios
+  /*MUDA A COR DE FUNDO DOS CARDS QUANDO CLICA EM ALGUM SUB-BOTÃO DE MODA E ACESSÓRIOS*/
   const subBtns = document.querySelectorAll("#subModa .subBtn, #subAcessorios .subBtn");
   const cardsContainer = document.getElementById("cardsOutletFundo");
 
@@ -32,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
-  //Preenchendo o coração do favorito ao clicar
+  /*PREENCHE O CORAÇÃO DE FAVORITO AO CLICAR*/
   document.querySelectorAll('.favorito-btn').forEach(function (btn) {
     btn.addEventListener('click', function () {
       const icon = this.querySelector('i');
@@ -42,11 +40,47 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
-  //Apenas a "preparação" da função de atualizar o número de itens no carrinho
+  /*"PREPARAÇÃO" DA FUNÇÃO DE ATUALIZAR O NÚMERO DE ITENS NO CARRINHO*/
   function atualizarCarrinho(qtd) {
     const contador = document.getElementById('contadorCarrinho');
     contador.textContent = qtd;
   }
+
+
+  /*OPÇÃO "CATEGORIAS" NA PARTE DE BAIXO DO CABEÇALHO PARA CELULAR*/
+  const btnCategorias = document.getElementById("btnCategorias");
+  const megaCategorias = btnCategorias.closest(".mega");
+
+  const btnMarcas = document.getElementById("btnMarcas");
+  const megaMarcas = btnMarcas.closest(".mega");
+
+  function isMobile() {
+    return window.matchMedia("(hover: none)").matches || window.innerWidth <= 992;
+  }
+
+  btnCategorias.addEventListener("click", (e) => {
+    if (!isMobile()) return;
+    e.preventDefault();
+    megaCategorias.classList.toggle("is-open");
+  });
+
+  btnMarcas.addEventListener("click", (e) => {
+    if (!isMobile()) return;
+    e.preventDefault();
+    megaMarcas.classList.toggle("is-open");
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!megaCategorias.contains(e.target)) megaCategorias.classList.remove("is-open");
+    if (!megaMarcas.contains(e.target)) megaMarcas.classList.remove("is-open");
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      megaCategorias.classList.remove("is-open");
+      megaMarcas.classList.remove("is-open");
+    }
+  });
 
 });
 

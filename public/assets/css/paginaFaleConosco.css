@@ -1,4 +1,4 @@
-/*CSS DA PÁGINA DE CLUBE FIDELIDADE*/
+/*CSS DA PÁGINA FALE CONOSCO*/
 
 /*CORPO*/
 
@@ -15,10 +15,10 @@ body {
 /*CABEÇALHO PARTE DE CIMA*/
 
 header {
-    /*cabeçalho não fixo*/
+    /*fixa o cabeçalho mesmo ao rolar a tela*/
+    position: sticky;
     top: 0;
     z-index: 1000;
-    position: relative;
 }
 
 #cabecalhoParteDeCima {
@@ -131,16 +131,13 @@ header {
     padding: 0.2rem 0.3rem;
     border: 1px solid #00000020;
     background-color: #F75326;
-    min-width: 1rem;      
-    height: 1.1rem;        
 }
 
 /*CABEÇALHO PARTE DE BAIXO*/
 
 #cabecalhoParteDeBaixo {
     /*parte de baixo do cabeçalho (transparente)*/
-    background-color: #f75326;
-    opacity: 90%;
+    background: rgb(247, 83, 38, .9);
     position: absolute;
     width: 100%;
     z-index: 10;
@@ -153,6 +150,7 @@ header {
     color: rgb(255, 255, 255);
     font-size: .9rem;
     transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
 .nav-link.text-uppercase.mx-3:hover {
@@ -182,10 +180,117 @@ header {
 
 
 
+/*OPÇÃO CATEGORIAS NO CABEÇALHO PARTE DE BAIXO*/
+
+.mega:hover .mega-menu,
+.mega:focus-within .mega-menu,
+.mega.is-open .mega-menu {
+    /*é o que permite abrir*/
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+}
+
+.mega-menu {
+    /*o fundo branco*/
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: max-content;
+    max-width: calc(100vw);
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, .16);
+    padding: 1.2rem;
+    visibility: hidden;
+    max-height: 22rem;
+}
+
+.mega-title-chip {
+    /*nome de cada categoria*/
+    display: inline-flex;
+    align-items: center;
+    gap: .55rem;
+    padding: .35rem .85rem;
+    border-radius: 100rem;
+    font-weight: 750;
+    font-size: .95rem;
+    background: rgb(255, 226, 218);
+    min-width: 9rem;
+    color: #000000;
+    margin-bottom: .5rem;
+}
+
+.mega-title-chip i {
+    /*ícone de cada categoria*/
+    font-size: 1rem;
+    opacity: .9;
+    color: #F75326;
+}
+
+.mega-col a {
+    /*as várias opções*/
+    display: block;
+    text-decoration: none;
+    color: #000000;
+    font-size: .95rem;
+    padding: .25rem 0;
+    margin-left: .6rem;
+}
+
+.mega-col a:hover {
+    /*as várias opções quando passa o mouse*/
+    text-decoration: underline;
+    transform: translateY(-.06rem);
+}
+
+.mega-grid {
+    /*grid de colunas*/
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 1.1rem;
+    justify-items: center;
+}
+
+.mega-grid-marcas {
+    /*centralizando o grid de marcas*/
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    justify-content: center;
+    column-gap: 4rem;
+}
+
+.mega-scroll {
+    /*barra de rolar dentro do mega*/
+    max-height: 18rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 1rem;
+}
+
+.mega-scroll::-webkit-scrollbar {
+    /*largura da barra de rolar*/
+    width: .4rem;
+}
+
+.mega-scroll::-webkit-scrollbar-thumb {
+    /*estética da barra de rolar*/
+    background: rgba(0, 0, 0, 0.199);
+    border-radius: 100rem;
+}
+
+.mega-scroll::-webkit-scrollbar-track {
+    /*estética do trilho da barra de rolar*/
+    background: rgba(0, 0, 0, .06);
+    border-radius: 100rem;
+}
+
+
+
+
 
 /*INÍCIO DO CORPO DO SITE*/
-
-/*BOTÃO ZAP*/
 
 .btn-zap {
     /*botão do whatsapp*/
@@ -219,455 +324,289 @@ header {
 
 
 
+/*CONTEÚDO*/
 
-/*PARTE DO CLUBE FIDELIDADE*/
-
-/*PRIMEIRA PARTE:*/
-
-#fundoPaginaClubeFidelidade {
-    /*distância entre o topo/fim e a página*/
-    background: rgba(255, 213, 185, 0.432);
-    padding-top: 3rem;
-    padding-bottom: 1rem;
+.atendimentoFundo {
+    /*fundo laranja atrás do título*/
+    background-color: rgb(247, 83, 38);
+    padding: 3.5rem 1.2rem;
+    box-shadow: inset 0 -0.25rem 0.37rem rgba(0, 0, 0, .22);
 }
 
-h1 {
-    /*título clube fidelidade parte preta*/
-    color: rgb(0, 0, 0);
-    text-align: left;
-    font-weight: 600;
-    font-size: 1rem;
-}
-
-#clubFidTitulo {
-    /*título clube fidelidade parte amarela*/
-    color: rgb(253, 211, 1);
-    -webkit-text-stroke: .5px #979797;
-    font-size: 1.5rem;
-}
-
-#subTitulo {
-    /*o grande amarelo*/
-    font-size: 2rem;
-    font-weight: 700;
-    line-height: 1.1;
-    color: rgb(253, 211, 1);
-    -webkit-text-stroke: .5px #979797;
-}
-
-#descricao {
-    /*frase que fala: a cada 1 real...*/
-    color: rgb(0, 0, 0);
-    text-align: left;
-    font-weight: 600;
-    font-size: 1rem;
-}
-
-#fundoPaginaClubeFidelidade .clube-hero {
-    /*faz o texto e a imagem ficarem um do lado do outro*/
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-#fundoPaginaClubeFidelidade .clube-texto {
-    /*o bloco do texto*/
-    flex: 1;
-    padding-left: 5rem;
-}
-
-#fundoPaginaClubeFidelidade .clube-imagem {
-    /*o bloco/área da imagem*/
-    flex: 1;
-    display: flex;
-}
-
-#fundoPaginaClubeFidelidade .clube-imagem img {
-    /*imagem em si*/
-    width: 50%;
-    height: auto;
-    border-radius: 1rem;
-    object-fit: cover;
-}
-
-.queroParticipar {
-    /*primeiro botão "quero participar"*/
-    background-color: #f54b1c;
-    color: white;
-    padding: .3rem .4rem .3rem .4rem;
-    font-weight: 500;
-    font-size: .9rem;
-    margin-left: 5rem;
-}
-
-.queroParticipar:hover {
-    /*primeiro botão quando passa o mouse*/
-    background-color: #be401d;
-    color: white;
-}
-
-
-
-
-
-
-/*SEGUNDA PARTE:*/
-.clube-hero-divisaoDois {
-    /*distância entre a primeira e a segunda parte*/
-    padding-top: 3rem;
-}
-
-h2 {
-    /*título "como funciona" / todos os títulos no corpo com o fundo em degradê laranja*/
-    text-align: center;
-    background-color: #F75326;
-    color: rgb(255, 255, 255);
-    border-radius: .3rem;
-    font-weight: 600;
-    box-shadow: inset 0 0 .6rem .1rem rgba(0, 0, 0, 0.281);
-}
-
-#fundoComoFunciona {
-    /*centralizando o background do título "como funciona"*/
-    display: flex;
-    justify-content: center;
-}
-
-#fundoComoFunciona h2 {
-    /*definindo o tamanho do background do título "como funciona"*/
-    width: 35%;
-    padding-bottom: .1rem;
-}
-
-#descricaoComoFunciona {
-    /*texto da parte "como funciona"*/
-    color: rgb(0, 0, 0);
-    text-align: center;
-    font-weight: 500;
-    font-size: 1rem;
-}
-
-#marcaTexto {
-    /*palavra "clube" no texto da parte "como funciona"*/
-    color: rgb(253, 211, 1);
-    -webkit-text-stroke: .5px #979797;
-    font-size: 1.2rem;
-}
-
-.bg {
-    /*linha laranja abaixo de "como funciona"*/
-    color: #F75326;
-    width: 90%;
-    margin: 3rem auto 0 auto;
-}
-
-
-
-
-
-
-/*NÍVEIS*/
-#tituloNiveis {
-    /*distância entre "como funciona" e "níveis"*/
-    margin-top: 2rem;
-}
-
-.sub {
-    /*frase abaixo do título "níveis"*/
-    color: rgb(0, 0, 0);
-    text-align: center;
-    font-weight: 500;
-    font-size: 1rem;
-    margin-bottom: 2rem;
-}
-
-.grid-niveis {
-    /*posição das caixas dos níveis*/
-    max-width: 68rem;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.6rem;
-}
-
-.card-nivel.vita {
-    /*estética da caixa do nível vita*/
-    background: rgba(195, 231, 174, 0.404);
-    border-radius: 1.1rem;
-    padding: 1.3rem 1.3rem 1.1rem;
-    text-align: left;
-    box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.253);
-    border: 1px solid rgba(13, 80, 24, 0.247);
-}
-
-.card-nivel.diamante {
-    /*estética da caixa do nível diamante*/
-    background: #d4af3736;
-    border-radius: 1.1rem;
-    padding: 1.3rem 1.3rem 1.1rem;
-    text-align: left;
-    box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.253);
-    border: 1px solid rgba(212, 175, 55, .55);
-    box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.253);
-}
-
-.titulo-nivel {
-    /*título "vita" e "vita diamante"*/
-    margin: 0 0 0.8rem;
-    font-size: 1.6rem;
-    color: #1f3f34;
-    font-weight: 700;
-}
-
-.badge {
-    /*as barras coloridas*/
-    height: 2rem;
-    border-radius: 0.6rem;
-    display: flex;
-    align-items: center;
-    padding: 0 0.8rem;
-    margin: 0 0 1rem;
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .25);
-}
-
-.badge-verde {
-    /*a barra verde*/
-    background: linear-gradient(90deg, #4f7d5a 0%, #2f5c3b 60%, #9aa0a6 100%);
+.atendimentoFundo h1 {
+    /*título "central de atendimento"*/
     color: #fff;
-}
-
-.badge-ouro {
-    /*a barra dourada*/
-    background: linear-gradient(90deg, #d7b65f 0%, #9a7a2b 100%);
-    color: #fff;
-}
-
-.texto-badge {
-    /*texto dentro da barra*/
-    font-size: 0.8rem;
-}
-
-.lista-beneficios {
-    /*listas com check*/
-    list-style: none;
-    padding: 0;
+    text-align: center;
+    font-weight: 700;
+    font-size: 2.2rem;
     margin: 0;
+}
+
+.atendimentoConteudo {
+    /*margem do fundo (off white)*/
+    padding: 1.6rem 1.5rem 3rem;
+}
+
+.atendimentoLayout {
+    /*disposição do conteúdo aside+main*/
     display: grid;
-    gap: 10px;
-}
-
-.lista-beneficios li {
-    /*o texto de cada item*/
-    position: relative;
-    padding-left: 28px;
-    color: #000000;
-}
-
-.lista-beneficios li::before {
-    /*os checks + cor do check verde*/
-    content: "✓";
-    position: absolute;
-    left: .2rem;
-    width: 1.25rem;
-    font-weight: 700;
-    color: #4f7d5a;
-}
-
-.card-nivel.diamante .lista-beneficios li::before {
-    /*cor do check dourado*/
-    color: #b98a12;
-}
-
-.assinarClube {
-    /*segundo botão "quero assinar"*/
-    background-color: #f54b1c;
-    color: white;
-    padding: .3rem .4rem .3rem .4rem;
-    font-weight: 500;
-    font-size: .9rem;
-    display: flex;
-    margin: 2rem auto 2rem auto;
-}
-
-.assinarClube:hover {
-    /*segundo botão "quero assinar" quando passa o mouse*/
-    background-color: #be401d;
-    color: white;
+    grid-template-columns: 18rem 1fr;
+    gap: 2rem;
 }
 
 
 
 
+/*ASIDE*/
 
-
-
-/*COMENTÁRIOS*/
-h4 {
-    /*título "Veja o que nossos assinantes estão falando" */
-    padding-top: .7rem;
-    text-align: center;
-    font-weight: 700;
+.atendimentoAside {
+    /*permite que o aside desça ao rolar a tela*/
+    position: sticky;
+    top: 7rem;
+    height: fit-content;
 }
 
-#comentarios {
-    /*fundo amarelinho*/
-    margin: .4rem;
-    border-radius: .3rem;
-    background-color: rgba(255, 255, 84, 0.329);
-    box-shadow: .5rem .3rem 1rem rgba(0, 0, 0, 0.575);
+.atendimentoNav {
+    /*estética da nav*/
+    background: #ffffff;
+    border-radius: 1.2rem;
+    padding: .5rem;
+    border-left: .22rem solid #F75326;
+    box-shadow: 0 .9rem 2.6rem rgba(0, 0, 0, .08);
 }
 
-.grid-depoimentos {
-    /*posição dos dois comentários*/
-    max-width: 68rem;
-    margin: 2rem auto 3rem auto;
-    padding-bottom: 2rem;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.3rem;
-}
-
-.dep-card {
-    /*o card do comentário*/
-    background: rgba(255, 255, 255, .72);
-    border-radius: 1rem;
-    padding: 1.1rem 1.1rem 1rem;
-    box-shadow: 0 0.6rem 1rem rgba(0, 0, 0, 0.281);
-}
-
-.dep-topo {
-    /*o conjunto das informações*/
+.atendimentoNavItens {
+    /*cada opção do aside*/
     display: flex;
     align-items: center;
-    gap: 0.8rem;
-    margin-bottom: 0.6rem;
+    gap: .6rem;
+    padding: .8rem;
+    border-radius: .9rem;
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    font-size: 1rem;
 }
 
-.dep-avatar {
-    /*foto*/
-    width: 46px;
-    height: 46px;
-    border-radius: 50%;
-    object-fit: cover;
+.atendimentoNavItens i {
+    /*ícones*/
+    width: 1.2rem;
+    text-align: center;
+    color: #222;
+}
+
+.atendimentoNavItens:hover {
+    /*cor de fundo cada opção ao passar o mouse*/
+    background: rgba(0, 0, 0, .04);
+}
+
+.atendimentoSection {
+    /*permite trocar os blocos de conteúdo a partir da escolha no aside + js (mostra)*/
+    display: none;
+}
+
+.atendimentoSection.is-active {
+    /*permite trocar os blocos de conteúdo a partir da escolha no aside + js (esconde)*/
+    display: block;
+}
+
+.atendimentoNavItens.is-active {
+    /*muda o background quando a opção for escolhida no aside*/
+    background: rgba(247, 83, 38, .12);
+    border-radius: .9rem;
+}
+
+
+
+
+
+/*CONTEÚDO DA DIREITA/PRINCIPAL*/
+
+.faleConoscoHead h2 {
+    /*título "fale conosco"*/
+    font-weight: 800;
+    color: #000;
+    font-size: 1.8rem;
+}
+
+.faleConoscoHead p {
+    /*frase/subtítulo*/
+    color: rgba(0, 0, 0, 0.719);
+    max-width: 58rem;
+    font-size: 1rem;
+}
+
+/*TELEFONE*/
+
+.faleTelefone {
+    /*estética do fundo laranjinha*/
+    background: #f753260e;
+    border-radius: .5rem;
+    padding: .8rem;
+    margin-top: 1.4rem;
+    box-shadow: 0.3rem 0.3rem 0.5rem rgba(247, 83, 38, 0.185);
+}
+
+.faleTelefone h3 {
+    /*título "atendimento por telefone"*/
+    font-weight: 700;
+    font-size: .9rem;
+    margin: 0 0 1rem;
+    color: #000;
+}
+
+.cardsInformativos {
+    /*disposição dos cards informativos*/
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    gap: 1.2rem;
+}
+
+.cardsInformativos--two {
+    /*responsividade dos cards informativos*/
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.cardInformativo {
+    /*card informativo em si*/
+    background: #fff;
+    border-radius: 1rem;
+    padding: 1rem;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    transition: transform .12s ease, box-shadow .12s ease;
+
+}
+
+.cardInformativo:hover {
+    /*card informativo ao passar o mouse*/
+    transform: translateY(-.08rem);
+    box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, .14);
+}
+
+.cardInformativo__icon {
+    /*fundo do ícone do card*/
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: .8rem;
+    background-color: #f7532649;
+    display: grid;
+    place-items: center;
     flex: 0 0 auto;
 }
 
-.dep-info {
-    /*nome + tipo da conta + estrelas*/
-    flex: 1;
-    min-width: 0;
+.cardInformativo__icon i {
+    /*ícone em si do card*/
+    color: black;
+    font-size: 1.1rem;
 }
 
-.dep-nome {
-    /*nome*/
+.cardInformativo__text strong {
+    /*título do card*/
+    display: block;
+    font-weight: 800;
+    color: rgb(0, 0, 0);
+    font-size: .75rem;
+    margin-bottom: .2rem;
+}
+
+.cardInformativo__text span {
+    /*informações/telefone*/
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    color: #2e2e2e;
     font-weight: 700;
-    color: #000000;
-    line-height: 1.1;
+    font-size: .92rem;
 }
-
-.dep-badge {
-    /*tipo da conta + background do cliente vita*/
-    display: inline-block;
-    margin-top: 0.3rem;
-    padding: .1rem 0.5rem;
-    border-radius: 100rem;
-    font-size: 0.7rem;
-    color: #fff;
-    background-color: #2f5c3b;
-}
-
-#badgeDiamante {
-    /*background do cliente diamante*/
-    background-color: #D4AF37;
-}
-
-.dep-estrelas { /*estrelas*/
-    margin-top: .2rem;
-    font-size: .7rem;
-    color: #D4AF37;
-}
-
-.dep-texto { /*o comentário -> frase*/
-    margin: 0;
-    color: #000000;
-    font-size: .8rem;
-}
-
 
 
 
 
 
 /*PERGUNTAS FREQUENTES*/
-  
-#faq{ /*distância entre o título e a linha clara acima*/
-    padding: 2rem;
-}
-  
-.faq-container{ /*largura de todo o container*/
+
+.perguntas {
+    /*largura de todo o container*/
     max-width: 61rem;
     margin: 0 auto;
 }
 
-.faq-item{ /*linhas entre as perguntas*/
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
-  
-.faq-question{ /*a caixa (que está invisível) de cada pergunta*/
-    width: 100%;
+.perguntaAoTodo {
+    /*linhas entre as perguntas*/
     background: transparent;
+    margin-bottom: 1rem;
+}
+
+.aPergunta {
+    /*a caixa (que está invisível) de cada pergunta*/
+    width: 100%;
     border: 0;
-    padding: 1rem;
+    padding: .8rem;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
-}
-  
-.faq-left{ /*distância entre o número e a pergunta*/
-    display: flex;
-    gap: 10px;
+    background: #f753261c;
+    border-radius: .9rem;
+    box-shadow: 0 .4rem 1.2rem rgba(0, 0, 0, .06);
+    margin-bottom: .8rem;
 }
 
-.faq-number{ /*o número de cada pergunta*/
+.cabecalhoPergunta {
+    /*distância entre o número e a pergunta*/
+    display: flex;
+    gap: 0.6rem;
+}
+
+.numeroPergunta {
+    /*o número de cada pergunta*/
     color: #f75326;
     font-weight: 800;
-    min-width: 22px;
+    min-width: 1.35rem;
 }
-  
-.faq-text{
+
+.textoPergunta {
+    /*a pergunta (texto) em si*/
     font-weight: 600;
-    font-size: 18px;
+    font-size: .9rem;
     text-align: left;
 }
-  
-.faq-icon{ /*o ícone +*/
+
+.iconePergunta {
+    /*o ícone +*/
     color: #f75326;
-    font-size: 28px;
+    font-size: 1.75rem;
     line-height: 1;
     transform: translateY(-1px);
     transition: transform .18s ease;
 }
 
-.faq-answer{ /*posição da resposta da pergunta*/
+.aResposta {
+    /*posição da resposta da pergunta*/
     max-height: 0;
     overflow: hidden;
     transition: max-height .25s ease;
 }
-  
-.faq-answer-inner{ /*resposta da pergunta*/
-    padding: 0 .5rem 1rem 2.5rem; 
+
+.textoResposta {
+    /*resposta da pergunta*/
+    padding: 0 .5rem 1rem 2.5rem;
     color: rgba(0, 0, 0, 0.85);
-    font-size: 16px;
+    font-size: .9rem;
 }
 
-.faq-item.is-open .faq-answer{ /*estado aberto*/
-    max-height: 19rem; 
+.perguntaAoTodo.is-open .aResposta {
+    /*estado aberto*/
+    max-height: 19rem;
 }
 
-.faq-item.is-open .faq-icon{ /*o ícone + vira um x*/
-    transform: rotate(45deg); 
+.perguntaAoTodo.is-open .iconePergunta {
+    /*o ícone + vira um x*/
+    transform: rotate(45deg);
 }
-
 
 
 
@@ -776,20 +715,69 @@ h6 {
 
 
 
-/*RESPONSIVIDADE*/
-@media (min-width: 992px) {
-    /*em telas maiores que 992px de largura*/
 
-    /*ASIDE*/
-    .aside-sticky {
-        /*posição do aside*/
-        position: sticky;
-        top: 5, 5rem;
+/*RESPONSIVIDADE*/
+
+@media (max-width: 992px) {
+
+    /*PARTE DE BAIXO DO CABEÇALHO - CATEGORIAS E MARCAS*/
+    .mega-menu {
+        /*o fundo branco*/
+        top: auto;
+        display: none;
+        left: 50%;
+        right: 0;
+        margin: 0 auto;
+        width: 95%;
+        max-height: 22rem;
     }
+
+    .mega.is-open .mega-menu {
+        /*permite que o mega abra em telas pequenas*/
+        display: block;
+    }
+
+    .mega-grid {
+        /*grid de colunas*/
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .mega-scroll {
+        /*barra de rolar dentro do mega*/
+        max-height: 10rem;
+    }
+
+    /*FALE CONOSCO*/
+    .atendimentoLayout {
+        /*layout de todo o main*/
+        grid-template-columns: 1fr;
+    }
+
+    .atendimentoAside {
+        /*layout do aside*/
+        position: static;
+    }
+
+    .faleTelefone {
+        /*relaciona atendimento por telefone com atendimento por e-mail*/
+        border-radius: 0 0 1rem 1rem;
+    }
+
+    .cardsInformativos {
+        /*layout de TODOs os cards (ex.: os diferentes telefones)*/
+        grid-template-columns: 1fr;
+    }
+
+    .cardInformativo {
+        /*layout de um card (ex.: telefone consumidor, e-mail consumidor)*/
+        grid-template-columns: 1fr;
+    }
+
+   
 }
 
 @media (max-width: 768px) {
-    /*em telas menores que 768px de largura (referência: ipad mini)*/
+    /*em telas menores que 767px de largura (referência: ipad mini)*/
 
     /*CABEÇALHO PARTE DE CIMA*/
     #cabecalhoParteDeCima {
@@ -803,12 +791,17 @@ h6 {
         margin-top: 0.2rem;
     }
 
-    #areaMeuPerfil {
+    #areaLoginECarrinho {
         /*área de login e carrinho*/
         margin-right: 0.8rem;
     }
 
-    #meuPerfilArea a {
+    #loginArea span {
+        /*texto "seja bem-vindo"*/
+        font-size: 0.8rem;
+    }
+
+    #loginArea a {
         /*texto faça login/cadastre-se*/
         font-size: 0.85rem;
     }
@@ -835,8 +828,6 @@ h6 {
     #cabecalhoParteDeBaixo {
         /*esconde o menu*/
         display: none;
-        top: 0;
-        position: sticky;
     }
 
     #menuIcon {
@@ -866,11 +857,9 @@ h6 {
         align-items: center;
     }
 
-    /*PARTE DO CLUBE FIDELIDADE*/
-    #fundoPaginaClubeFidelidade {
-        /*distância entre o topo/fim e a página*/
-        margin-top: 4rem;
-        margin-left: 1rem;
+    #fundoCategorias {
+        /*afasta o background de clube fidelidade do background de categorias*/
+        margin-top: .4rem;
     }
 }
 

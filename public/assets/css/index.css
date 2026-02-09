@@ -153,8 +153,7 @@ header {
 
 #cabecalhoParteDeBaixo {
     /*parte de baixo do cabeçalho (transparente)*/
-    background-color: #f75326;
-    opacity: 90%;
+    background: rgb(247, 83, 38, .9);
     position: absolute;
     width: 100%;
     z-index: 10;
@@ -167,6 +166,7 @@ header {
     color: rgb(255, 255, 255);
     font-size: .9rem;
     transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
 .nav-link.text-uppercase.mx-3:hover {
@@ -193,6 +193,102 @@ header {
 }
 
 
+
+
+
+/*OPÇÃO CATEGORIAS NO CABEÇALHO PARTE DE BAIXO*/
+
+.mega:hover .mega-menu,
+.mega:focus-within .mega-menu,
+.mega.is-open .mega-menu{ /*é o que permite abrir*/
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+}
+
+.mega-menu{ /*o fundo branco*/
+    position: absolute;
+    top: 100%;
+    left: 50%; 
+    width: max-content;               
+    max-width: calc(100vw);      
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 1.2rem 3.2rem rgba(0,0,0,.16);
+    padding: 1.2rem;
+    visibility: hidden;
+    max-height: 22rem;
+}
+
+.mega-title-chip{ /*nome de cada categoria*/
+    display: inline-flex;
+    align-items: center;
+    gap: .55rem;
+    padding: .35rem .85rem;
+    border-radius: 100rem;
+    font-weight: 750;
+    font-size: .95rem;
+    background: rgb(255, 226, 218);
+    min-width: 9rem;
+    color: #000000;
+    margin-bottom: .5rem; 
+}
+
+.mega-title-chip i{ /*ícone de cada categoria*/
+    font-size: 1rem;
+    opacity: .9;
+    color: #F75326;
+}
+
+.mega-col a{ /*as várias opções*/
+    display: block;
+    text-decoration: none;
+    color: #000000;
+    font-size: .95rem;
+    padding: .25rem 0;
+    margin-left: .6rem;
+}
+  
+.mega-col a:hover{ /*as várias opções quando passa o mouse*/
+    text-decoration: underline;
+    transform: translateY(-.06rem);
+}
+
+.mega-grid{ /*grid de colunas*/
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 1.1rem;
+    justify-items: center;
+}
+
+.mega-grid-marcas{ /*centralizando o grid de marcas*/
+    display: grid;
+    grid-template-columns: repeat(2, max-content); 
+    justify-content: center;                                               
+    column-gap: 4rem;                              
+}
+
+.mega-scroll{ /*barra de rolar dentro do mega*/
+    max-height: 18rem;        
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 1rem;      
+}
+
+.mega-scroll::-webkit-scrollbar{ /*largura da barra de rolar*/
+    width: .4rem;
+}
+  
+.mega-scroll::-webkit-scrollbar-thumb{ /*estética da barra de rolar*/
+    background: rgba(0, 0, 0, 0.199);
+    border-radius: 100rem;
+}
+  
+.mega-scroll::-webkit-scrollbar-track{ /*estética do trilho da barra de rolar*/
+    background: rgba(0,0,0,.06);
+    border-radius: 100rem;
+}
 
 
 
@@ -290,19 +386,6 @@ header {
     margin-left: 1rem;
 }
 
-/*cor do check, do presente e do diamante no slide do clube fidelidade:*/
-.fa-check {
-    color: #146933;
-}
-
-.fa-gift {
-    color: #810202;
-}
-
-.fa-gem {
-    color: #646161;
-}
-
 .btnQueroClubF {
     /*botão quero fazer parte do clube fidelidade*/
     padding: .4rem 3rem .5rem 3rem;
@@ -324,9 +407,22 @@ header {
 
 .hero-row {
     /*transição entre os dois lados*/
-    background: linear-gradient(to right, #EDE8D0 0%, #ffd5b9 70%);
+    background: linear-gradient(to right, #EDE8D0 0%, rgb(255, 213, 185) 70%);
 }
 
+
+/*cor do check, do presente e do diamante no slide do clube fidelidade:*/
+.fa-check {
+    color: #146933;
+}
+
+.fa-gift {
+    color: #810202;
+}
+
+.fa-gem {
+    color: #646161;
+}
 
 
 
@@ -414,7 +510,7 @@ h1 {
 /*TÍTULO*/
 
 h2 {
-    /*título "ofertas" / todos os títulos no corpo com o fundo em degradê vinho e preto*/
+    /*título "ofertas" / todos os títulos no corpo com o fundo em degradê laranja*/
     text-align: center;
     background: linear-gradient(180deg, #be401d, #F75326);
     color: white;
@@ -596,7 +692,6 @@ h2 {
 
 
 
-
 /*OS PRODUTOS MAIS VENDIDOS*/
 
 .card.h-100.maisVendidos {
@@ -700,7 +795,6 @@ h2 {
     background-color: #c7c7c7;
     border-radius: 0.25rem;
 }
-
 
 
 
@@ -836,6 +930,7 @@ h2 {
 
 
 
+
 /*PARTE QUAL É O SEU ESPORTE*/
 
 #fundoSeuEsporte {
@@ -932,6 +1027,7 @@ h2 {
     transform: translate(-50%, -100%); /* ancora no fundo */
     font-size: 1.3rem;
 }
+
 
 
 
@@ -1184,8 +1280,6 @@ h2 {
 
 
 
-
-
 /*CARDS VERTICAIS*/
 
 .card.cardsVerticais {
@@ -1204,8 +1298,6 @@ h2 {
     display: block;
     width: 100%;
 }
-
-
 
 
 
@@ -1296,8 +1388,6 @@ h4 {
 
 
 
-
-
 /*RODAPÉ*/
 
 footer {
@@ -1322,20 +1412,21 @@ footer p {
     /*opções do rodapé*/
     font-size: 0.9rem;
     text-align: left;
-    transition: transform 0.3s ease;
-    cursor: pointer;
     color: #000000;
+    cursor: pointer;
 }
 
 footer p:hover {
     /*opções do rodapé quando passa o mouse*/
-    transform: scale(1.05);
+    text-decoration: underline;
 }
 
 .copy {
     /*copyright*/
     font-size: 1rem;
     font-weight: 600;
+    text-align: center;
+    pointer-events: none;
 }
 
 .bolaFundoPagamento {
@@ -1371,6 +1462,21 @@ h6 {
     color: #F75326;
 }
 
+#horarioFuncionamentoRodape{ /*tiro o cursor do horário de funcionamento*/
+    pointer-events: none;
+}
+
+.fab.fa-whatsapp.fa-lg{ /*cor do ícono do whatsapp no rodapé*/
+    color: #4fce5d;
+}
+
+.redesSociaisRodape .fa-instagram::before{ /*cor do ícono do instagram no rodapé*/
+    background: radial-gradient(circle at 30% 107%,#fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%,#285AEB 90%);
+    background-clip: text;
+    color: transparent;
+}
+
+
 
 
 
@@ -1396,6 +1502,64 @@ h6 {
 
 
 /*RESPONSIVIDADE*/
+
+@media (min-width: 1311px) {
+    /*em telas maiores que 1311px de largura*/
+
+    /*CATEGORIAS COM IMAGENS*/
+    .categoriesImagens-grid {
+        grid-template-columns: repeat(3, 1fr);
+        /*transforma em 3 colunas*/
+    }
+}
+
+@media (min-width: 1280px) and (max-width: 1285px) {
+    /*dimensões do nest hub max*/
+
+    /*ESPORTES*/
+    .titulo-seu-esporte h3 {
+        /*título qual é sua atividade física*/
+        font-size: 3rem;
+    }
+
+    .titulo-seu-esporte {
+        /*distância entre o título e os cards*/
+        flex: .8;
+    }
+}
+
+@media (max-width: 992px) {
+
+    /*TELA DE CATEGORIAS COM IMAGEM (LARANJA CLARINHO)*/
+    .grid-categorias { /*diminui para 2 por coluna*/
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /*PARTE DE BAIXO DO CABEÇALHO - CATEGORIAS E MARCAS*/
+    
+    .mega-menu{ /*o fundo branco*/
+        top: auto;
+        display: none; 
+        left: 50%;
+        right: 0;
+        margin: 0 auto;
+        width: 95%;
+        max-height: 22rem;        
+    }
+    
+    .mega.is-open .mega-menu{ /*permite que o mega abra em telas pequenas*/
+        display: block;
+    }
+    
+    .mega-grid{ /*grid de colunas*/
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .mega-scroll{ /*barra de rolar dentro do mega*/
+        max-height: 10rem;        
+    }
+}
+
 @media (min-width: 914px) {
     /*em telas maiores que 914px de largura*/
 
@@ -1416,14 +1580,53 @@ h6 {
     }
 }
 
-@media (min-width: 1311px) {
-    /*em telas maiores que 1311px de largura*/
+@media (min-width: 820px) and (max-width: 829px) {
+    /*dimensões do ipad air*/
 
-    /*CATEGORIAS COM IMAGENS*/
-    .categoriesImagens-grid {
-        grid-template-columns: repeat(3, 1fr);
-        /*transforma em 3 colunas*/
+    /*BOTÕES AMARELOS DE CATEGORIAS NO CORPO DO SITE*/
+    #botoesCategoriasCorpo {
+        /*margem esquerda no ipad air*/
+        margin-left: 0.3rem;
     }
+
+    /*ESPORTES*/
+    .titulo-seu-esporte h3 {
+        /*título qual é sua atividade física*/
+        font-size: 2rem;
+    }
+
+    .titulo-seu-esporte {
+        /*distância do título pros cards*/
+        flex: 1;
+    }
+}
+
+@media (min-width: 829px) {
+    /*em telas maiores que 829px de largura*/
+
+    /*BOTÕES AMARELOS DE CATEGORIAS NO CORPO DO SITE*/
+    #botoesCategoriasCorpo>.col {
+        /*aumentando a largura dos botões a medida que a tela cresce*/
+        flex: 1 1 auto;
+    }
+
+    /*TÍTULO ESPORTES*/
+    .titulo-seu-esporte h3 {
+        /*título qual é sua atividade física*/
+        font-size: 2.5rem;
+        padding-left: .3rem !important;
+    }
+}
+
+@media (min-width: 853px) and (max-width: 1024px) {
+    /*em telas maiores que 853px e menor que 1024px de largura*/
+
+    /*ESPORTES*/
+    .titulo-seu-esporte {
+        /*distância entre o título e os cards*/
+        flex: 1;
+    }
+
 }
 
 @media (max-width: 768px) {
@@ -1497,7 +1700,7 @@ h6 {
         left: 0;
         width: 100%;
         z-index: 20;
-        background-color: #2e0101;
+        background-color: #b43e1a;
         opacity: 0.9;
     }
 
@@ -1513,7 +1716,6 @@ h6 {
     }
 
     /*CARROSSEL/CLUBE FIDELIDADE*/
-
     #carrossel img {
         /*altura da imagem do carrossel*/
         height: 95vh;
@@ -1558,21 +1760,18 @@ h6 {
     }
 
     /*SUB-BOTÕES DE MODA E ACESSÓRIOS*/
-
     .subBtn {
         /*largura mínima para os subbotoes*/
         min-width: 6rem;
     }
 
     /*OS PRODUTOS MAIS VENDIDOS*/
-
     .todosOsMaisVendidos {
         /*pegando todos os cards dos produtos mais vendidos*/
         margin-left: -2rem;
     }
 
     /*ESPORTES*/
-
     .titulo-seu-esporte {
         /*título qual é sua atividade física*/
         gap: .5rem;
@@ -1607,10 +1806,7 @@ h6 {
         margin-left: 0rem;
     }
 
-
-
     /*BANNER WWHEY*/
-
     .banner-wheyProtein {
         /*altura do banner*/
         max-height: none;
@@ -1647,7 +1843,6 @@ h6 {
     }
 
     /*TELA LARANJA COM FILTRÁVEIS*/
-
     #fundoTelaComFiltros {
         /*habilita a barra de rolar*/
         overflow-x: auto;
@@ -1692,10 +1887,7 @@ h6 {
         font-size: 1rem;
     }
 
-
-
     /*SOBRE A VITA FORTIS*/
-
     h4 {
         /*título você já conhece a vita fortis*/
         padding: .5rem;
@@ -1703,11 +1895,25 @@ h6 {
     }
 }
 
+@media (min-width: 768px) and (max-width: 853px) {
+
+    /*RODAPÉ*/
+    #tituloRedesSociaisRodape {
+        /*forçando a quebra de "nos acompanhe nas redes sociais" em telas pequenas*/
+        white-space: pre;
+    }
+
+    .quebra-sm::after {
+        /*forçando a quebra de "nos acompanhe nas redes sociais" em telas pequenas*/
+        content: "\A";
+        white-space: pre;
+    }
+}
+
 @media (max-width: 767.98px) {
     /*rodapé não incluindo 768*/
 
     /*RODAPÉ*/
-
     .primeira-linha-rodape {
         /*permite as quebras de linha*/
         display: flex;
@@ -1758,14 +1964,10 @@ h6 {
     }
 }
 
-@media (max-width: 345px) {
-    /*galaxy z fold 5*/
-
-    /*SUB-BOTÕES DE MODA E ACESSÓRIOS*/
-
-    .subBtn {
-        /*largura mínima para os subbotoes*/
-        min-width: 5.8rem;
+@media (max-width: 576px) {
+    /*TELA DE CATEGORIAS COM IMAGEM (LARANJA CLARINHO)*/
+    .grid-categorias { /*diminui para 1 por coluna*/
+        grid-template-columns: 1fr;
     }
 }
 
@@ -1773,7 +1975,6 @@ h6 {
     /*medida do s8+*/
 
     /*BANNER WHEY*/
-
     .tituloWhey {
         /*título*/
         white-space: nowrap;
@@ -1796,7 +1997,6 @@ h6 {
     }
 
     /*SOBRE A VITA FORTIS*/
-
     h4 {
         /*título você já conhece a vita fortis*/
         padding: .5rem;
@@ -1804,95 +2004,12 @@ h6 {
     }
 }
 
-@media (min-width: 820px) and (max-width: 829px) {
-    /*dimensões do ipad air*/
+@media (max-width: 345px) {
+    /*galaxy z fold 5*/
 
-    /*BOTÕES AMARELOS DE CATEGORIAS NO CORPO DO SITE*/
-    #botoesCategoriasCorpo {
-        /*margem esquerda no ipad air*/
-        margin-left: 0.3rem;
-    }
-
-    /*ESPORTES*/
-    .titulo-seu-esporte h3 {
-        /*título qual é sua atividade física*/
-        font-size: 2rem;
-    }
-
-    .titulo-seu-esporte {
-        /*distância do título pros cards*/
-        flex: 1;
-    }
-}
-
-@media (min-width: 829px) {
-    /*em telas maiores que 829px de largura*/
-
-    /*BOTÕES AMARELOS DE CATEGORIAS NO CORPO DO SITE*/
-    #botoesCategoriasCorpo>.col {
-        /*aumentando a largura dos botões a medida que a tela cresce*/
-        flex: 1 1 auto;
-    }
-
-    /*TÍTULO ESPORTES*/
-    .titulo-seu-esporte h3 {
-        /*título qual é sua atividade física*/
-        font-size: 2.5rem;
-        padding-left: .3rem !important;
-    }
-}
-
-@media (min-width: 853px) and (max-width: 1024px) {
-    /*em telas maiores que 853px e menor que 1024px de largura*/
-
-    /*ESPORTES*/
-
-    .titulo-seu-esporte {
-        /*distância entre o título e os cards*/
-        flex: 1;
-    }
-
-}
-
-@media (min-width: 1280px) and (max-width: 1285px) {
-    /*dimensões do nest hub max*/
-
-    /*ESPORTES*/
-    .titulo-seu-esporte h3 {
-        /*título qual é sua atividade física*/
-        font-size: 3rem;
-    }
-
-    .titulo-seu-esporte {
-        /*distância entre o título e os cards*/
-        flex: .8;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 853px) {
-
-    /*RODAPÉ*/
-
-    #tituloRedesSociaisRodape {
-        /*forçando a quebra de "nos acompanhe nas redes sociais" em telas pequenas*/
-        white-space: pre;
-    }
-
-    .quebra-sm::after {
-        /*forçando a quebra de "nos acompanhe nas redes sociais" em telas pequenas*/
-        content: "\A";
-        white-space: pre;
-    }
-}
-
-@media (max-width: 992px) {
-    .grid-categorias {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-
-@media (max-width: 576px) {
-    .grid-categorias {
-        grid-template-columns: 1fr;
+    /*SUB-BOTÕES DE MODA E ACESSÓRIOS*/
+    .subBtn {
+        /*largura mínima para os subbotoes*/
+        min-width: 5.8rem;
     }
 }
